@@ -1,7 +1,5 @@
 $(document).ready(function () {
-
   if($("body.temp_e_zines").length != 0){
-
     function clicktoappend() {
       $(document).one("click", "#view_more_scroll_btn", function(){
         $("#view_more_scroll_btn").hide();
@@ -9,7 +7,6 @@ $(document).ready(function () {
         scroll_to_data($("#view_more_scroll_btn").attr("data-index"));
       });
     }
-    
     function scroll_to_data(index) {
       setTimeout(function() {
         fetch('/blogs/e_zines?page=' + index).then(responseText => responseText.text()).then((responseText) => {
@@ -29,7 +26,6 @@ $(document).ready(function () {
         });
       }, 1000);
     }
-        
     $(window).scroll(function(){      
       if($("#view_more_scroll_btn").length != 0){
         var button_position = $("#view_more_scroll_btn").position().top - $(window).height();
@@ -40,7 +36,6 @@ $(document).ready(function () {
     });
     clicktoappend();    
   }
-
   $('.product_recommendations_slider').owlCarousel({
           loop: true,
           margin: 10,
@@ -62,7 +57,6 @@ $(document).ready(function () {
               }
           }
         });
-
   if($(".home_page-banner").length != 0){
    $('.home_page-banner').owlCarousel({
           loop: true,
@@ -76,8 +70,6 @@ $(document).ready(function () {
           items:1,
         });
   }
-    
-  // Header
   function header_scroll() {
     var headertop = $(".fixed_header").height() + 15;
       if ($(document).scrollTop() >= headertop) {
@@ -91,11 +83,9 @@ $(document).ready(function () {
     header_scroll();
   });
   header_scroll();
-  
   $('.header .header__navigation header-menu details').hover(function () {
     $(this).find('summary').click();
   });
-  
   $(document).on("click", ".header .header__icon.header__icon--menu", function () {
       if ($("#Details-menu-drawer-container").attr("open") != "open") {
           $(".fixed_header").addClass("header_fill");
@@ -107,7 +97,6 @@ $(document).ready(function () {
         }
       }
   });
-  
   $('.logo_slider').owlCarousel({
       loop: true,
       margin: 10,
@@ -132,7 +121,6 @@ $(document).ready(function () {
           }
       }
   });
-  
   $('.magazines-slider').owlCarousel({
       loop:true,
       nav: true,
@@ -167,7 +155,6 @@ $(document).ready(function () {
           }
       }
   });		
-  
   $('.services-slider-main').owlCarousel({
       loop: true,
       nav: false,
@@ -188,7 +175,6 @@ $(document).ready(function () {
           }
       }
   });
-  
   $('.custom-featured-collection-main').owlCarousel({
       loop: true,
       margin: 30,
@@ -216,7 +202,6 @@ $(document).ready(function () {
           }
       }
   });
-  
   $('.custom-featured-blog-main').owlCarousel({
       loop: true,
       margin: 30,
@@ -241,7 +226,6 @@ $(document).ready(function () {
           }
       }
   });
-  
   $('.custom-testi-main').owlCarousel({
       loop: true,
       autoplay:true,
@@ -251,8 +235,6 @@ $(document).ready(function () {
       dots: true,
       items: 1
   });
-  
-  
   $('.case-study-main').owlCarousel({
       loop: true,
       autoplay:true,
@@ -275,7 +257,6 @@ $(document).ready(function () {
           }
       }
   });
-
   $('.video_section_swiper').owlCarousel({
       loop: false,
       autoplay:true,
@@ -295,26 +276,12 @@ $(document).ready(function () {
           }
       }
   });
-
-// for external link in new tabs
 $('.header .header__inline-menu a,.header .menu-drawer__navigation a,footer.footer a').each(function() {
     if (this.hostname === location.hostname || !this.hostname.length) {
     }else{
        $(this).attr('target','_blank') 
     }
 });
-
-  //   $( 'a' ).each(function() {
-  //   if( location.hostname === this.hostname || !this.hostname.length ) {
-  //       $(this).addClass('local');
-  //   } else {
-  //       $(this).addClass('external');
-  //   }
-  // });
-
-
-
-  /* Cart terms checkbox */
   $(document).on('change','#main-cart-footer #cart-accept-terms-condition',function(){
     if($(this).is(':checked')){
      $('#main-cart-footer .cart__dynamic-checkout-buttons,#main-cart-footer .cart__checkout-button').removeClass('disabled');
@@ -330,8 +297,4 @@ $('.header .header__inline-menu a,.header .menu-drawer__navigation a,footer.foot
       $('#cart-notification #cart-notification-form').addClass('disabled');
     }
   });
-  /* Cart terms checkbox */
-
-  
-
 });

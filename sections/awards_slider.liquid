@@ -30,7 +30,7 @@
         <div class="award_slider_block">
           {% if block.settings.a_image != blank %}
             <figure>
-              <img src="{{ block.settings.a_image | img_url:"200x" }}">
+              {{ block.settings.a_image | image_url: width: 400 | image_tag: loading: 'lazy', width: 200 }}
             </figure>
           {% endif %}
 

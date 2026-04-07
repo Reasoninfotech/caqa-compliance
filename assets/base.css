@@ -1,12 +1,9 @@
-/* Color custom properties */
-
 a:not(.button) {
   color: #018c0b;
 }
 a:not(.button):hover {
   color: #193e99;
 }
-
 :root,
 .color-background-1 {
   --color-foreground: var(--color-base-text);

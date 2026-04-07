@@ -8,7 +8,11 @@
           <div>
             <figure>
               <a href="{{ block.settings.url }}" target="_blank">
-                <img width="100%" src="{{ block.settings.image | img_url : "master" }}">
+                {{ block.settings.image | image_url: width: 400 | image_tag: 
+                  width: 200, 
+                  loading: 'lazy', 
+                  alt: block.settings.image.alt | default: "Partner Logo" 
+                }}
               </a>
             </figure>
           </div>
@@ -18,7 +22,11 @@
           <div>
             <figure>
               <a href="{{ block.settings.url2 }}" target="_blank">
-                <img width="100%" src="{{ block.settings.image2 | img_url : "master" }}">
+                {{ block.settings.image2 | image_url: width: 400 | image_tag: 
+                  width: 200, 
+                  loading: 'lazy', 
+                  alt: block.settings.image2.alt | default: "Partner Logo" 
+                }}
               </a>
             </figure>
           </div>
@@ -28,7 +36,11 @@
           <div>
             <figure>
               <a href="{{ block.settings.url3 }}" target="_blank">
-                <img width="100%" src="{{ block.settings.image3 | img_url : "master" }}">
+                {{ block.settings.image3 | image_url: width: 400 | image_tag: 
+                  width: 200, 
+                  loading: 'lazy', 
+                  alt: block.settings.image3.alt | default: "Partner Logo" 
+                }}
               </a>
             </figure>
           </div>

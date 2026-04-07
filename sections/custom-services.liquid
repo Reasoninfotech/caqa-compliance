@@ -68,7 +68,14 @@
           <div class="services-slide">
             <figure>
               <a href="{{ block.settings.page.url }}">
-                <img src="{{ block.settings.page.metafields.page.bread_crumb_image | img_url:"master" }}">
+                {% if block.settings.page.metafields.page.bread_crumb_image != blank %}
+                  {{ block.settings.page.metafields.page.bread_crumb_image | image_url: width: 600 | image_tag: 
+                    width: 300, 
+                    height: 240, 
+                    loading: 'lazy', 
+                    alt: block.settings.page.title 
+                  }}
+                {% endif %}
               </a>
               <figcaption>
                 <a href="{{ block.settings.page.url }}" class="head">{{ block.settings.page.title | truncate: 50 }}</a>
