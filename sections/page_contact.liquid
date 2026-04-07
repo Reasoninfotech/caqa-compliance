@@ -231,7 +231,7 @@
     </div>
   </div>
 </section>
-<script src="{{ 'tellinput.js' | asset_url }}"></script>
+<script src="{{ 'tellinput.js' | asset_url }}" defer></script>
 <script>
   var input = document.querySelector("#ContactForm-phone");
   window.intlTelInput(input, {
@@ -258,7 +258,7 @@
     utilsScript: "{{ 'utils.js' | asset_url }}",
   });
 </script>
-<script src="{{ 'utils.js' | asset_url }}"></script>
+<script src="{{ 'utils.js' | asset_url }}" defer></script>
 {% schema %}
 {
 "name": "Contact Us",
