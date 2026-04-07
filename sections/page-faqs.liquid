@@ -1,0 +1,337 @@
+{% render 'bread_crumb' back_img:page.metafields.page.bread_crumb_image, title:page.title %}
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+<style>
+  .page_faqs{padding:60px 0 0}
+  .page_faqs .blocks_title{padding:10px}
+  .page_faqs .page_faqs_blocks{padding:10px}
+  .page_faqs .page_faqs_blocks .page_faqs_block{border:1px solid #e6e6e6;transition:0.2s;position:relative}
+  .page_faqs .page_faqs_blocks .page_faqs_block:after{content: '';height: 0;width: 6px;position: absolute;top: 0;bottom: 0;left: -1px;margin: auto;background-color: #0b57e3;background-image:linear-gradient(left,#0b57e3,#193e99);filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#0b57e3',endColorStr='#193e99',gradientType='1');transition: all 300ms linear 0ms;opacity: 0;}
+  .page_faqs .page_faqs_blocks .page_faqs_block.active:after{height:100%;opacity:1}
+  .page_faqs .page_faqs_blocks .page_faqs_block.active{box-shadow:0 0 25px rgb(0 0 0 / 15%);border:1px solid #fff}
+  .page_faqs .page_faqs_blocks .page_faqs_block:not(:last-child){margin-bottom:20px}
+  .page_faqs .page_faqs_blocks .page_faqs_block .quetion{padding:25px 65px 25px 25px;font-size: 18px;font-weight:700;display:flex;align-items:center;color:inherit;position: relative}
+  .page_faqs .page_faqs_blocks .page_faqs_block .quetion:after{content:'';width:6px;height:3px;background:#000;position:absolute;bottom:0;left:4px;transition:0.2s;opacity:0}
+  .page_faqs .page_faqs_blocks .page_faqs_block.active .quetion:after{opacity:1}
+  .page_faqs .page_faqs_blocks .page_faqs_block .quetion svg{width:12px;height:12px;position:absolute;color:#9ba2aa;right:35px;transition:0.2s}
+  .page_faqs .page_faqs_blocks .page_faqs_block .quetion .icon-close{width:20px;height:20px;opacity:0}
+  .page_faqs .page_faqs_blocks .page_faqs_block.active .quetion .icon-close{opacity:1}
+  .page_faqs .page_faqs_blocks .page_faqs_block.active .quetion .icon-down-arrow{opacity:0}
+  .page_faqs .page_faqs_blocks .page_faqs_block .answer{padding:25px 25px 65px;color:#636363;display:none}
+
+  .page_faqs .contact_form{margin-top:80px}
+  .page_faqs .contact_form .contact_info_block{display: flex;margin-bottom:40px}
+  .page_faqs .contact_form .contact_info_block .contact_circle_icon{font-size: 24px;color: #fff;height: 63px;width: 63px;display:flex;align-items:center;justify-content:center;background-color: #193f97;text-align: center;border-radius: 63px;margin-right: 38px;position: relative;overflow: hidden;flex-shrink:0}
+  .page_faqs .contact_form .contact_info_block .contact_circle_icon svg{width:24px;height:24px}
+  .page_faqs .contact_form .contact_block_info{display: flex;flex-direction:column;line-height:26px;letter-spacing:0}
+  .page_faqs .contact_form .contact_block_info .blk_title{font-size: 24px;font-weight: 600;margin:0 0 7px}
+  .page_faqs .contact_form .contact_info_block:hover .contact_circle_icon svg{animation:toRightFromLeft 0.5s forwards}
+
+  .page_faqs .contact_form .contact__form_row{display:flex;}
+  .page_faqs .contact_form .contact__form_row .contact__form_block{width:50%;}
+  
+  .page_faqs .contact_form .contact__form_row form .contact__fields{display:flex;}
+  .page_faqs .contact_form .contact__form_row form .field{margin:8px;width:calc(100% - 16px);}
+  .page_faqs .contact_form .contact__form_row form .contact__button{margin:16px 8px;}
+  @keyframes toRightFromLeft {
+    0% {transform: translateX(0px);}
+    50% {transform: translateX(63px);}
+    51% {transform: translateX(-63px);}
+    100% {transform: translateX(0px);}
+  }
+
+  @media screen and (max-width:991px){
+    .page_faqs{padding:30px 0 0}
+    .page_faqs .page-width{padding:0 15px;}
+    .page_faqs .contact_form .contact_block_info{font-size:15px}
+    .page_faqs .contact_form .contact_block_info .blk_title{font-size:20px}
+    .page_faqs .contact_form .contact_info_block .contact_circle_icon{margin-right:25px}
+  }
+
+  @media screen and (max-width:768px){
+  .page_faqs .contact_form{margin-top:40px;}
+    .page_faqs .page_faqs_blocks .page_faqs_block .quetion{font-size:16px;padding:20px 40px 20px 20px;}
+    .page_faqs .page_faqs_blocks .page_faqs_block .answer{font-size:14px;}
+    .page_faqs .page_faqs_blocks .page_faqs_block .quetion svg{right:15px}
+
+.page_faqs .contact_form .contact_info_block{margin-bottom:25px;}
+  .page_faqs .contact_form .contact_info_block .contact_circle_icon{height:40px;width:40px;margin-right:15px;}
+  .page_faqs .contact_form .contact_info_block .contact_circle_icon svg{width:15px;height:15px;}
+
+  .page_faqs .contact_form .contact__form_row{flex-direction:column;}
+  .page_faqs .contact_form .contact__form_row .contact__form_block{width:100%;}
+  }
+  @media(max-width:575px){
+  .page_faqs .contact_form .contact__form_row form .contact__fields{display:block;}
+  }
+
+</style>
+<section class="page_faqs">
+  <div class="page-width">
+    {% if section.settings.title != blank %}
+    <div class="blocks_title">
+      {% if section.settings.subtitle != blank %}<span>{{ section.settings.subtitle }}</span>{% endif %}
+      <h1>{{ section.settings.title }}</h1>
+    </div>
+    {% endif %}
+    <div class="page_faqs_blocks">
+      {% for block in section.blocks %}
+      {% if block.settings.que != blank %}
+      <div class="page_faqs_block">
+        <a href="javascript:void(0)" class="quetion">{{ block.settings.que }} {% render 'icon-down-arrow' %}{% render 'icon-circle-close' %}</a>
+        <div class="answer rte">
+        {{ block.settings.ans }}
+        {{ block.settings.ans_h }}
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="contact_form">
+    <div class="contact page-width">
+      {% if section.settings.c_title != blank %}
+      <div class="blocks_title">
+        {% if section.settings.c_subtitle != blank %}<span>{{ section.settings.c_subtitle }}</span>{% endif %}
+        <h1>{{ section.settings.c_title }}</h1>
+      </div>
+      {% endif %}
+
+      <div class="contact__form_row">
+        <div class="contact__form_block">
+          {% if section.settings.loca_desc != blank %}
+          <div class="contact_info_block location">
+            <span class="contact_circle_icon"><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentcolor" viewBox="0 0 20 20"><path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></span>
+            <div class="contact_block_info">
+              {% if section.settings.loca_title != blank %}<span class="blk_title">{{ section.settings.loca_title }}</span>{% endif %}
+              <div class="rte">{{ section.settings.loca_desc }}</div>
+            </div>
+          </div>
+          {% endif %}
+          {% if section.settings.phone1 != blank %}
+          <div class="contact_info_block phone">
+            <span class="contact_circle_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentcolor" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 287.32 287.32" style="enable-background:new 0 0 287.32 287.32;" xml:space="preserve"><path d="M267.749,191.076c-14.595-11.729-27.983-17.431-40.93-17.431c-18.729,0-32.214,11.914-44.423,24.119  c-1.404,1.405-3.104,2.06-5.349,2.06c-10.288,0.001-28.387-12.883-53.794-38.293c-29.89-29.892-41.191-48.904-33.592-56.506  c20.6-20.593,27.031-41.237-4.509-80.462C73.861,10.51,62.814,3.68,51.38,3.68c-15.42,0-27.142,12.326-37.484,23.202  c-1.788,1.88-3.477,3.656-5.133,5.312c-11.689,11.688-11.683,37.182,0.017,68.2c12.837,34.033,38.183,71.055,71.37,104.247  c25.665,25.663,53.59,46.403,80.758,60.328c23.719,12.158,46.726,18.672,64.783,18.672c0.002,0,0.004,0,0.007,0  c11.3,0,20.479-2.465,26.541-7.478c12.314-10.181,35.234-29.039,35.081-51.439C287.236,212.71,280.653,201.451,267.749,191.076z"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></span>
+            <div class="contact_block_info">
+              {% if section.settings.phone_title != blank %}<span class="blk_title">{{ section.settings.phone_title }}</span>{% endif %}
+              <a href="tel:{{ section.settings.phone1 }}">{{ section.settings.phone1 }}</a>
+              {% if section.settings.phone1 != blank %}<a href="tel:{{ section.settings.phone2 }}">{{ section.settings.phone2 }}</a>{% endif %}
+            </div>
+          </div>
+          {% endif %}
+          {% if section.settings.mail1 != blank %}
+          <div class="contact_info_block mail">
+            <span class="contact_circle_icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentcolor" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 472.615 472.615" style="enable-background:new 0 0 472.615 472.615;" xml:space="preserve"><g><g><polygon points="236.307,294.01 0,142.889 0,404.329 472.615,404.329 472.615,142.892   "/></g></g><g><g><polygon points="0,68.286 0,119.51 236.307,270.635 472.615,119.508 472.615,68.286   "/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></span>            
+            <div class="contact_block_info">              {% if section.settings.mail_title != blank %}<span class="blk_title">{{ section.settings.mail_title }}</span>{% endif %}
+              <a href="mailto:{{ section.settings.mail1 }}">{{ section.settings.mail1 }}</a>
+              {% if section.settings.mail2 != blank %}<a href="mailto:{{ section.settings.mail2 }}">{{ section.settings.mail2 }}</a>{% endif %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        <div class="contact__form_block">
+          {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+          {%- if form.posted_successfully? -%}
+          <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</h2>
+          {%- elsif form.errors -%}
+          <div class="form__message">
+            <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h2>
+          </div>
+          <ul class="form-status-list caption-large" role="list">
+            <li>
+              <a href="#ContactForm-email" class="link">
+                {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+              </a>
+            </li>
+          </ul>
+          {%- endif -%}
+          <div class="contact__fields">
+            <div class="field">
+              <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}" required>
+              <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }} <span aria-hidden="true">*</span></label>
+            </div>
+            <div class="field field--with-error">
+              <input
+                     autocomplete="email"
+                     type="email"
+                     id="ContactForm-email"
+                     class="field__input"
+                     name="contact[email]"
+                     spellcheck="false"
+                     autocapitalize="off"
+                     value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                     aria-required="true"
+                     {% if form.errors contains 'email' %}
+                     aria-invalid="true"
+                     aria-describedby="ContactForm-email-error"
+                     {% endif %}
+                     placeholder="{{ 'templates.contact.form.email' | t }}" required
+                     >
+              <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+              {%- if form.errors contains 'email' -%}
+              <small class="contact__field-error" id="ContactForm-email-error">
+                <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                <span class="form__message">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
+              </small>
+              {%- endif -%}
+            </div>
+          </div>
+          <div class="contact__fields">
+            <div class="field">
+              <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}" required>
+              <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }} <span aria-hidden="true">*</span></label>
+            </div>
+            <div class="field">
+              <input type="text" id="ContactForm-subject" class="field__input" autocomplete="off" name="contact[Subject]"  placeholder="Subject" required>
+              <label class="field__label" for="ContactForm-phone">Subject <span aria-hidden="true">*</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <textarea
+                      rows="12"
+                      id="ContactForm-body"
+                      class="text-area field__input"
+                      name="contact[{{ 'templates.contact.form.comment' | t }}]"
+                      placeholder="{{ 'templates.contact.form.comment' | t }}"
+                      >
+              {{- form.body -}}
+            </textarea>
+            <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
+          </div>
+          <div class="contact__button">
+            <button type="submit" class="button btn_blue">
+              {{ 'templates.contact.form.send' | t }}
+            </button>
+          </div>
+          {%- endform -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  $(document).ready(function(){
+    $('.page_faqs .page_faqs_blocks .page_faqs_block .quetion').click(function(){
+      if($(this).parent('.page_faqs_block').hasClass('active')){
+        $(this).siblings('.answer').slideUp();
+        $(this).parent('.page_faqs_block').removeClass('active');
+      }else{
+        $(this).parent('.page_faqs_block').addClass('active');
+        $(this).siblings('.answer').slideDown();
+      }
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Faqs",
+    "settings": [
+		{
+			"type":"text",
+			"id":"title",
+			"label":"Title"
+		},
+		{
+			"type":"text",
+			"id":"subtitle",
+			"label":"Subtitle"
+		},
+		{
+			"type":"header",
+			"content":"Contact form"
+		},
+		{
+			"type":"text",
+			"id":"c_title",
+			"label":"Title"
+		},
+		{
+			"type":"text",
+			"id":"c_subtitle",
+			"label":"Subtitle"
+		},
+        {
+          "type":"header",
+          "content":"Location"
+        },
+        {
+          "type":"text",
+          "id":"loca_title",
+          "label":"Location Title"
+        },
+        {
+          "type":"richtext",
+          "id":"loca_desc",
+          "label":"Location Description"
+        },
+        {
+          "type":"header",
+          "content":"Mail"
+        },
+        {
+          "type":"text",
+          "id":"mail_title",
+          "label":"Mail Title"
+        },
+        {
+          "type":"text",
+          "id":"mail1",
+          "label":"Mail 1"
+        },
+        {
+          "type":"text",
+          "id":"mail2",
+          "label":"Mail 2"
+        },
+        {
+          "type":"header",
+          "content":"Phone"
+        },
+        {
+          "type":"text",
+          "id":"phone_title",
+          "label":"Phone Title"
+        },
+        {
+          "type":"text",
+          "id":"phone1",
+          "label":"Phone 1"
+        },
+        {
+          "type":"text",
+          "id":"phone2",
+          "label":"Phone 2"
+        }
+	],
+	"blocks":[
+		{
+			"type":"text",
+			"name":"FAQs",
+			"settings":[
+				{
+					"type":"text",
+					"id":"que",
+					"label":"Quetion"
+				},
+				{
+					"type":"richtext",
+					"id":"ans",
+					"label":"Answer"
+				},
+				{
+					"type":"html",
+					"id":"ans_h",
+					"label":"Answer",
+                    "info":"If need to add html tags"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

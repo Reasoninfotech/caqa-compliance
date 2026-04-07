@@ -1,0 +1,143 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+<style>
+#custom-featured-collection-{{ section.id }}{background-image:url({{ section.settings.back | img_url:"master" }});background-repeat:no-repeat;}
+  .custom-featured-collection{padding:170px 0 290px;min-height:1260px;}
+  .custom-featured-collection .page-width{max-width:calc(var(--page-width) + 40px);padding:0 90px;}
+  .custom-featured-collection .custom-featured-collection-head{text-align:center;padding-bottom:50px;color:white;}
+  .custom-featured-collection .custom-featured-collection-head .head{font-size:60px;color:inherit;}
+  .custom-featured-collection .custom-featured-collection-head .text{font-size:18px;line-height:normal;}
+
+  .custom-featured-collection .custom-featured-collection-main .custom-featured-collection-slide .card{background:transparent;}
+  .custom-featured-collection .custom-featured-collection-main .card .card__heading{color:white;}
+  .custom-featured-collection .custom-featured-collection-main .card .card__heading a{color:inherit;}
+  .custom-featured-collection .custom-featured-collection-main .card .card__heading a:hover{color:inherit;}
+  .custom-featured-collection .custom-featured-collection-main .card .price{color:white;}
+  .custom-featured-collection .custom-featured-collection-main .card .price s{color:#708fd7;}
+
+  .custom-featured-collection .custom-featured-collection-main .owl-nav button{top:40%}
+  .custom-featured-collection .custom-featured-collection-main .owl-nav button.owl-prev{left:-75px;}
+  .custom-featured-collection .custom-featured-collection-main .owl-nav button.owl-next{right:-75px;}
+
+  .custom-featured-collection .custom-featured-collection-btn{text-align: center;padding-top: 35px;}
+  .custom-featured-collection .custom-featured-collection-btn .button{padding: 25px 40px;border-radius: 50px;}
+
+  @media(max-width:1600px){
+    #custom-featured-collection-{{ section.id }}{background-position-y:-125px;}
+    .custom-featured-collection{padding:75px 0 30px;min-height:1px;}
+    .custom-featured-collection .custom-featured-collection-main .owl-nav button.owl-prev{left:-70px;}
+    .custom-featured-collection .custom-featured-collection-main .owl-nav button.owl-next{right:-70px;}
+    .custom-featured-collection .custom-featured-collection-btn{padding-top:0;}
+  }
+  @media(max-width:1200px){
+    .custom-featured-collection .custom-featured-collection-head .head{font-size:50px;}
+    .custom-featured-collection .custom-featured-collection-btn .button{padding:15px 25px;}
+  }
+  @media(max-width:991px){
+    
+    .custom-featured-collection .page-width{max-width:var(--page-width);padding:0 55px;}
+    .custom-featured-collection .custom-featured-collection-head{padding-bottom:30px;}
+    .custom-featured-collection .custom-featured-collection-head .head{font-size:45px;}
+    
+      .custom-featured-collection .custom-featured-collection-main .owl-nav button.owl-prev{left:-45px;}
+    .custom-featured-collection .custom-featured-collection-main .owl-nav button.owl-next{right:-45px;}
+  }
+  @media(max-width:767px){
+    .custom-featured-collection .custom-featured-collection-head .head{font-size:30px;}
+    .custom-featured-collection .custom-featured-collection-head .text{font-size:16px;}
+    }
+    @media(max-width:575px){
+    .custom-featured-collection .custom-featured-collection-head .head{font-size:25px;}
+    .custom-featured-collection .page-width{padding:0 15px;}
+    
+    .custom-featured-collection .custom-featured-collection-main{padding:0 35px;}
+    .custom-featured-collection .custom-featured-collection-main .owl-nav button.owl-prev{left:-10px;}
+    .custom-featured-collection .custom-featured-collection-main .owl-nav button.owl-next{right:-10px;}
+    }
+</style>
+
+<section class="custom-featured-collection" id="custom-featured-collection-{{ section.id }}">
+<div class="page-width">
+  <div class="custom-featured-collection-head">
+    {% if section.settings.head != blank %}
+      <h1 class="head">{{ section.settings.head }}</h1>
+      {% endif %}
+      {% if section.settings.text != blank %}
+      <div class="text">{{ section.settings.text }}</div>
+      {% endif %}
+  </div>
+  <div class="custom-featured-collection-main owl-carousel">
+    {%- for product in section.settings.collection.products limit: 8 -%}
+      <div class="custom-featured-collection-slide">
+      {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: "adapt",
+              show_secondary_image: false,
+              show_vendor: false,
+              show_rating: false,
+              show_quick_add: false,
+              section_id: section.id
+            %}
+      </div>
+      {% endfor %}
+      
+      
+  </div>
+  {% if section.settings.btn != blank and section.settings.btnurl != blank %}
+<div class="custom-featured-collection-btn">
+  <a class="button btn_green" href="{{ section.settings.btnurl }}">{{ section.settings.btn }}</a>
+</div>
+    {% endif %}
+  
+</div>
+</section>
+
+{% schema %}
+  {
+    "name": "Featured Collection2",
+    "settings": [
+    {
+      "type":"text",
+      "id":"head",
+      "label":"Heading"
+    },
+      {
+      "type":"richtext",
+      "id":"text",
+      "label":"Text"
+    },
+     {
+      "type":"collection",
+      "id":"collection",
+      "label":"Colllection"
+    },
+      {
+      "type":"text",
+      "id":"btn",
+      "label":"Button Label",
+        "default":"VIEW ALL RESOURCES"
+    },
+    {
+      "type":"url",
+      "id":"btnurl",
+      "label":"Url to Navigate",
+      "default":"/"
+    },
+     {
+      "type":"image_picker",
+      "id":"back",
+      "label":"Background Image"
+    }
+    ],
+    "presets":[
+{ "name":"Featured Collection2"}
+    
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

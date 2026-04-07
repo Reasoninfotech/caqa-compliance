@@ -1,0 +1,70 @@
+{% comment %} <section class="default-pdf-section"
+style="background:url(https://vetsector.com.au/wp-content/uploads/2022/06/Rectangle-6-copy-2.png); background-size: contain; background-repeat: no-repeat;"> {% endcomment %}
+<section class="default-pdf-section">
+  <div class="container">
+    <h1 class="text-center section_title">
+        {% if section.settings.head != blank %}{{ section.settings.head }}{% endif %} {% if section.settings.subhead != blank %}<span>{{ section.settings.subhead }}</span>{% endif %} </h1>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="owl-carousel magazines-slider">
+                {% for article in section.settings.blog.articles reversed limit: 8 %}
+                <div class="default-magazines-box">
+                    <a href="{{ article.url }}">
+                        <figure class="pdf_hover">
+                            <img width="100%" src="{{ article.image.src | img_url:"master" }}" />
+                        </figure>
+                    </a>
+                    <div class="magazines-bottom-section">
+                        <div class="magazines-text">
+                            <p>{{ article.title }}</p>
+                            <a href="{{ article.url }}">Read More ➙</a>
+                        </div>
+                    </div>
+                </div>   
+                {% endfor %}
+            </div>
+          {% if section.settings.btn != blank and section.settings.url != blank %}
+            <center><a href="{{ section.settings.url }}" class=" button btn_blue">{{ section.settings.btn }}</a></center>
+          {% endif %}              
+        </div>
+    </div>
+</div>
+</section>
+
+{% schema %}
+{
+"name": "Custom E_PDF",
+"settings": [
+{
+"type":"text",
+"id":"subhead",
+"label":"Sub Heading"
+},
+{
+"type":"text",
+"id":"head",
+"label":"Heading"
+},
+{
+"type":"text",
+"id":"btn",
+"label":"Button Label"
+},
+{
+"type":"url",
+"id":"url",
+"label":"Url to Navigate"
+},
+{
+"type":"blog",
+"id":"blog",
+"label":"Blog"
+}
+],
+"presets":[
+{
+"name":"Custom E_PDF"
+}
+]
+}
+{% endschema %}

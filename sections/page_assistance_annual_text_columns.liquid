@@ -1,0 +1,131 @@
+<style>
+  .temp_assistance_annual .bread_crumb figure img{display: none;}
+  .temp_assistance_annual .bread_crumb figure figcaption{background:linear-gradient(45deg, #022259, #022259, #002b91, #001a58, #007fba)}
+
+  .page_annual_text_columns{}
+  .page_annual_text_columns .page_annual_text_row{display:flex;flex-wrap:wrap;background-image:url(https://cdn.shopify.com/s/files/1/0619/9531/9474/files/clip_group_c26da346-55cd-4f0c-aed1-8dff841333c1.png);background-size:contain;background-repeat:no-repeat}
+  .page_annual_text_columns .left_block{width:50%;padding:50px 50px 130px;}
+  .page_annual_text_columns .left_block .content_wrap{}
+  .page_annual_text_columns .left_block .title{margin:0 0 30px;font-weight:400;max-width:350px;color:#fff}
+  .page_annual_text_columns .left_block .subtitle{margin:0 0 30px;font-size:24px;line-height:normal;max-width:270px;color:#fff}
+  .page_annual_text_columns .left_block .rte{max-width: 240px;letter-spacing: 0px;line-height: normal;color:#fff;font-weight:300}
+
+  .page_annual_text_columns .right_block{width:50%;padding:50px;display:flex;align-items:center}
+  .page_annual_text_columns .right_block .content_wrap{max-width:700px}
+  .page_annual_text_columns .right_block .title{margin:0;color:#01a10b}
+  .page_annual_text_columns .right_block .rte{margin:0;line-height:27px;font-size:20px}
+  .page_annual_text_columns .right_block .rte a{word-break: break-all;}
+
+
+  @media screen and (max-width:1400px){
+    .page_annual_text_columns .right_block .rte{line-height:27px;font-size:16px}
+  }
+
+  @media screen and (max-width:1300px){
+    .page_annual_text_columns .right_block{align-items:end;justify-content:flex-end;}
+    .page_annual_text_columns .right_block .content_wrap{max-width:400px;}
+    .page_annual_text_columns .right_block .rte{font-size:14px;line-height:22px}
+    .page_annual_text_columns .right_block .title{font-size: 24px;}
+  }
+
+  @media screen and (max-width:991px){
+    .page_annual_text_columns .page_annual_text_row{background-size:850px}
+    .page_annual_text_columns .left_block{width:100%;padding:50px 50px 130px;}
+    .page_annual_text_columns .left_block .title{font-size:34px}
+    .page_annual_text_columns .left_block .subtitle{font-size:20px;}
+
+    .page_annual_text_columns .right_block{width:100%;padding:0 25px 50px;margin-top:-90px}
+
+  }
+
+  @media screen and (max-width:768px){
+    .page_annual_text_columns .page_annual_text_row{background-size:710px}
+    .page_annual_text_columns .left_block{width:100%;padding:40px 30px 100px;}
+    .page_annual_text_columns .left_block .title{font-size:24px;max-width:280px;margin-bottom:20px}
+    .page_annual_text_columns .left_block .subtitle{font-size:16px;max-width:200px;margin-bottom:20px}
+    .page_annual_text_columns .left_block .rte{font-size:14px;max-width:220px}
+
+    .page_annual_text_columns .right_block{width:100%;padding:0 25px 50px;margin-top:-50px}
+    .page_annual_text_columns .right_block .title {font-size: 20px;}
+    .page_annual_text_columns .right_block .content_wrap{letter-spacing:0;max-width:350px}
+
+  }
+
+  @media screen and (max-width:575px){
+    .page_annual_text_columns .right_block{margin-top:50px}
+  }
+</style>
+<section class="page_annual_text_columns">
+  <div class="page_annual_text_row">
+    <div class="left_block">
+      <div class="content_wrap">
+        {% if section.settings.l_title != blank %}
+          <h1 class="title">{{ section.settings.l_title }}</h1>
+        {% endif %}
+        {% if section.settings.l_subTitle != blank %}
+          <h2 class="subtitle">{{ section.settings.l_subTitle }}</h2>
+        {% endif %}
+        {% if section.settings.l_desc %}
+          <div class="rte">{{ section.settings.l_desc }}</div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="right_block">
+      <div class="content_wrap">
+        {% if section.settings.r_title != blank %}
+          <h1 class="title">{{ section.settings.r_title }}</h1>
+        {% endif %}
+        {% if section.settings.r_desc %}
+          <div class="rte">{{ section.settings.r_desc }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Annual Text Column",
+  "settings": [
+    {
+      "type":"header",
+      "content":"Left Block"
+    },
+    {
+      "type":"html",
+      "id":"l_title",
+      "label":"Title",
+      "info":"For strong text add <strong></strong>"
+    },
+    {
+      "type":"text",
+      "id":"l_subTitle",
+      "label":"Subtitle"
+    },
+    {
+      "type":"richtext",
+      "id":"l_desc",
+      "label":"Description"
+    },
+    {
+      "type":"header",
+      "content":"Right Block"
+    },
+    {
+      "type":"text",
+      "id":"r_title",
+      "label":"Title"
+    },
+    {
+      "type":"richtext",
+      "id":"r_desc",
+      "label":"Description"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

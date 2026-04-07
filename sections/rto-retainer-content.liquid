@@ -1,0 +1,62 @@
+{% style %}
+  .rto-patten-content{padding:0px 0px 52px;}
+  .rto-patten-content .rto-patten-block{padding:15px 0px; background:#01a10b;}
+  .rto-patten-content .rto-patten-block h3{font-size: 18px;color: #ffffff;font-weight: 700;text-align: center;}
+  .rto-patten-content .rto-patten-block p{font-size: 14px;color: #ffffff;font-weight: 700;text-align: center;margin-bottom: 0px;}
+  .rto-patten-content .rto-content{padding:20px 0px;}
+  .rto-patten-content .rto-content h4{font-size: 16px; color: #193ed6; font-weight: 600;}
+  .rto-patten-content .rto-content p{font-size: 14px;color: #000000;font-weight: 600;margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #ccc;}
+  .rto-patten-content .rto-content p:last-child{border-bottom:0px;}
+{% endstyle %}
+
+<div class="rto-patten-content">
+  <div class="rto-patten-block">
+    <div class="page-width">
+      {% if section.settings.text != blank %}
+        <h3>{{ section.settings.text }}</h3>
+      {% endif %}
+      {% if section.settings.sub_text != blank %}
+        <p>{{ section.settings.sub_text }}</p>
+      {% endif %}
+    </div>
+  </div>
+  <div class="rto-content">
+    <div class="page-width">
+      {{ section.settings.content }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "RTO Retainer Content",
+  "settings": [
+    {
+      "type":"text",
+      "id":"text",
+      "label":"Text"
+    },
+    {
+      "type":"text",
+      "id":"sub_text",
+      "label":"Sub Text"
+    },
+    {
+      "type":"html",
+      "id":"content",
+      "label":"Content"
+    }
+  ],
+  "presets":[
+    {
+      "name":"RTO Retainer Content"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

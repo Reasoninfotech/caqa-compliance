@@ -1,0 +1,41 @@
+{{ 'services-inner.css' | asset_url | stylesheet_tag }}
+<style>
+  #MainContent .page-width, #MainContent .page-width-desktop{max-width:1190px;}
+</style>
+{% render 'bread_crumb' back_img:section.settings.bread_crumb_back, title:section.settings.bread_title %}
+
+<div class="page-width">
+<br><br>
+{{ page.content }}  
+<!-- <iframe class="mj-w-res-iframe" style="color: #000;" src="https://app.mailjet.com/widget/iframe/3RXf/Kx7" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> -->
+<script type="text/javascript" src="https://app.mailjet.com/statics/js/iframeResizer.min.js"></script>
+</div>
+
+{% schema %}
+{
+"name": "Free QWebinar CAQA",
+"settings": [
+    {
+"type":"image_picker",
+"id":"bread_crumb_back",
+"label":"Title Background image"
+},
+{
+"type":"text",
+"id":"bread_title",
+"label":"Page title"
+}
+],
+"presets":[
+{
+"name":"Free QWebinar CAQA"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

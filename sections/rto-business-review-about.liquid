@@ -1,0 +1,144 @@
+{% style %}
+  .RTO_Business_About .rto_about_content figure{position:relative;}
+  .RTO_Business_About .rto_about_content img{max-width:1000px;}
+  .RTO_Business_About .rto_about_content figcaption{position: absolute;font-size: 34px;line-height: 50px;color: #ffffff;font-weight: 700;top: 50px;left:50px;max-width: 350px;}
+  .RTO_Business_About .rto_txt{padding:20px 0px;}
+  .RTO_Business_About .rto_txt p{font-size: 16px;color: #01a10b;font-weight: 600;}
+  .RTO_Business_About .rto_about_block{display:flex; flex-wrap:wrap;gap:30px;}
+  .RTO_Business_About .rto_about_block .rto_block{width:calc(50% - 15px);}
+  .RTO_Business_About .rto_about_block .rto_block.full_block{width:100%;}
+  .RTO_Business_About .rto_about_block .rto_block figure{margin:0px; padding:0px; display:flex; flex-wrap:wrap; gap:20px;}
+  .RTO_Business_About .rto_about_block .rto_block figure img{width:80px; object-fit:contain;object-position: top;}
+  .RTO_Business_About .rto_about_block .rto_block figure figcaption{width:calc(100% - 100px);}
+  .RTO_Business_About .rto_bottom_content{padding:50px 0px;}
+  .RTO_Business_About .rto_bottom_content h4{font-size: 16px;letter-spacing: 3px;color: #01a10b;font-weight: 600;margin-bottom:15px;}
+  .RTO_Business_About .rto_bottom_content > div{border-radius: 7px; padding:20px; background-color: #c9fff4;}
+  .RTO_Business_About .rto_bottom_content ul{column-count:2;}
+
+  @media screen and (max-width: 991px){
+    .RTO_Business_About .rto_about_content figcaption{font-size: 28px;line-height: 38px;max-width: 290px;top:30px;left:30px;}
+    .RTO_Business_About .rto_about_block .rto_block figure img {width: 60px;}
+    .RTO_Business_About .rto_about_block .rto_block figure figcaption {width: calc(100% - 80px);}
+  }
+
+  @media screen and (max-width: 767px){
+    .RTO_Business_About .rto_about_content figcaption{font-size: 18px;line-height: 28px;max-width: 190px;top:15px;left:15px}
+    .RTO_Business_About .rto_about_content img {max-width: 500px;}
+    .RTO_Business_About .rto_about_block .rto_block{width:100%;}
+    .RTO_Business_About .rto_about_block{gap:10px;}
+    .RTO_Business_About .rto_bottom_content ul {column-count: 1;}
+  }
+
+  @media screen and (max-width: 575px){
+    .RTO_Business_About .rto_about_content figure {position: relative;display: flex;flex-wrap: wrap;flex-direction: column-reverse;}
+    .RTO_Business_About .rto_about_content figcaption {position: relative;color: #173d96;left: 0;top: 0;max-width: 100%;margin-bottom:15px;}
+    .RTO_Business_About .rto_txt p{font-size:14px;}
+  }
+{% endstyle %}
+
+<div class="RTO_Business_About">
+  <div class="page-width">
+    {% if section.settings.img != blank %}
+      <div class="rto_about_content">
+        <figure>
+          <img width="100%" src="{{ section.settings.img | img_url : "master" }}">
+          {% if section.settings.text != blank -%}
+            <figcaption>{{ section.settings.text }}</figcaption>
+          {%- endif %}
+        </figure>
+      </div>
+    {% endif %}
+    {% if section.settings.content != blank %}
+    <div class="rto_txt">{{ section.settings.content }}</div>
+    {% endif %}  
+    <div class="rto_about_block">
+      {% for block in section.blocks %}
+        {% if block.settings.img != blank and block.settings.text != blank %}
+          <div class="rto_block{% if block.settings.full_width %} full_block{% endif %}">
+            <figure>
+              <img width="100%" src="{{ block.settings.img | img_url : "master" }}">
+              <figcaption>{{ block.settings.text }}</figcaption>
+            </figure>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% if section.settings.bottom_text != blank and section.settings.bottom_content != blank %}
+      <div class="rto_bottom_content">
+        <h4>{{ section.settings.bottom_text }}</h4>
+        <div>{{ section.settings.bottom_content }}</div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "RTO Business About",
+  "settings": [
+    {
+      "type":"image_picker",
+      "id":"img",
+      "label":"Image"
+    },
+    {
+      "type":"text",
+      "id":"text",
+      "label":"Title"
+    },
+    {
+      "type":"html",
+      "id":"content",
+      "label":"Content"
+    },
+    {
+      "type":"header",
+      "content":"Bottom Text"
+    },
+    {
+      "type":"text",
+      "id":"bottom_text",
+      "label":"Title"
+    },
+    {
+      "type":"html",
+      "id":"bottom_content",
+      "label":"Content"
+    }
+  ],
+  "blocks":[
+    {
+        "name":"Image Text",
+        "type":"text",
+        "settings":[
+          {
+            "type":"image_picker",
+            "id":"img",
+            "label":"Image"
+          },
+          {
+            "type":"richtext",
+            "id":"text",
+            "label":"Text"
+          },
+          {
+            "type":"checkbox",
+            "id":"full_width",
+            "label":"Full Block"
+          }
+        ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"RTO Business About"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

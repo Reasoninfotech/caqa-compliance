@@ -1,0 +1,84 @@
+{{ 'component-retainer-services.css' | asset_url | stylesheet_tag }}
+{% render 'bread_crumb' back_img:section.settings.bread_crumb_back, title:section.settings.bread_title %}
+
+<section class="retainer-services">
+  <div class="page-width">
+    <div class="retainer_block">
+      {% for title in page.metafields.services.title %}
+      {% assign i = forloop.index0 %}
+      {% if page.metafields.services.title[i] != blank and page.metafields.services.icon[i] != blank %}
+      <div class="ct-fancy-box" data-wow-delay="ms">
+        <a href="#{{ page.metafields.services.title[i] | lowercase | replace : " ", "-" }}">
+          <div class="item--icon"><img src="{{ page.metafields.services.icon[i] }}"></div>
+          <div class="item--holder">
+            <h3 class="item--title">{{ page.metafields.services.title[i] }}</h3>          
+          </div>
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>    
+
+    <div class="retainer_content">
+      {% for title in page.metafields.services.title %}
+      {% assign i = forloop.index0 %}
+      {% if page.metafields.services.title[i] != blank and page.metafields.services.content[i] != blank %}
+      <div id="{{ page.metafields.services.title[i] | lowercase | replace : " ", "-" }}" class="retainer_txt">
+        <div class="ct-title"><h3><span>{{ page.metafields.services.title[i] }}</span><i></i></h3></div>
+        {{ page.metafields.services.content[i] }}
+      </div>
+      {% endif %}
+      {% endfor %}
+
+
+      {% if section.settings.contact_desc != blank %}
+      <div class="retainer_contact_block">
+        {% if section.settings.contact_img != blank %}<div class="retainer_contact_icon"><img src="{{ section.settings.contact_img | img_url:'100x' }}"></div>{% endif %}
+        <div class="retainer_contact_desc">
+          {% if section.settings.contact_title != blank %}
+            <h3 class="retainer_contact_title">{{ section.settings.contact_title }}</h3>
+          {% endif %}
+          <div class="retainer_contact_content">
+            {{ section.settings.contact_desc }}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>  
+</section>
+
+
+{% schema %}
+{
+"name": "Retainer Services",
+"settings": [
+{
+"type":"image_picker",
+"id":"bread_crumb_back",
+"label":"Title Background image"
+},
+{
+"type":"text",
+"id":"bread_title",
+"label":"Page title"
+},
+{
+"type":"image_picker",
+"id":"contact_img",
+"label":"Contact icon"
+},
+{
+"type":"text",
+"id":"contact_title",
+"label":"Contact title"
+},
+{
+"type":"richtext",
+"id":"contact_desc",
+"label":"Contact Description"
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,114 @@
+{% style %}
+  
+  #sec__{{ section.id }}{ background-color:{{ section.settings.bg_color }}; }
+  .image_text_section{padding:50px 0;}
+  .image_text_section .image-text-heading{max-width: 650px;margin-bottom: 30px;}
+  .image_text_section .image-text-heading h2{font-size: 27px;color: #ffffff;font-weight: 600;}
+  .image_text_section .image-text-description {font-size: 14px;color: #ffffff;line-height: 20px;margin-bottom: 25px;}
+  .image_text_section .image-text-block{display:flex;flex-wrap:wrap;}
+  .image_text_section .image_text_left{width:40%;padding-right:15px;}
+  .image_text_section figure{margin-bottom: 15px;}
+  .image_text_section figure img{max-width:100%;}
+  .image_text_section .image_text_left_des{font-size: 15px;line-height: 20px;color: #ffffff;font-weight: 200;}
+  .image_text_section .image_text_left_des strong{font-weight: 700;}
+  .image_text_section .image_text_right{width:60%;font-size: 15px;line-height: 18px;color: #ffffff;font-weight: 200;padding-left:15px;}
+  .image_text_section .image_text_right strong{font-weight: 500;color:#ffff00;}
+  .image_text_section .image_text_right ul{list-style-type: none;display: flex;flex-direction: column;gap: 10px;}
+  .image_text_section .image_text_right ul li{padding-left:20px;position: relative;}
+  .image_text_section .image_text_right ul li:after{content:"";height:10px;width:10px;position:absolute;top:2px;left:0;background-image:url('https://cdn.shopify.com/s/files/1/0619/9531/9474/files/Path.svg');background-repeat:no-repeat;background-size:contain;}
+
+
+  @media screen and (max-width:990px){
+    .image_text_section .image_text_left{width:100%;padding-right:0;}
+    .image_text_section .image_text_right{width:100%;padding-left:0;}
+
+    .image_text_section .image-text-heading h2{font-size:21px;}
+  }
+
+  @media screen and (max-width:768px){
+    .image_text_section{padding:30px 0;}
+  }
+
+  @media screen and (max-width:575px){
+    .image_text_section .image-text-heading h2 {font-size: 17px;}
+    .image_text_section .image_text_left_des {font-size: 14px;}
+    .image_text_section .image_text_right {font-size: 14px;}
+  }
+  {{ section.settings.cus_css }}
+{% endstyle %}
+<div class="image_text_section {{ section.settings.cus_class }}" id="sec__{{ section.id }}">
+  <div class="page-width">
+     {% if section.settings.heading != blank %}  <div class="image-text-heading"><h2>{{ section.settings.heading }}</h2></div>  {% endif %}
+     {% if section.settings.description != blank %}  <div class="image-text-description">{{ section.settings.description }}</div>  {% endif %}
+    <div class="image-text-block">
+      <div class="image_text_left">
+        {% if section.settings.image != blank %}
+            <figure>
+              <img src="{{ section.settings.image | img_url:"master" }}">
+            </figure>
+        {% endif %}
+        {% if section.settings.left_description != blank %}<div class="image_text_left_des rte">{{ section.settings.left_description }}</div>{% endif %}
+      </div>
+      {% if section.settings.right_description != blank %}<div class="image_text_right rte">{{ section.settings.right_description }}</div>{% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image Text Section",
+    "settings": [
+      {
+        "type":"color",
+        "id":"bg_color",
+        "label":"Background Color"
+      },
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"heading"
+      },
+      {
+        "type":"richtext",
+        "id":"description",
+        "label":"Description"
+      },
+      {
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },
+      {
+        "type":"richtext",
+        "id":"left_description",
+        "label":"Left Description"
+      },
+      {
+        "type":"richtext",
+        "id":"right_description",
+        "label":"Right Description"
+      },
+      {
+        "type":"text",
+        "id":"cus_class",
+        "label":"Custom Class"
+      },
+      {
+        "type":"html",
+        "id":"cus_css",
+        "label":"Custom CSS"
+      }
+    ],
+    "presets":[
+      {
+        "name":"Image Text Section"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

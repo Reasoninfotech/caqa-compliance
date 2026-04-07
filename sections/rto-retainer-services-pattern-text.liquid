@@ -1,0 +1,103 @@
+{% style %}
+    .rto-patten-text{padding:52px 0px;}
+    .rto-patten-text .rto-patten-block{display:flex;flex-wrap: wrap;align-items: center;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt, .rto-patten-text .rto-patten-block .rto-content{width:50%;}
+    .rto-patten-text .rto-patten-block .rto-content{padding:15px;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt{position:relative;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt figure{margin:0px;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt figure img{vertical-align: bottom;min-height:400px; object-position: right;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt .rto-content{position: absolute;top: 50%;left: 0px;transform: translateY(-50%);}
+    .rto-patten-text .rto-patten-block .rto-patten-txt .rto-content h4{font-size: 44px;line-height: 41px;text-transform: uppercase;color: #01a10b;font-weight: 800;margin-bottom: 0px;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt .rto-content h2{font-size: 100px;line-height: 100px;text-transform: uppercase;color: #112a88; font-weight: 800; text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;}
+
+  @media screen and (max-width:1200px){
+    .rto-patten-text .rto-patten-block .rto-patten-txt .rto-content h2 {font-size: 85px;line-height: 85px;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt .rto-content h4 {font-size: 35px;line-height: 35px;}
+  }
+
+  @media screen and (max-width:991px){
+    .rto-patten-text{padding-bottom:0px;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt, .rto-patten-text .rto-patten-block .rto-content{width:100%;}
+    .rto-patten-text .rto-patten-block > .rto-content{padding: 20px 0px 0px;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt figure img{min-height:250px;}
+  }
+
+  @media screen and (max-width:767px){
+    .rto-patten-text .rto-patten-block .rto-patten-txt .rto-content h4{max-width: 50%;}
+  }
+
+  @media screen and (max-width:480px){
+    .rto-patten-text{padding: 20px 0px 0px;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt .rto-content h4 {font-size: 22px;line-height: 22px;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt .rto-content h2 {font-size: 50px;line-height: 50px;}
+    .rto-patten-text .rto-patten-block .rto-patten-txt figure img{min-height:200px;}
+  }
+{% endstyle %}
+
+<div class="rto-patten-text">
+  <div class="page-width">
+    <div class="rto-patten-block">
+      {% if section.settings.heading != blank %}
+        <div class="rto-patten-txt">
+          <figure>
+            <img
+              width="100%"
+              src="https://cdn.shopify.com/s/files/1/0619/9531/9474/files/back_patten_c0064d93-ca67-4a83-aea1-98f46828aadd.png"
+            >
+          </figure>
+          <div class="rto-content">
+            <h2>{{ section.settings.heading }}</h2>
+            <h4>{{ section.settings.sub_heading }}</h4>
+          </div>
+        </div>
+      {% endif %}
+      <div class="rto-content">
+        {% if section.settings.text != blank -%}
+          <p>
+            <b>{{ section.settings.text }}</b>
+          </p>
+        {%- endif %}
+        {{ section.settings.content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "RTO Patten Text",
+  "settings": [
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Heading"
+      },
+      {
+        "type":"text",
+        "id":"sub_heading",
+        "label":"Sub Heading"
+      },
+      {
+        "type":"text",
+        "id":"text",
+        "label":"Text"
+      },
+      {
+        "type":"html",
+        "id":"content",
+        "label":"Content"
+      }
+  ],
+  "presets":[
+    {
+      "name":"RTO Patten Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,25 @@
+{% render 'bread_crumb' back_img:section.settings.bread_crumb_back, title:section.settings.bread_title %}
+
+{% schema %}
+{
+"name": "Single Services",
+"settings": [
+{
+"type":"image_picker",
+"id":"bread_crumb_back",
+"label":"Title Background image"
+},
+{
+"type":"text",
+"id":"bread_title",
+"label":"Page title"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

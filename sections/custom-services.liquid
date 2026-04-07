@@ -1,0 +1,134 @@
+<style>
+  .services-slider{margin-top:-160px;padding:30px 0;overflow:hidden}
+  .services-slider .services-slider-head{position:relative;padding-right:200px;}
+  .services-slider .services-slider-head .head{font-size:60px;display:block;margin-bottom:5px;}
+  .services-slider .services-slider-head .text{font-size:18px;line-height:normal;font-weight:400;color:#5A5B5F;}
+
+  .services-slider .services-slider-head .services-slider_nav{position:absolute;right:0;bottom:0;z-index:1;}
+  .services-slider .services-slider-head .services-slider_nav button{background:rgba(217, 220, 227, 1);border:none;border-radius:15px;color:white;padding:20px 25px;}
+  .services-slider .services-slider-head .services-slider_nav button.ser_prev svg{transform: rotate(90deg);}
+  .services-slider .services-slider-head .services-slider_nav button.ser_next svg{transform: rotate(270deg);}
+  .services-slider .services-slider-head .services-slider_nav button svg{width:25px;}
+
+  .services-slider .services-slider-main{padding-top:40px;}
+
+  .services-slider .services-slider-main.owl-carousel .owl-stage-outer{overflow:unset}
+  .services-slider .services-slider-main.owl-carousel .owl-stage{display:flex;}
+
+  .services-slider .services-slider-main .services-slide{width:100%;padding:20px 0;height:100%}
+  .services-slider .services-slider-main .services-slide figure{display: flex;flex-direction: column;height: 100%;box-shadow: 0px 4px 23px -3px #00000026;border-radius: 20px;overflow:hidden}
+  .services-slider .services-slider-main .services-slide figure a{display:flex}
+  .services-slider .services-slider-main .services-slide img{max-height:240px;object-fit:cover;}
+  .services-slider .services-slider-main .services-slide figcaption{padding:30px;text-align:left;}
+  .services-slider .services-slider-main .services-slide figcaption .head{font-size:22px;line-height:normal;font-weight: 600;color:inherit;margin-bottom:10px}
+  .services-slider .services-slider-main .services-slide figcaption .text{font-size:17px;line-height:normal;color:#5A5B5F;}
+
+
+  @media(max-width:1200px){
+    .services-slider .services-slider-main .services-slide figcaption{padding:15px;}
+  }
+  @media(max-width:991px){
+    .services-slider .services-slider-head .head{font-size:45px;}
+    .services-slider .services-slider-head .text{font-size:15px;}
+    .services-slider .services-slider-head .services-slider_nav button{padding:15px 20px;}
+  .services-slider .services-slider-main .services-slide figcaption .head{font-size:18px;}
+    .services-slider .services-slider-main .services-slide figcaption .text{font-size:15px;}
+  }
+  @media(max-width:767px){
+    .services-slider .services-slider-head .head{font-size:35px;}
+    .services-slider .services-slider-head{padding-right:0;padding-bottom:60px;}
+    .services-slider .services-slider-head .services-slider_nav button{padding:8px 18px;}
+    .services-slider .services-slider-head .services-slider_nav button svg{width:18px}
+    .services-slider .services-slider-head .services-slider_nav{left:0;right:auto;}
+  }
+  @media(max-width:575px){
+    .services-slider .services-slider-main{padding-top:25px;}
+  }
+</style>
+
+<section class="services-slider" id="services-slider-{{ section.id }}">
+  <div class="page-width">
+    <div class="services-slider-head">
+      {% if section.settings.head != blank %}
+        <h1 class="head">{{ section.settings.head }}</h1>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <div class="text">{{ section.settings.text }}</div>
+      {% endif %}
+
+      <div class="services-slider_nav">
+        <button class="ser_prev">{% render 'icon-caret' %}</button>
+        <button class="ser_next">{% render 'icon-caret' %}</button>
+      </div>
+    </div>
+
+    <div class="services-slider-main owl-carousel">
+      {% for block in section.blocks %}
+        {% if block.settings.page != blank %}
+          <div class="services-slide">
+            <figure>
+              <a href="{{ block.settings.page.url }}">
+                <img src="{{ block.settings.page.metafields.page.bread_crumb_image | img_url:"master" }}">
+              </a>
+              <figcaption>
+                <a href="{{ block.settings.page.url }}" class="head">{{ block.settings.page.title | truncate: 50 }}</a>
+                <div class="text">{{ block.settings.page.content | strip_html | truncatewords: 10 }}</div>
+              </figcaption>
+            </figure>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  jQuery(document).ready(function($) {
+      $(document).on("click",".services-slider .services-slider-head .services-slider_nav .ser_prev",function(){
+        $(this).parents(".services-slider").find(".services-slider-main .owl-nav .owl-prev").trigger("click");
+      });
+    $(document).on("click",".services-slider .services-slider-head .services-slider_nav .ser_next",function(){
+        $(this).parents(".services-slider").find(".services-slider-main .owl-nav .owl-next").trigger("click");
+      });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Services Slider",
+  "settings": [
+      {
+        "type":"text",
+        "id":"head",
+        "label":"Heading"
+      },
+      {
+        "type":"richtext",
+        "id":"text",
+        "label":"Text"
+      }
+    ],
+    "blocks":[
+        {
+        "type":"text",
+        "name":"Services",
+          "settings":[
+            {
+              "type":"page",
+              "id":"page",
+              "label":"Select Page"
+            }
+        ]
+    }
+  ],
+  "presets":[
+    {"name":"Services Slider"}
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,121 @@
+{% render 'bread_crumb' back_img:section.settings.bread_crumb_back, title:section.settings.bread_title %} 
+<style>
+  .about_us_template{padding:60px 0}
+  .about_us_template .about_us_template-row{display:flex;flex-wrap: wrap}
+  .about_us_template .text_block{width:50%;padding:15px}
+  .about_us_template .img_block{width:50%;padding:15px}
+  .about_us_template .img_block img{max-width:100%;max-height:100%}
+  .about_us_template .desc{font-size:18px;line-height:34px;letter-spacing:0px}
+  .about_us_template a{text-decoration:none;color:#018c0b}
+  .about_us_template .bottom_desc{padding:15px}
+  .about_us_template .bottom_bar{display: flex;align-items:center;margin:75px 15px 15px;padding:23px 59px;background-color:#018c0b;font-size:18px;border-radius:7px}
+  .about_us_template .bottom_bar strong{font-size:22px;padding-right:5px;}
+  .about_us_template .bottom_bar > div{flex-grow:1;margin-right:30px;color:#fff;margin-top:10px;margin-bottom:10px}
+  .about_us_template .bottom_bar .btn{padding: 0 42px;line-height: 55px;font-size: 15px;font-weight:600;color:#0e0e0e;background-color:#fff;display: flex;align-items:center;justify-content:center;border-radius:5px;transition:0.2s;margin:10px 0}
+  .about_us_template .bottom_bar .btn:hover{background:linear-gradient(90deg,#0b57e3 0%,#214ebd);color:#fff;background-repeat:no-repeat}
+  .about_us_template .bottom_bar .btn svg{height:18px;width:18px;margin-right:10px;transition:0.2s}
+  .about_us_template .bottom_bar .btn:hover svg{fill:#fff}
+  
+  @media screen and (max-width:1200px){
+    .about_us_template .bottom_bar{padding:23px 30px;}
+    .about_us_template .desc{font-size:16px;line-height:28px}
+  }
+  
+  @media screen and (max-width:991px){
+    .about_us_template .page-width{padding:0}
+    .about_us_template .bottom_bar{flex-direction:column;align-items: flex-start}
+  }
+  @media screen and (max-width:768px){
+    .about_us_template{padding:20px 0}
+    .about_us_template .text_block{width:100%}
+    .about_us_template .img_block{width:100%}
+    .about_us_template .bottom_bar .btn{background:linear-gradient(90deg,#0b57e3 0%,#214ebd);color:#fff;background-repeat:no-repeat}
+    .about_us_template .bottom_bar .btn svg{fill:#fff}
+  }
+  
+</style>
+<section class="about_us_template">
+  <div class="page-width">
+    <div class="about_us_template-row">
+      <div class="text_block">
+        <div class="blocks_title">
+          {% if section.settings.subtitle != blank %}<span>{{ section.settings.subtitle }}</span>{% endif %}
+          {% if section.settings.title != blank %}<h2>{{ section.settings.title }}</h2>{% endif %}
+        </div>
+        {% if section.settings.desc != blank %}
+        <div class="desc rte">{{ section.settings.desc }}</div>
+        {% endif %}
+      </div>
+      {% if section.settings.img != blank %}
+      <div class="img_block">
+        <img src="{{ section.settings.img | img_url:'500x' }}">
+      </div>
+      {% endif %}
+    </div>
+    {% if section.settings.btm_desc != blank %}
+    <div class="desc rte bottom_desc">{{ section.settings.btm_desc }}</div>
+    {% endif %}
+    {% if section.settings.btm_bar != blank %}
+    <div class="bottom_bar">
+      <div class="rte">{{ section.settings.btm_bar }}</div>
+      {% if section.settings.btm_bar_link != blank %}
+      <a href="{{ section.settings.btm_bar_link }}" target="_blank" class="btn">{% render 'icon-download' %} Download</a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "About us",
+    "settings": [
+		{
+			"type":"image_picker",
+			"id":"bread_crumb_back",
+			"label":"Title Background image"
+		},
+		{
+			"type":"text",
+			"id":"subtitle",
+			"label":"Block subtitle"
+		},
+		{
+			"type":"text",
+			"id":"title",
+			"label":"Block Title"
+		},
+		{
+			"type":"richtext",
+			"id":"desc",
+			"label":"Block Description"
+		},
+		{
+			"type":"image_picker",
+			"id":"img",
+			"label":"Block Image"
+		},
+		{
+			"type":"richtext",
+			"id":"btm_desc",
+			"label":"Bottom Description"
+		},
+		{
+			"type":"richtext",
+			"id":"btm_bar",
+			"label":"Bottom Bar"
+		},
+		{
+			"type":"url",
+			"id":"btm_bar_link",
+			"label":"Bottom Bar link",
+			"info":"Get PDF link from files and Paste here"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

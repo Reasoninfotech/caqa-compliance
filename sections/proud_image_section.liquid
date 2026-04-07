@@ -1,0 +1,134 @@
+{% style %}
+  .image_section{padding:50px 0;}
+  .image_section .image_section_title{margin-bottom:50px;text-align:center;}
+  .image_section .images-section__images{display:flex;flex-wrap:wrap;gap:50px;justify-content: center;}
+  .image_section .images-section__images figure{margin:0;width:300px;background-color:#fff;padding:20px;border-radius:20px;display: flex;align-items: center;justify-content: center;height:135px;}
+  .image_section .images-section__images img {max-width:100%;max-height:100%;}
+
+  @media screen and (max-width:768px){
+  .image_section{padding:35px 0;}
+  .image_section .image_section_title{margin-bottom:30px;}
+    .image_section .images-section__images figure{min-width: 170px; width:170px;}
+    .image_section .images-section__images{gap:30px}
+    .image_section .images-section__images img{max-height:50px; object-fit:contain;}
+  }
+
+  @media screen and (max-width:575px){
+    .image_section .images-section__images {gap: 20px;}
+    .image_section .images-section__images figure {min-width: 135px;width: 128px;height: auto;}
+  }
+
+  .left__imges____{position:relative;}
+  .left__imges____:before{content: "";background-image: url(https://cdn.shopify.com/s/files/1/0514/9605/9035/files/Shape_1_copy_8_3.png);background-repeat: no-repeat;position: absolute;bottom: 0;left: 0;z-index: -99999;margin-bottom: -9%;height: 449px;width:164px;background-size: contain;}
+
+  @media screen and (max-width:768px){
+    .left__imges____:after{height: 500px;width: 225px;}
+  }
+
+  @media screen and (max-width:575px){
+    .left__imges____:after{height: 500px;width: 150px;}
+  }
+
+  {{ section.settings.css }}
+{% endstyle %}
+<div class="image_section {{ section.settings.class }}">
+  <div class="page-width">
+    <h1 class="image_section_title section_title">{{ section.settings.text }}</h1>
+    <div class="images-section__images">
+      {% if section.settings.six_img != blank %}
+        <figure>
+          <img src="{{ section.settings.six_img | img_url:"master" }}">
+        </figure>
+      {% endif %}
+      {% if section.settings.fir_img != blank %}
+        <figure>
+          <img src="{{ section.settings.fir_img | img_url:"master" }}">
+        </figure>
+      {% endif %}
+      {% if section.settings.sec_img != blank %}
+        <figure>
+          <img src="{{ section.settings.sec_img | img_url:"master" }}">
+        </figure>
+      {% endif %}
+      {% if section.settings.thr_img != blank %}
+        <figure>
+          <img src="{{ section.settings.thr_img | img_url:"master" }}">
+        </figure>
+      {% endif %}
+      {% if section.settings.fou_img != blank %}
+        <figure>
+          <img src="{{ section.settings.fou_img | img_url:"master" }}">
+        </figure>
+      {% endif %}
+      {% if section.settings.fiv_img != blank %}
+        <figure>
+          <img src="{{ section.settings.fiv_img | img_url:"master" }}">
+        </figure>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Proud Image Section",
+  "settings": [
+    {
+      "type":"text",
+      "id":"text",
+      "label":"Title"
+    },
+    {
+      "type":"image_picker",
+      "id":"fir_img",
+      "label":"First Img"
+    },
+    {
+      "type":"image_picker",
+      "id":"sec_img",
+      "label":"Second Img"
+    },
+    {
+      "type":"image_picker",
+      "id":"thr_img",
+      "label":"Third Img"
+    },
+    {
+      "type":"image_picker",
+      "id":"fou_img",
+      "label":"forth Img"
+    },
+    {
+      "type":"image_picker",
+      "id":"fiv_img",
+      "label":"Fifth Img"
+    },
+    {
+      "type":"image_picker",
+      "id":"six_img",
+      "label":"Six Img"
+    },
+    {
+      "type":"text",
+      "id":"class",
+      "label":"Custom CSS Class"
+    },
+    {
+      "type":"html",
+      "id":"css",
+      "label":"Custom CSS"
+    }
+  ],
+  "presets":[
+    {
+      "name":"Proud Image Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

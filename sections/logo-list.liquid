@@ -1,0 +1,114 @@
+{{ 'component-logo-list.css' | asset_url | stylesheet_tag }}
+{% if section.blocks.size %}
+<section class="logo_list">
+  <div class="page-width">
+      <div class="logo_slider owl-carousel">
+        {%- for block in section.blocks -%}
+          {% if block.settings.image != blank and block.settings.url != blank %}
+          <div>
+            <figure>
+              <a href="{{ block.settings.url }}" target="_blank">
+                <img width="100%" src="{{ block.settings.image | img_url : "master" }}">
+              </a>
+            </figure>
+          </div>
+        {% endif %}
+          
+          {% if block.settings.image2 != blank and block.settings.url2 != blank %}
+          <div>
+            <figure>
+              <a href="{{ block.settings.url2 }}" target="_blank">
+                <img width="100%" src="{{ block.settings.image2 | img_url : "master" }}">
+              </a>
+            </figure>
+          </div>
+        {% endif %}
+          
+          {% if block.settings.image3 != blank and block.settings.url3 != blank %}
+          <div>
+            <figure>
+              <a href="{{ block.settings.url3 }}" target="_blank">
+                <img width="100%" src="{{ block.settings.image3 | img_url : "master" }}">
+              </a>
+            </figure>
+          </div>
+        {% endif %}
+        {%- endfor -%}
+      </div>
+  </div>      
+</section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Logo List",
+    "settings": [    
+    ],
+    "blocks": [
+      {
+        "type": "column",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Logo Image1"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Logo Images"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Logo Url"
+          },
+          {
+            "type": "header",
+            "content": "Logo Image2"
+          },
+          {
+            "type": "image_picker",
+            "id": "image2",
+            "label": "Logo Images"
+          },
+          {
+            "type": "url",
+            "id": "url2",
+            "label": "Logo Url"
+          },
+          {
+            "type": "header",
+            "content": "Logo Image3"
+          },
+          {
+            "type": "image_picker",
+            "id": "image3",
+            "label": "Logo Images"
+          },
+          {
+            "type": "url",
+            "id": "url3",
+            "label": "Logo Url"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Logo List",
+        "blocks": [
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

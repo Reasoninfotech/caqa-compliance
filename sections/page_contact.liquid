@@ -1,0 +1,328 @@
+{{ 'tellinput.css' | asset_url | stylesheet_tag }}
+<style>
+  .contact_page{ padding:50px 0px; }
+
+    .contact_page .sec-subhead{position:relative;padding-bottom:8px;width:fit-content;font-weight: 400;font-size: 18px;margin-bottom: 10px;}
+    .contact_page .sec-subhead::after{content: "";position: absolute;bottom: 0;left: 0;width: 100%;height: 4px;background-color: #0d3ea7;}
+    .contact_page .head{margin-bottom:45px;}
+    .contact_page .head span.blue{color:#193f97;}
+
+  .contact_page .contact_page-main{display:flex;align-items:center;}
+  .contact_page .contact_page-main .contact_page-content{width:50%;padding-right:50px;}
+    .contact_page .contact_page-main .contact_page-content iframe{width:100%;height:400px;}
+
+  .contact_page .contact_page-main .contact_page-content .head{font-size:60px;line-height:60px; margin-bottom:20px;color:white;padding-right:55px;}
+  .contact_page .contact_page-main .contact_page-content .text{font-size:18px;line-height:26px; margin-bottom:30px;}
+  .contact_page .contact_page-main .contact_page-content .btns a{padding:25px 55px;border-radius:50px;}
+
+  .contact_page .contact_page-main .contact_page-form{width:50%;}
+  .contact_page .contact_page-main .contact_page-form .heading{font-size:50px;}
+  .contact_page .contact_page-main .contact_page-form .contact__form_block{width:100%;}
+  .contact_page .contact_page-main .contact_page-form form .contact__fields1{display:flex;}
+  .contact_page .contact_page-main .contact_page-form form .contact__fields1 .field1{width:50%;}
+  .contact_page .contact_page-main .contact_page-form form .field1{padding:4px 8px 4px 0;}
+  .contact_page .contact_page-main .contact_page-form form .contact__fields1 input,.contact_page .contact_page-main .contact_page-form form  textarea{padding:18px 30px;border: none;border-radius: 50px;background:#F0F1F3;width:100%;outline:unset;box-shadow:none;}
+  .contact_page .contact_page-main .contact_page-form form  textarea{border-radius:20px;}
+  .contact_page .contact_page-main .contact_page-form form .contact__fields1 input#ContactForm-phone{padding-left:50px;}
+  .contact_page .contact_page-main .contact_page-form form .contact__button .button{margin-top:5px;font-weight: 600;padding: 25px 75px;border-radius: 50px;}
+
+  .contact_page .contact_page-main form label{display:none;}
+
+  .contact_page .contact-medium-block{display:flex;padding:70px 0 0;flex-wrap:wrap;}
+  .contact_page .contact-medium-block .contact-medium-box{width:33.33%;display:flex;justify-content:center;}
+  .contact_page .contact-medium-block .contact-medium-box .medium-icon{display:inline-block;margin-right:15px;}
+  .contact_page .contact-medium-block .contact-medium-box .medium-icon svg{width:50px;height:50px;fill:#193f97;}
+    .contact_page .contact-medium-block .contact-medium-box .medium-text p{margin:0;}
+  .iti__flag {background-image: url(//cdn.shopify.com/s/files/1/0762/4343/5832/t/1/assets/flags.png);}
+
+  @media screen and (max-width:1440px){
+  .contact_page .contact_page-main .contact_page-content{padding-right:20px;}
+    }
+  @media screen and (max-width:991px){
+    .contact_page .contact_page-main{flex-direction:column;}
+  .contact_page .contact_page-main .contact_page-content{width:100%;margin-bottom: 30px;padding: 0;}
+    .contact_page .contact_page-main .contact_page-form{width:100%;}
+    .contact_page .contact-medium-block .contact-medium-box .medium-icon svg{width:35px;height:35px;}
+  }
+    @media(max-width:767px){
+      .contact_page .contact-medium-block .contact-medium-box{width:50%;padding:20px;justify-content:start;}
+    }
+  @media screen and (max-width:575px){
+    .contact_page .head{margin-bottom:30px;}
+    .contact_page .contact_page-main .contact_page-content iframe{height:350px;}
+    .contact_page .contact_page-main .contact_page-form form .contact__fields1{flex-direction:column;}
+    .contact_page .contact_page-main .contact_page-form form .contact__fields1 .field1{width:100%;}
+    .contact_page .contact-medium-block{padding:45px 0 0;}
+    .contact_page .contact-medium-block .contact-medium-box{width:100%;}
+  }
+</style>
+
+<section class="contact_page">
+  <div class="page-width">
+    {% if section.settings.subhead != blank %}
+      <h4 class="sec-subhead">
+        {{ section.settings.subhead }}
+      </h4>
+    {% endif %}
+    {% if section.settings.head != blank %}
+      <div class="head">
+        {{ section.settings.head }}
+      </div>
+    {% endif %}
+    <div class="contact_page-main">
+      {% if section.settings.map != blank %}
+        <div class="contact_page-content">
+          {{ section.settings.map }}
+        </div>
+      {% endif %}
+
+      <div class="contact_page-form">
+        <div class="contact__form_row">
+          <div class="contact__form_block">
+            {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+              {%- if form.posted_successfully? -%}
+                <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+                  {% render 'icon-success' %}
+                  {{ 'templates.contact.form.post_success' | t }}
+                </h2>
+              {%- elsif form.errors -%}
+                <div class="form__message">
+                  <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+                    {% render 'icon-error' %}
+                    {{ 'templates.contact.form.error_heading' | t }}
+                  </h2>
+                </div>
+                <ul class="form-status-list caption-large" role="list">
+                  <li>
+                    <a href="#ContactForm-email" class="link">
+                      {{ form.errors.translated_fields.email | capitalize }}
+                      {{ form.errors.messages.email }}
+                    </a>
+                  </li>
+                </ul>
+              {%- endif -%}
+              <div class="contact__fields1">
+                <div class="field1">
+                  <input
+                    class="field__input1"
+                    autocomplete="name"
+                    type="text"
+                    id="ContactForm-name"
+                    name="contact[{{ 'templates.contact.form.name' | t }}]"
+                    value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                    placeholder="Name*"
+                    required
+                  >
+                  <label class="field__label" for="ContactForm-name">
+                    {{- 'templates.contact.form.name' | t }}
+                    <span aria-hidden="true">*</span></label
+                  >
+                </div>
+                <div class="field1 field--with-error">
+                  <input
+                    autocomplete="email"
+                    type="email"
+                    id="ContactForm-email"
+                    class="field__input1"
+                    name="contact[email]"
+                    spellcheck="false"
+                    autocapitalize="off"
+                    value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                    aria-required="true"
+                    {% if form.errors contains 'email' %}
+                      aria-invalid="true"
+                      aria-describedby="ContactForm-email-error"
+                    {% endif %}
+                    placeholder="Email*"
+                    required
+                  >
+                  <label class="field__label" for="ContactForm-email">
+                    {{- 'templates.contact.form.email' | t }}
+                    <span aria-hidden="true">*</span></label
+                  >
+                  {%- if form.errors contains 'email' -%}
+                    <small class="contact__field-error" id="ContactForm-email-error">
+                      <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                      <span class="form__message">
+                        {%- render 'icon-error' -%}
+                        {{- form.errors.translated_fields.email | capitalize }}
+                        {{ form.errors.messages.email -}}
+                      </span>
+                    </small>
+                  {%- endif -%}
+                </div>
+              </div>
+              <div class="contact__fields1">
+                <div class="field1">
+                  <input
+                    type="tel"
+                    id="ContactForm-phone"
+                    class="field__input1"
+                    autocomplete="tel"
+                    name="contact[{{ 'templates.contact.form.phone' | t }}]"
+                    pattern="[0-9\-]*"
+                    value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                    placeholder="Phone*"
+                    required
+                  >
+                  <label class="field__label" for="ContactForm-phone">
+                    {{- 'templates.contact.form.phone' | t }}
+                    <span aria-hidden="true">*</span></label
+                  >
+                </div>
+                <div class="field1">
+                  <input
+                    type="text"
+                    id="ContactForm-subject"
+                    class="field__input1"
+                    autocomplete="off"
+                    name="contact[Subject]"
+                    placeholder="Subject"
+                  >
+                  <label class="field__label" for="ContactForm-phone">Subject <span aria-hidden="true">*</span></label>
+                </div>
+              </div>
+              <div class="field1">
+                <textarea
+                  rows="5"
+                  id="ContactForm-body"
+                  class="text-area field__input1"
+                  name="contact[{{ 'templates.contact.form.comment' | t }}]"
+                  placeholder="Comment or Message"
+                >
+                {{- form.body -}}
+              </textarea>
+                <label class="form__label field__label" for="ContactForm-body">
+                  {{- 'templates.contact.form.comment' | t -}}
+                </label>
+              </div>
+              <div class="contact__button">
+                <button type="submit" class="button btn_blue">SUBMIT</button>
+              </div>
+            {%- endform -%}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-medium-block">
+      {% for block in section.blocks %}
+        {% if block.settings.text != blank %}
+          <div class="contact-medium-box">
+            <span class="medium-icon">
+              {% if block.settings.icon == 'location' %}
+                {% render 'icon-location' %}
+              {% elsif block.settings.icon == 'mail' %}
+                {% render 'icon-mail' %}
+              {% else %}
+                {% render 'icon-phone' %}
+              {% endif %}
+            </span>
+            <div class="medium-text-main">
+              <h3 class="medium-text-head">
+                {{ block.settings.head }}
+              </h3>
+              <div class="medium-text">
+                {{ block.settings.text }}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<script src="{{ 'tellinput.js' | asset_url }}"></script>
+<script>
+  var input = document.querySelector("#ContactForm-phone");
+  window.intlTelInput(input, {
+    // allowDropdown: false,
+    // autoInsertDialCode: true,
+    // autoPlaceholder: "off",
+    dropdownContainer: document.body,
+    // excludeCountries: ["us"],
+    // formatOnDisplay: false,
+    geoIpLookup: callback => {
+      fetch("http://ip-api.com/json")
+        .then(res => res.json())
+        .then(data => callback(data.countryCode))
+        .catch(() => callback("us"));
+    },
+    // hiddenInput: "full_number",
+    // initialCountry: "auto",
+    localizedCountries: { 'au': 'Australia' },
+    // nationalMode: false,
+    // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+    // placeholderNumberType: "MOBILE",
+    preferredCountries: ['au'],
+    // separateDialCode: true,
+    utilsScript: "{{ 'utils.js' | asset_url }}",
+  });
+</script>
+<script src="{{ 'utils.js' | asset_url }}"></script>
+{% schema %}
+{
+"name": "Contact Us",
+"tag": "section",
+"class": "section",
+"settings": [
+{
+"type": "text",
+"id": "subhead",
+"label": "Sub Heading"
+},
+{
+"type": "html",
+"id": "head",
+"label": "Heading"
+},
+{
+"type": "html",
+"id": "map",
+"label": "Map Iframe"
+}
+],
+"blocks":[
+{
+  "type":"text",
+  "name":"Icon with Text",
+  "settings":[
+    {
+      "type":"select",
+      "id":"icon",
+      "label":"Icon",
+      "options":[
+      {
+        "label":"Location",
+        "value":"location"
+      },
+      {
+        "label":"Mail",
+        "value":"mail"
+      },
+      {
+        "label":"Phone",
+        "value":"phone"
+      }
+      ],
+      "default":"location"
+    },
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ]
+}
+],
+"presets": [
+{
+"name": "Contact Us"
+}
+]
+}
+{% endschema %}

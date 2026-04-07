@@ -1,0 +1,59 @@
+<div class="bread_crumb">
+  <figure>
+    {% if back_img != blank %}
+      <img src="{{ back_img | img_url:'1500x' }}">
+    {% else %}
+      <img src="https://cdn.shopify.com/s/files/1/0619/9531/9474/files/about-us-01.jpg?v=1656676817">
+    {% endif %}
+    <figcaption>
+      {% if title != blank -%}
+        <h1>{{ title }}</h1>
+      {%- else %}
+        {% if page.title != blank %}
+          <h1>{{ page.title }}</h1>
+        {% elsif template == 'blog' %}
+          <h1>{{ blog.title }}</h1>
+        {% elsif template == 'article' %}
+          <h1>{{ article.title }}</h1>
+        {% endif %}
+      {%- endif %}
+      <nav role="breadcrumbs" aria-label="breadcrumbs">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/" title="Home">Home</a></li>
+          {% if template contains 'page' %}
+            <li class="breadcrumb-item">{{ page.title }}</li>
+          {% elsif template contains 'product' %}
+            {% for collection in product.collections %}
+              {% if forloop.first %}
+                <li class="breadcrumb-item">{{ collection.title }}</li>
+              {% endif %}
+            {% endfor %}
+            <li class="breadcrumb-item active">{{ product.title }}</li>
+          {% elsif template contains 'collection' and collection.handle %}
+            {% if current_tags %}
+              {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+              <li class="breadcrumb-item">{{ collection.title | link_to: url }}</li>
+              <li class="breadcrumb-item active">{{ current_tags | join: ' + ' }}</li>
+            {% else %}
+              <li class="breadcrumb-item active">{{ collection.title }}</li>
+            {% endif %}
+          {% elsif template == 'blog' %}
+            {% if current_tags %}
+              <li class="breadcrumb-item">{{ blog.title | link_to: blog.url }}</li>
+              <li class="breadcrumb-item active">{{ current_tags | join: ' + ' }}</li>
+            {% else %}
+              <li class="breadcrumb-item active">{{ blog.title }}</li>
+            {% endif %}
+          {% elsif template contains 'article' %}
+            <li class="breadcrumb-item">{{ blog.title | link_to: blog.url }}</li>
+            <li class="breadcrumb-item active">{{ article.title | escape | truncatewords: 6 }}</li>
+          {% elsif template == 'search' %}
+            <li class="breadcrumb-item active">Search</li>
+          {% else %}
+            <li class="breadcrumb-item active">{{ page_title }}</li>
+          {% endif %}
+        </ol>
+      </nav>
+    </figcaption>
+  </figure>
+</div>

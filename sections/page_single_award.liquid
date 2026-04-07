@@ -1,0 +1,34 @@
+<style>
+  .main_award{padding:30px 0}
+  .main_award .rte img {border:0px !important}
+</style>
+{% assign image = section.settings.bread_crumb_back %}
+{% if page.metafields.page.bread_crumb_image != blank %}
+{% assign image = page.metafields.page.bread_crumb_image %}
+{% endif %}
+{% render 'bread_crumb' back_img:image, title:section.settings.bread_title %}
+<section class="main_award">
+  <div class="page-width">
+    <div class="rte">
+      {{ page.content }}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Page single_award",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"bread_crumb_back",
+        "label":"Title Background image"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

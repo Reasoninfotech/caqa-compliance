@@ -1,0 +1,80 @@
+{% style %}
+  #sec__{{ section.id }}{background-color:{{ section.settings.bg_color }};padding:50px 0;margin-top: -413px;z-index: 1;position: relative;}
+  .three-image-section .three-image-main{display:flex;flex-wrap:wrap;gap:30px;}
+  .three-image-section .three-image-block{width:calc(33.33% - 20px);background-color:#f2f2f2;padding:20px;}
+  .three-image-section .three-image-block figure{margin:0;text-align:center;}
+  .three-image-section .three-image-block figure img{max-width:100%;max-height:150px;min-height:88px;}
+  .three-image-section .three-image-block .three-image-block_des{font-size:18px;line-height:28px;text-align:center;}
+
+
+   @media screen and (max-width:1200px){
+    .three-image-section .three-image-block .three-image-block_des {font-size: 17px;line-height: 23px;}
+    .three-image-section .three-image-block{width:100%;}
+    #sec__{{ section.id }}{margin-top:0;}
+
+  }
+
+  @media screen and (max-width:768px){
+  #sec__{{ section.id }}{padding:30px 0;}
+  }
+
+  @media screen and (max-width:575px){
+    .three-image-section .three-image-block .three-image-block_des {font-size: 14px;line-height: 20px;}
+    .three-image-section .three-image-main{gap:20px;}
+  }
+{% endstyle %}
+<div class="three-image-section" id="sec__{{ section.id }}">
+  <div class="page-width">
+    <div class="three-image-main">
+      {% for block in section.blocks %}
+        <div class="three-image-block">
+          <figure>
+            <img src="{{ block.settings.image | img_url:"master" }}">
+          </figure>
+          <div class="three-image-block_des">{{ block.settings.des }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Three Image Section",
+  "settings": [
+    {
+      "type":"color",
+      "id":"bg_color",
+      "label":"background Color"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"text",
+      "name":"text",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image"
+        },
+        {
+          "type":"richtext",
+          "id":"des",
+          "label":"Description"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"Three Image Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

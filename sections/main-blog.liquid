@@ -1,0 +1,280 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+.section-{{ section.id }}-padding {
+padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+
+@media screen and (min-width: 750px) {
+.section-{{ section.id }}-padding {
+padding-top: {{ section.settings.padding_top }}px;
+padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+}
+{%- endstyle -%}
+
+{% render 'bread_crumb' back_img:blog.metafields.custom.heading_image %}
+
+{%- paginate blog.articles by 20 -%}
+<div class="main-blog page-width section-{{ section.id }}-padding">
+  <div class="blog-content">
+    <div class="blog-left">
+      <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+        {%- for article in blog.articles -%}
+        <div class="blog-articles__article article">
+          {%- render 'article-card',
+            article: article,
+          media_height: section.settings.image_height,
+          media_aspect_ratio: article.image.aspect_ratio,
+          show_image: section.settings.show_image,
+          show_date: section.settings.show_date,
+          show_author: section.settings.show_author,
+          show_excerpt: false 
+          -%}
+        </div>
+        {%- endfor -%}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    </div>
+    <div class="blog-right">
+      {% include 'blog-sidebar' %}
+    </div>
+  </div>
+</div>
+{%- endpaginate -%}
+
+{% if section.settings.author_img != blank and section.settings.author_title != blank %}
+<div class="modal fade author_popup" id="AuthorModal" tabindex="-1" aria-labelledby="AuthorModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="position: absolute;right: 10px;top: 10px;z-index: 2;"></button>
+      <div class="modal-body p-5 text-center">
+        <figure><img src="{{ section.settings.author_img | img_url : "master" }}" alt="" width="150" height="150"></figure>
+        <h2>{{ section.settings.author_title }}</h2>
+        <h4 class="mb-3">{{ section.settings.author_sub_title }}</h4>
+        {{ section.settings.author_content }}        
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+{
+"name": "t:sections.main-blog.name",
+"tag": "section",
+"class": "section",
+"settings": [
+{
+"type": "header",
+"content": "t:sections.main-blog.settings.header.content"
+},
+{
+"type": "select",
+"id": "layout",
+"options": [
+{
+"value": "grid",
+"label": "t:sections.main-blog.settings.layout.options__1.label"
+},
+{
+"value": "collage",
+"label": "t:sections.main-blog.settings.layout.options__2.label"
+}
+],
+"default": "collage",
+"label": "t:sections.main-blog.settings.layout.label",
+"info": "t:sections.main-blog.settings.layout.info"
+},
+{
+"type": "checkbox",
+"id": "show_image",
+"default": true,
+"label": "t:sections.main-blog.settings.show_image.label"
+},
+{
+"type": "select",
+"id": "image_height",
+"options": [
+{
+"value": "adapt",
+"label": "t:sections.main-blog.settings.image_height.options__1.label"
+},
+{
+"value": "small",
+"label": "t:sections.main-blog.settings.image_height.options__2.label"
+},
+{
+"value": "medium",
+"label": "t:sections.main-blog.settings.image_height.options__3.label"
+},
+{
+"value": "large",
+"label": "t:sections.main-blog.settings.image_height.options__4.label"
+}
+],
+"default": "medium",
+"label": "t:sections.main-blog.settings.image_height.label",
+"info": "t:sections.main-blog.settings.image_height.info"
+},
+{
+"type": "checkbox",
+"id": "show_date",
+"default": true,
+"label": "t:sections.main-blog.settings.show_date.label"
+},
+{
+"type": "checkbox",
+"id": "show_author",
+"default": false,
+"label": "t:sections.main-blog.settings.show_author.label"
+},
+{
+"type": "paragraph",
+"content": "t:sections.main-blog.settings.paragraph.content"
+},
+{
+"type": "header",
+"content": "t:sections.all.padding.section_padding_heading"
+},
+{
+"type": "range",
+"id": "padding_top",
+"min": 0,
+"max": 100,
+"step": 4,
+"unit": "px",
+"label": "t:sections.all.padding.padding_top",
+"default": 36
+},
+{
+"type": "range",
+"id": "padding_bottom",
+"min": 0,
+"max": 100,
+"step": 4,
+"unit": "px",
+"label": "t:sections.all.padding.padding_bottom",
+"default": 36
+},
+{
+"type": "header",
+"content": "Sidebar Config"
+},
+
+{
+"type": "header",
+"content": "Search"
+},
+{
+"type": "checkbox",
+"id": "enable_widget_search",
+"label": "Enable?",
+"default": true
+},
+{
+"type": "text",
+"id": "widget_search_title",
+"label": "Title Widget",
+"default": "Search"
+},
+{
+"type": "header",
+"content": "Widget Categories"
+},
+{
+"type": "checkbox",
+"id": "enable_widget_cate",
+"label": "Enable?",
+"default": true
+},
+{
+"type": "text",
+"id": "widget_cate_title",
+"label": "Title Widget",
+"default": "Categories"
+},
+{
+"type": "link_list",
+"id": "widget_cate_menu",
+"label": "Menu for Categories"
+},
+{
+"type": "header",
+"content": "Widget Related Post"
+},
+{
+"type": "checkbox",
+"id": "enable_widget_related",
+"label": "Enable?",
+"default": true
+},
+{
+"type": "text",
+"id": "widget_related_title",
+"label": "Title Widget",
+"default": "RECENT POSTS"
+},
+{
+"type": "blog",
+"id": "select_blog",
+"label": "Select Blog"
+},
+{
+"type": "range",
+"id": "blogs_limit",
+"label": "Limit blogs",
+"min": 2,
+"max": 50,
+"step": 1,
+"default": 5
+},
+{
+"type": "header",
+"content": "Tag"
+},
+{
+"type": "checkbox",
+"id": "enable_widget_tag",
+"label": "Enable?",
+"default": true
+},
+{
+"type": "text",
+"id": "shop_by_tag_title",
+"label": "Widget Title",
+"default": "Tags"
+},
+{
+"type": "header",
+"content": "Author Content"
+},
+{
+"type":"image_picker",
+"id":"author_img",
+"label":"Author Image"
+},
+{
+"type":"text",
+"id":"author_title",
+"label":"Title"
+},
+{
+"type":"text",
+"id":"author_sub_title",
+"label":"Text"
+},
+{
+"type":"html",
+"id":"author_content",
+"label":"Content"
+}
+]
+}
+{% endschema %}

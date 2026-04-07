@@ -1,0 +1,29 @@
+{% render 'bread_crumb' back_img:page.metafields.page.bread_crumb_image, title:page.title %}
+<div class="page_services">
+  <div class="page-width">
+    {% if page.metafields.page_service.title != blank %}
+    <div class="blocks_title">
+      {% if page.metafields.page_service.subtitle != blank %}<span>{{page.metafields.page_service.subtitle}}</span>{% endif %}
+      <h2>{{page.metafields.page_service.title}}</h2>
+    </div>
+    {% endif %}
+
+    
+    <div class="page_services_block_row">
+      {% for services in page.metafields.services_blocks.block %}
+      {% assign i = forloop.index0 %}
+      {% assign obj = page.metafields.services_blocks.block[i] %}
+      {% if pages[obj].metafields.page.bread_crumb_image != blank %}
+      <div class="page_services_block">
+        <a href="{{ pages[obj].url }}" class="img"><img src="{{ pages[obj].metafields.page.bread_crumb_image | img_url:'500x' }}"></a>
+        <div class="block_caption">
+          <a href="{{ pages[obj].url }}">{{ pages[obj].title }}</a>
+          <div>{{ pages[obj].content | strip_html | truncatewords: 10 }}</div>
+        </div>
+        <a href="{{ pages[obj].url }}" class="btn">Read More</a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

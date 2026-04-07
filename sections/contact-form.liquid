@@ -1,0 +1,299 @@
+{{ 'tellinput.css' | asset_url | stylesheet_tag }}
+<style>
+  .contact-form{background-repeat: no-repeat; background-size: contain; padding:245px 0px; }
+  .contact-form .contact-form-main{display:flex;align-items:center;}
+  .contact-form .contact-form-main .contact-form-content{width:50%;color:white;padding-right:80px;}
+  .contact-form .contact-form-main .contact-form-content .head{font-size:60px;line-height:60px; margin-bottom:20px;color:white;padding-right:55px;}
+  .contact-form .contact-form-main .contact-form-content .text{font-size:18px;line-height:26px; margin-bottom:30px;}
+  .contact-form .contact-form-main .contact-form-content .btns a{padding:25px 55px;border-radius:50px;}
+
+  .contact-form .contact-form-main .contact-form-form{width:50%;padding:30px 50px;background:white;border-radius:30px;}
+  .contact-form .contact-form-main .contact-form-form .heading{font-size:50px;}
+  .contact-form .contact-form-main .contact-form-form .contact__form_block{width:100%;}
+  .contact-form .contact-form-main .contact-form-form form .contact__fields1{display:flex;}
+  .contact-form .contact-form-main .contact-form-form form .contact__fields1 .field1{width:50%;}
+  .contact-form .contact-form-main .contact-form-form form .field1{padding:4px 8px 4px 0;}
+  .contact-form .contact-form-main .contact-form-form form .contact__fields1 input,.contact-form .contact-form-main .contact-form-form form  textarea{padding:18px 30px;border: none;border-radius: 50px;background:#F0F1F3;width:100%;outline:unset;box-shadow:none;}
+  .contact-form .contact-form-main .contact-form-form form  textarea{border-radius:20px;}
+  .contact-form .contact-form-main .contact-form-form form .contact__fields1 input#ContactForm-phone{padding-left:50px;}
+  .contact-form .contact-form-main .contact-form-form form .contact__button .button{margin-top:5px;font-weight: 600;padding: 25px 75px;border-radius: 50px;}
+  .iti__flag {background-image: url(//cdn.shopify.com/s/files/1/0762/4343/5832/t/1/assets/flags.png);}
+  .contact-form .contact-form-main form label{display:none;}
+
+
+  @media screen and (max-width:1800px){
+    .contact-form .contact-form-main .contact-form-content{max-width:575px;padding-right:50px;}
+    .contact-form .contact-form-main .contact-form-content .head{font-size:45px;line-height:45px;}
+    .contact-form .contact-form-main .contact-form-content .text{font-size:16px;line-height:22px; margin-bottom:20px;}
+
+    .contact-form .contact-form-main .contact-form-form{padding:30px}
+    .contact-form .contact-form-main .contact-form-form .heading{font-size:35px}
+    .contact-form .contact-form-main .contact-form-form form .contact__fields1 input, .contact-form .contact-form-main .contact-form-form form textarea{padding:15px 28px;}
+    .contact-form .contact-form-main .contact-form-form form .contact__button .button{padding:20px 60px;}
+  }
+  @media screen and (max-width:1600px){
+    .contact-form{background-position-x: left;background-size: cover;padding:265px 0;}
+    .contact-form .contact-form-main .contact-form-content .head{font-size:35px;line-height:35px;padding:0;}
+    .contact-form .contact-form-main .contact-form-content .btns a{padding:20px 35px;}
+  }
+  @media screen and (max-width:1440px){
+    .contact-form{padding:200px 0;}
+    }
+  @media screen and (max-width:991px){
+  .contact-form{padding:100px 0 120px;}
+    .contact-form .contact-form-main{flex-direction:column;}
+    .contact-form .contact-form-main .contact-form-content{max-width:100%;width:100%;padding:0 0 20px;}
+    .contact-form .contact-form-main .contact-form-form{width:100%;}
+  }
+  @media screen and (max-width:576px){
+    .contact-form .contact-form-main .contact-form-content .head{font-size:26px;line-height:30px;}
+    .contact-form .contact-form-main .contact-form-content .btns a {padding: 15px 22px;}
+    .contact-form .contact-form-main .contact-form-form{padding:20px;}
+    .contact-form .contact-form-main .contact-form-form .heading {font-size: 26px;line-height: 26px;}
+    .contact-form .contact-form-main .contact-form-form form .contact__fields1 {flex-direction: column;}
+    .contact-form .contact-form-main .contact-form-form form .contact__fields1 .field1{width:100%;}
+    .contact-form .contact-form-main .contact-form-form form .contact__button .button {padding: 15px 50px;}
+    .contact-form .contact-form-main .contact-form-form form .contact__fields1 input, .contact-form .contact-form-main .contact-form-form form textarea {padding: 12px 20px;}
+  }
+</style>
+
+<section
+  class="contact-form"
+  {% if section.settings.back_img != blank %}
+    style="background-image: url({{ section.settings.back_img | img_url:"master" }});"
+  {% endif %}
+>
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="contact-form-main">
+      <div class="contact-form-content">
+        {% if section.settings.head != blank %}
+          <h1 class="head">
+            {{ section.settings.head }}
+          </h1>
+        {% endif %}
+        {% if section.settings.text != blank %}
+          <div class="text">
+            {{ section.settings.text }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.btn != blank and section.settings.btnurl != blank %}
+          <div class="btns">
+            <a class="button btn_green" target="_blank" href="{{ section.settings.btnurl }}">
+              {{- section.settings.btn -}}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+      <div class="contact-form-form">
+        {%- if section.settings.formhead != blank -%}
+          <h2 class="heading">{{ section.settings.formhead }}</h2>
+        {%- endif -%}
+        <div class="contact__form_row">
+          <div class="contact__form_block">
+            {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+              {%- if form.posted_successfully? -%}
+                <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+                  {% render 'icon-success' %}
+                  {{ 'templates.contact.form.post_success' | t }}
+                </h2>
+              {%- elsif form.errors -%}
+                <div class="form__message">
+                  <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+                    {% render 'icon-error' %}
+                    {{ 'templates.contact.form.error_heading' | t }}
+                  </h2>
+                </div>
+                <ul class="form-status-list caption-large" role="list">
+                  <li>
+                    <a href="#ContactForm-email" class="link">
+                      {{ form.errors.translated_fields.email | capitalize }}
+                      {{ form.errors.messages.email }}
+                    </a>
+                  </li>
+                </ul>
+              {%- endif -%}
+              <div class="contact__fields1">
+                <div class="field1">
+                  <input
+                    class="field__input1"
+                    autocomplete="name"
+                    type="text"
+                    id="ContactForm-name"
+                    name="contact[{{ 'templates.contact.form.name' | t }}]"
+                    value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                    placeholder="Name"
+                    required
+                  >
+                  <label class="field__label" for="ContactForm-name">
+                    {{- 'templates.contact.form.name' | t }}
+                    <span aria-hidden="true">*</span></label
+                  >
+                </div>
+                <div class="field1 field--with-error">
+                  <input
+                    autocomplete="email"
+                    type="email"
+                    id="ContactForm-email"
+                    class="field__input1"
+                    name="contact[email]"
+                    spellcheck="false"
+                    autocapitalize="off"
+                    value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                    aria-required="true"
+                    {% if form.errors contains 'email' %}
+                      aria-invalid="true"
+                      aria-describedby="ContactForm-email-error"
+                    {% endif %}
+                    placeholder="Email"
+                    required
+                  >
+                  <label class="field__label" for="ContactForm-email">
+                    {{- 'templates.contact.form.email' | t }}
+                    <span aria-hidden="true">*</span></label
+                  >
+                  {%- if form.errors contains 'email' -%}
+                    <small class="contact__field-error" id="ContactForm-email-error">
+                      <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                      <span class="form__message">
+                        {%- render 'icon-error' -%}
+                        {{- form.errors.translated_fields.email | capitalize }}
+                        {{ form.errors.messages.email -}}
+                      </span>
+                    </small>
+                  {%- endif -%}
+                </div>
+              </div>
+              <div class="contact__fields1">
+                <div class="field1">
+                  <input
+                    type="tel"
+                    id="ContactForm-phone"
+                    class="field__input1"
+                    autocomplete="tel"
+                    name="contact[{{ 'templates.contact.form.phone' | t }}]"
+                    pattern="[0-9\-]*"
+                    value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                    placeholder="Phone"
+                    required
+                  >
+                  <label class="field__label" for="ContactForm-phone">
+                    {{- 'templates.contact.form.phone' | t }}
+                    <span aria-hidden="true">*</span></label
+                  >
+                </div>
+                <div class="field1">
+                  <input
+                    type="text"
+                    id="ContactForm-subject"
+                    class="field__input1"
+                    autocomplete="off"
+                    name="contact[Subject]"
+                    placeholder="Subject"
+                    required
+                  >
+                  <label class="field__label" for="ContactForm-subject"
+                    >Subject <span aria-hidden="true">*</span></label
+                  >
+                </div>
+              </div>
+              <div class="field1">
+                <textarea
+                  rows="5"
+                  id="ContactForm-body"
+                  class="text-area field__input1"
+                  name="contact[{{ 'templates.contact.form.comment' | t }}]"
+                  placeholder="Comment or Message"
+                >
+                {{- form.body -}}
+              </textarea>
+                <label class="form__label field__label" for="ContactForm-body">
+                  {{- 'templates.contact.form.comment' | t -}}
+                </label>
+              </div>
+              <div class="contact__button">
+                <button type="submit" class="button btn_blue">SUBMIT</button>
+              </div>
+            {%- endform -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="{{ 'tellinput.js' | asset_url }}"></script>
+<script>
+  var input = document.querySelector("#ContactForm-phone");
+  window.intlTelInput(input, {
+    // allowDropdown: false,
+    // autoInsertDialCode: true,
+    // autoPlaceholder: "off",
+    dropdownContainer: document.body,
+    // excludeCountries: ["us"],
+    // formatOnDisplay: false,
+    geoIpLookup: callback => {
+      fetch("http://ip-api.com/json")
+        .then(res => res.json())
+        .then(data => callback(data.countryCode))
+        .catch(() => callback("us"));
+    },
+    // hiddenInput: "full_number",
+    // initialCountry: "auto",
+    localizedCountries: { 'au': 'Australia' },
+    // nationalMode: false,
+    // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+    // placeholderNumberType: "MOBILE",
+    preferredCountries: ['au'],
+    // separateDialCode: true,
+    utilsScript: "{{ 'utils.js' | asset_url }}",
+  });
+</script>
+<script src="{{ 'utils.js' | asset_url }}"></script>
+{% schema %}
+{
+"name": "t:sections.contact-form.name",
+"tag": "section",
+"class": "section",
+"settings": [
+{
+"type":"image_picker",
+"id":"back_img",
+"label":"Backgorund Images"
+},
+{
+"type": "text",
+"id": "head",
+"label": "Heading"
+},
+{
+"type": "richtext",
+"id": "text",
+"label": "Text"
+},
+{
+"type": "text",
+"id": "btn",
+"label": "Button Label"
+},
+{
+"type": "url",
+"id": "btnurl",
+"label": "Url to Navigate"
+},
+{
+"type": "header",
+"content": "Contact Form"
+},
+{
+"type": "text",
+"id": "formhead",
+"label": "Form Heading"
+}
+],
+"presets": [
+{
+"name": "t:sections.contact-form.presets.name"
+}
+]
+}
+{% endschema %}

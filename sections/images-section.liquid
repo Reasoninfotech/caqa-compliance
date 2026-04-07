@@ -1,0 +1,61 @@
+{% style %}
+  #sec__{{ section.id }}{background-color:{{ section.settings.bg_color }};padding:50px 0;}
+  .images-section .images_section-block{display:flex;flex-wrap:wrap;}
+  .images-section figure{margin:0;width:100%;}
+  .images-section figure img{margin: 0 auto;max-width: 100%;display: flex;}
+
+  @media screen and (max-width:768px){
+    #sec__{{ section.id }}{padding:30px 0;}
+  }
+{% endstyle %}
+<div class="images-section" id="sec__{{ section.id }}">
+  <div class="page-width">
+      <div class="images_section-block">
+        {% for block in section.blocks %}
+          {% if block.settings.image != blank %}
+              <figure>
+                <img src="{{ block.settings.image | img_url:"master" }}">
+              </figure>
+          {% endif %}
+        {% endfor %}
+      </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Images section",
+    "settings": [
+      {
+        "type":"color",
+        "id":"bg_color",
+        "label":"backgroun Color"
+      }
+    ],
+    "blocks":[
+      {
+        "name":"Image Block",
+        "type":"image_picker",
+        "settings":[
+          {
+            "type":"image_picker",
+            "id":"image",
+            "label":"Image"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name":"Images"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,245 @@
+{% render 'bread_crumb', back_img: section.settings.bread_crumb_back, title: section.settings.bread_title %}
+<style>
+  .temp_our_consultants:not(body){padding:60px 0}
+  .temp_our_consultants .temp_our_consultants_title{display:flex;padding-bottom:80px;flex-wrap:wrap}
+  .temp_our_consultants .temp_our_consultants_title h2{font-size:36px;padding:15px;width:50%;margin:0}
+  .temp_our_consultants .temp_our_consultants_title .desc{width:50%;padding:15px;font-size:18px;line-height:34px}
+
+  .temp_our_consultants .temp_our_team_title{padding-bottom:50px;font-size:50px;margin:25px auto;text-align:center}
+  .temp_our_consultants_persons{display: flex;flex-wrap: wrap;max-width: 1360px;padding: 0 20px;margin: 0 auto;gap: 40px;}
+  .temp_our_consultants_persons .temp_our_consultants_person{width: calc(25% - 30px);}
+  
+  .temp_our_consultants_person .consultants_link{display: flex;height: 100%;align-items: center;flex-direction: column;color: inherit !important;text-align: center;text-decoration: none;}
+  .temp_our_consultants_person .consultants_link .consultants_img{width:100%;display:flex;}
+  .temp_our_consultants_person .consultants_link .consultants_img img{height:auto;max-width:100%;width:100%;}
+  .temp_our_consultants_person .consultants_link .consultants_name{margin-top:10px;font-size:22px;font-weight:600;line-height:normal;}
+  .temp_our_consultants_person .consultants_link .consultants_desig{margin-top:5px;line-height:normal;font-size:15px;}
+  .temp_our_consultants_person .consultants_info{position:fixed;top:0;left:0;height:100%;width:100%;background-color:#00000080;z-index:99999;display:none;cursor:pointer}
+  .temp_our_consultants_person .consultants_info .consultants_info_body{position: absolute;left:0;right:0;top:0;bottom:0;margin: auto;background-color: #FFF;max-height:90%;height:fit-content;max-width: 800px;width: 90%;display: flex;}
+  .temp_our_consultants_person .consultants_info .consultants_info_wrap{width:100%;overflow-y:auto;box-shadow: 0 11px 15px -7px rgb(0 0 0 / 20%), 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%);padding:25px;display:flex;flex-direction:column;align-items:center;cursor:auto}
+  .temp_our_consultants_person .consultants_info .consultants_info_wrap .consultants_img img{max-height:150px}
+  .temp_our_consultants_person .consultants_info .consultants_info_wrap .consultants_name{font-size:30px;line-height:normal;margin:10px 0;text-align:center}
+  .temp_our_consultants_person .consultants_info .consultants_info_wrap .consultants_desig{font-size:18px;line-height:normal;font-weight:600;margin-bottom:20px;text-align:center}
+  .temp_our_consultants_person .consultants_info .desc{font-size:15px;line-height:normal;text-align:left;width:100%}
+  .temp_our_consultants_person .consultants_info .close__btn{position: absolute;top: -10px;right: -10px;width: 35px;height: 35px;font-size: 0;cursor: pointer;text-decoration: none;text-align: center;line-height: 29px;fill: #fff;border-radius: 50px;background-color: rgb(0,0,0);border: 3px solid #fff;outline: none!important;display:flex;justify-content:center;align-items:center}
+  .temp_our_consultants_person .consultants_info .close__btn svg{width:19px;height:19px}
+
+  @media screen and (max-width:1200px){
+
+    .temp_our_consultants .temp_our_team_title{font-size:30px;}
+    
+    .temp_our_consultants .temp_our_consultants_title h2{font-size:30px;}
+    .temp_our_consultants .temp_our_consultants_title .desc{font-size:16px;line-height:30px}
+
+    .temp_our_consultants_person .consultants_link .consultants_name{font-size:18px;}
+    .temp_our_consultants_person .consultants_link .consultants_desig{font-size:14px;}
+  }
+  @media screen and (max-width:991px){
+    .temp_our_consultants .temp_our_consultants_title h2{font-size:25px;}
+    .temp_our_consultants .temp_our_consultants_title .desc{font-size:14px;line-height:25px}
+
+    .temp_our_consultants .temp_our_team_title{font-size:25px;}
+    .temp_our_consultants_persons .temp_our_consultants_person{width:calc(33.33% - 26.66px)}
+    .temp_our_consultants_person .consultants_link .consultants_name{font-size:16px;}
+    .temp_our_consultants_person .consultants_link .consultants_desig{font-size:12px;}
+    .temp_our_consultants_person .consultants_info .consultants_info_wrap .consultants_name{font-size:25px}
+    .temp_our_consultants_person .consultants_info .consultants_info_wrap .consultants_desig{font-size:16px;}
+  }
+
+  @media screen and (max-width:768px){
+    .temp_our_consultants{padding:30px 0}
+    .temp_our_consultants_persons{gap: 40px 30px;}
+    .temp_our_consultants_persons .temp_our_consultants_person{width: calc(50% - 15px);}
+    .temp_our_consultants .temp_our_consultants_title{padding-bottom:40px}
+    .temp_our_consultants .temp_our_consultants_title h2{width:100%}
+    .temp_our_consultants .temp_our_consultants_title .desc{font-size:16px;line-height:25px;width:100%}
+
+    .temp_our_consultants .temp_our_team_title{padding-bottom:40px;}
+    
+  }
+  @media screen and (max-width:575px){
+    .temp_our_consultants_persons .temp_our_consultants_person{width:50%}
+    .temp_our_consultants_person .consultants_info .consultants_info_wrap .consultants_name{font-size:20px}
+    .temp_our_consultants_person .consultants_info .consultants_info_wrap .consultants_desig{font-size:14px;}
+    .temp_our_consultants_person .consultants_info .desc{font-size:14px}
+  }
+  @media screen and (max-width:430px){
+    .temp_our_consultants_persons .temp_our_consultants_person{width:100%}
+  }
+</style>
+<section class="temp_our_consultants">
+  <div class="page-width">
+    <div class="temp_our_consultants_title">
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.desc != blank %}
+        <div class="desc rte">{{ section.settings.desc }}</div>
+      {% endif %}
+    </div>
+  </div>
+
+    <div class="temp_our_team">
+    {% if section.settings.our_team != blank %}
+       <h2 class="temp_our_team_title page-width">{{ section.settings.our_team }}</h2>
+    {% endif %}
+    <div class="temp_our_consultants_persons">
+    {% for i in page.metafields.our_team.image %}
+      {% assign index = forloop.index0 %}
+    {% endfor %}
+    {% for blocks in (0..index) %}
+      {% assign i = forloop.index0 %}
+      {% if page.metafields.our_team.image[i] != blank %}
+        <div class="temp_our_consultants_person">
+          <a href="javascript:void(0)" class="consultants_link">
+            <div class="consultants_img">
+              <img src="{{ page.metafields.our_team.image[i] }}">
+            </div>
+            {% if page.metafields.our_team.name[i] != blank %}
+              <span class="consultants_name">{{ page.metafields.our_team.name[i] }}</span>
+            {% endif %}
+            {% if page.metafields.our_team.desig[i] != blank %}
+              <span class="consultants_desig">{{ page.metafields.our_team.desig[i] }}</span>
+            {% endif %}
+          </a>
+          <div class="consultants_info">
+            <div class="consultants_info_body">
+              <a href="javascript:void(0)" class="close__btn">
+                <svg viewBox="0 0 1792 1792">
+                  <path d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z"></path>
+                </svg>
+              </a>
+              <div class="consultants_info_wrap">
+                <div class="consultants_img">
+                  <img src="{{ page.metafields.our_team.image[i] }}">
+                </div>
+                {% if page.metafields.our_team.name[i] != blank %}
+                  <span class="consultants_name">{{ page.metafields.our_team.name[i] }}</span>
+                {% endif %}
+                {% if page.metafields.our_team.desig[i] != blank %}
+                  <span class="consultants_desig">{{ page.metafields.our_team.desig[i] }}</span>
+                {% endif %}
+                {% if page.metafields.our_team.desc[i] != blank %}
+                  <div class="desc rte">{{ page.metafields.our_team.desc[i] }}</div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  </div>
+
+  <div class="temp_our_team">
+    {% if section.settings.our_consultants != blank %}
+       <h2 class="temp_our_team_title page-width">{{ section.settings.our_consultants }}</h2>
+    {% endif %}
+    <div class="temp_our_consultants_persons">
+    {% for i in page.metafields.our_consultants.image %}
+      {% assign index = forloop.index0 %}
+    {% endfor %}
+    {% for blocks in (0..index) %}
+      {% assign i = forloop.index0 %}
+      {% if page.metafields.our_consultants.image[i] != blank %}
+        <div class="temp_our_consultants_person">
+          <a href="javascript:void(0)" class="consultants_link">
+            <div class="consultants_img">
+              <img src="{{ page.metafields.our_consultants.image[i] }}">
+            </div>
+            {% if page.metafields.our_consultants.name[i] != blank %}
+              <span class="consultants_name">{{ page.metafields.our_consultants.name[i] }}</span>
+            {% endif %}
+            {% if page.metafields.our_consultants.desig[i] != blank %}
+              <span class="consultants_desig">{{ page.metafields.our_consultants.desig[i] }}</span>
+            {% endif %}
+          </a>
+          <div class="consultants_info">
+            <div class="consultants_info_body">
+              <a href="javascript:void(0)" class="close__btn">
+                <svg viewBox="0 0 1792 1792">
+                  <path d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z"></path>
+                </svg>
+              </a>
+              <div class="consultants_info_wrap">
+                <div class="consultants_img">
+                  <img src="{{ page.metafields.our_consultants.image[i] }}">
+                </div>
+                {% if page.metafields.our_consultants.name[i] != blank %}
+                  <span class="consultants_name">{{ page.metafields.our_consultants.name[i] }}</span>
+                {% endif %}
+                {% if page.metafields.our_consultants.desig[i] != blank %}
+                  <span class="consultants_desig">{{ page.metafields.our_consultants.desig[i] }}</span>
+                {% endif %}
+                {% if page.metafields.our_consultants.desc[i] != blank %}
+                  <div class="desc rte">{{ page.metafields.our_consultants.desc[i] }}</div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  </div>
+
+  
+  
+</section>
+<script>
+  $(document).ready(function(){
+    $('.temp_our_consultants_person .consultants_link').click(function(){
+      $(this).parent('.temp_our_consultants_person').find('.consultants_info').fadeIn(500);
+    });
+
+    $('.temp_our_consultants_person .consultants_info').click(function(){
+      $(this).fadeOut(500)
+    });
+    $('.temp_our_consultants_person .consultants_info .consultants_info_wrap').click(function(e){
+      e.stopPropagation();
+    });
+  });
+</script>
+{% schema %}
+ {
+   "name": "Our Consultants",
+   "settings": [
+	{
+		"type":"image_picker",
+		"id":"bread_crumb_back",
+		"label":"Title Background image"
+	},
+	{
+		"type":"text",
+		"id":"bread_title",
+		"label":"Page title"
+	},
+	{
+		"type":"text",
+		"id":"title",
+		"label":"Title"
+	},
+	{
+		"type":"richtext",
+		"id":"desc",
+		"label":"desc"
+	},
+     {
+        "type":"text",
+        "id":"our_team",
+        "label":"Team Title"
+    },
+    {
+      "type":"text",
+      "id":"our_consultants",
+      "label":"Consultant Title"
+    }
+]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

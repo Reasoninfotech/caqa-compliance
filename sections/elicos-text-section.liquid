@@ -1,0 +1,70 @@
+{% style %}
+  #sec__{{ section.id }}{min-height:750px;background-color:{{ section.settings.bg_color }};padding:50px 0;background-image:url('https://cdn.shopify.com/s/files/1/0619/9531/9474/files/Path__1.png');background-size: contain;background-repeat: no-repeat;background-position: 0 100%;color:#fff;margin: 50px 0;}
+  .elicos-bottom-section .elicos-bottom-heading-block{background:#01a10b;text-align:center;padding: 25px 20px;}
+  .elicos-bottom-section .elicos-bottom-title{font-size:33px;color:#fff;}
+  .elicos-bottom-section .elicos-bottom-subtitle{font-size:15px;color:#fff;}
+  .elicos-bottom-section .elicos-bottom-des-block{font-size:15px;margin-top: 20px;font-weight: 200;}
+  .elicos-bottom-section .elicos-bottom-des-block strong{font-weight: 500;}
+
+  @media screen and (max-width:1200px){
+    #sec__{{ section.id }}{min-height: 650px;}
+  }
+
+  @media screen and (max-width:768px){
+    #sec__{{ section.id }}{background-size: 900px;margin:30px 0;}
+  }
+
+  @media screen and (max-width:575px){
+    #sec__{{ section.id }}{min-height: 700px;}
+    .elicos-bottom-section .elicos-bottom-title {font-size: 26px;}
+    .elicos-bottom-section .elicos-bottom-subtitle {font-size: 13px;}
+    .elicos-bottom-section .elicos-bottom-des-block {font-size: 13px;}
+    .elicos-bottom-section .elicos-bottom-heading-block{padding: 20px;}
+  }
+  
+{% endstyle %}
+<div class="elicos-bottom-section" id="sec__{{ section.id }}">
+  <div class="page-width">
+    <div class="elicos-bottom-block">
+      <div class="elicos-bottom-heading-block">
+        <h2 class="elicos-bottom-title">{{ section.settings.title }}</h2>
+        <h4 class="elicos-bottom-subtitle">{{ section.settings.subtitle }}</h4>
+      </div>
+      <div class="elicos-bottom-des-block">{{ section.settings.des }}</div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Elicos Botttom Section",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      },
+      {
+        "type":"text",
+        "id":"subtitle",
+        "label":"Subtitle"
+      },
+      {
+        "type":"richtext",
+        "id":"des",
+        "label":"Description"
+      },
+      {
+        "type":"color",
+        "id":"bg_color",
+        "label":"background Color"
+      }
+    ],
+    "blocks":[],
+    "presets":[
+      {
+        "name":"Elicos Bottom Section"
+      }
+    ]
+  }
+{% endschema %}

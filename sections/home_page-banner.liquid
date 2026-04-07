@@ -1,0 +1,267 @@
+<style>
+  .home_page-banner .home_page-banner-main{display:flex;}
+  .home_page-banner .home_page-banner-main .home_page-banner-media{width:50%;text-align:right;}
+  .home_page-banner .home_page-banner-main .home_page-banner-media img{width:100%;height:100%;max-width:100%;}
+  .home_page-banner .home_page-banner-main .home_page-banner-media img.mob-img{display:none;}
+  .home_page-banner .home_page-banner-main .home_page-banner-content{width:50%;display:flex;align-items:center;}
+  .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-content-inner{max-width:710px;margin-left:auto;padding-left:50px;}
+  .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-head{font-size: 70px;line-height: 70px;font-weight: 700;}
+  .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-text{font-size: 24px;font-weight: 600;line-height: 30px;color: #404146;margin:20px 0;}
+  .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-btns a{font-weight:600;min-width: 225px;padding: 25px 30px;border-radius: 34px;margin-bottom:5px;}
+
+  @media(max-width:1440px){
+    .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-content-inner{padding-top:100px;}
+    .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-head{font-size:55px;line-height:55px;}
+    .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-text{font-size:20px;}
+    .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-btns a{min-width:200px;padding:20px;}
+  }
+  @media(max-width:991px){
+    .home_page-banner{padding:0 0 50px}
+    .home_page-banner .home_page-banner-main{flex-direction:column-reverse;}
+    .home_page-banner .home_page-banner-main .home_page-banner-media{width:100%;}
+    .home_page-banner .home_page-banner-main .home_page-banner-content{width:100%;}
+    .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-content-inner{padding:15px 50px;max-width:100%;}
+    .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-head{font-size:40px;line-height:40px;}
+    .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-text{font-size:18px;}
+  }
+  @media(max-width:749px){
+    .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-content-inner{padding:30px 15px;}
+  .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-head{font-size:28px;line-height:28px;}
+  .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-text{font-size:15px;}
+  }
+   @media(max-width:575px){
+  .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-head{font-size:24px;line-height:24px;}
+  .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-text{line-height:normal;}
+    .home_page-banner .home_page-banner-main .home_page-banner-content .home_page-banner-btns a {min-width: auto;padding: 12px 15px;font-size: 12px;}
+  }
+</style>
+
+<section class="home_page-banner owl-carousel" id="home_page-banner-{{ section.id }}">
+  {% for i in (1..2) %}
+    {% if i == 1 %}
+      <div class="home_page-banner-main">
+        <div class="home_page-banner-content">
+          <div class="home_page-banner-content-inner">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'heading' %}
+                  {% if block.settings.head != blank %}
+                    <h1 class="home_page-banner-head">
+                      {{ block.settings.head }}
+                    </h1>
+                  {% endif %}
+
+                {% when 'text' %}
+                  {% if block.settings.text != blank %}
+                    <div class="home_page-banner-text">
+                      {{ block.settings.text }}
+                    </div>
+                  {% endif %}
+
+                {% when 'button' %}
+                  <div class="home_page-banner-btns">
+                    {% if block.settings.btn1 != blank and block.settings.btn1url != blank %}
+                      <a class="button btn_green" href="{{ block.settings.btn1url }}">{{ block.settings.btn1 }}</a>
+                    {% endif %}
+                    {% if block.settings.btn2 != blank and block.settings.btn2url != blank %}
+                      <a class="button btn_blue" href="{{ block.settings.btn2url }}" target="_blank">
+                        {{- block.settings.btn2 -}}
+                      </a>
+                    {% endif %}
+                  </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="home_page-banner-media {% if section.settings.mobimage != blank %}has_mobimage{% endif %}">
+          <a href="/pages/contact">
+            <img src="{{ section.settings.image | img_url:"master" }}">
+            <img class="mob-img" src="{{ section.settings.mobimage | img_url:"master" }}">
+          </a>
+        </div>
+      </div>
+    {% else %}
+      {% if section.settings.image1 != blank %}
+      <div class="home_page-banner-main">
+        <div class="home_page-banner-content">
+          <div class="home_page-banner-content-inner">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'heading' %}
+                  {% if block.settings.head1 != blank %}
+                    <h1 class="home_page-banner-head">
+                      {{ block.settings.head1 }}
+                    </h1>
+                  {% endif %}
+
+                {% when 'text' %}
+                  {% if block.settings.text1 != blank %}
+                    <div class="home_page-banner-text">
+                      {{ block.settings.text1 }}
+                    </div>
+                  {% endif %}
+
+                {% when 'button' %}
+                  <div class="home_page-banner-btns">
+                    {% if block.settings.btn11 != blank and block.settings.btn1url1 != blank %}
+                      <a class="button btn_green" href="{{ block.settings.btn1url1 }}">{{ block.settings.btn11 }}</a>
+                    {% endif %}
+                    {% if block.settings.btn21 != blank and block.settings.btn2url1 != blank %}
+                      <a class="button btn_blue" href="{{ block.settings.btn2url1 }}" target="_blank">
+                        {{- block.settings.btn21 -}}
+                      </a>
+                    {% endif %}
+                  </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="home_page-banner-media {% if section.settings.mobimage1 != blank %}has_mobimage{% endif %}">
+          <a href="/pages/contact">
+            <img src="{{ section.settings.image1 | img_url:"master" }}">
+            <img class="mob-img" src="{{ section.settings.mobimage1 | img_url:"master" }}">
+          </a>
+        </div>
+      </div>
+    {% endif %}
+    {% endif %}
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Home Page Banner",
+  "settings": [
+    {
+      "type":"image_picker",
+      "id":"image",
+      "label":"Image"
+    },
+    {
+      "type":"image_picker",
+      "id":"mobimage",
+      "label":"Image for Mobile"
+    },
+    {
+      "type" : "header",
+      "content":"Second Slide"
+    },
+    {
+      "type":"image_picker",
+      "id":"image1",
+      "label":"Image"
+    },
+    {
+      "type":"image_picker",
+      "id":"mobimage1",
+      "label":"Image for Mobile"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"heading",
+      "name":"Heading",
+      "settings":[
+      {
+          "type":"text",
+            "id":"head",
+              "label":"Heading"
+        },
+        {
+      "type" : "header",
+      "content":"Second Slide"
+    },
+        {
+          "type":"text",
+            "id":"head1",
+              "label":"Heading"
+        }
+      ]
+    },
+    {
+      "type":"text",
+      "name":"Text",
+      "settings":[
+      {
+          "type":"richtext",
+            "id":"text",
+              "label":"Text"
+        },
+        {
+      "type" : "header",
+      "content":"Second Slide"
+    },
+         {
+          "type":"html",
+            "id":"text1",
+              "label":"Text"
+        }
+      ]
+    },
+    {
+      "type":"button",
+      "name":"Buttons",
+      "settings":[
+      {
+          "type":"text",
+            "id":"btn1",
+              "label":"Button Label"
+        },
+        {
+          "type":"url",
+            "id":"btn1url",
+              "label":"Url to Navigate"
+        },
+        {
+          "type":"text",
+            "id":"btn2",
+              "label":"Button Label"
+        },
+        {
+          "type":"url",
+            "id":"btn2url",
+              "label":"Url to Navigate"
+        },
+        {
+      "type" : "header",
+      "content":"Second Slide"
+    },
+        {
+          "type":"text",
+            "id":"btn11",
+              "label":"Button Label"
+        },
+        {
+          "type":"url",
+            "id":"btn1url1",
+              "label":"Url to Navigate"
+        },
+        {
+          "type":"text",
+            "id":"btn21",
+              "label":"Button Label"
+        },
+        {
+          "type":"url",
+            "id":"btn2url1",
+              "label":"Url to Navigate"
+        }
+      ]
+    }
+  ],
+  "presets":[
+{
+  "name":"Home Page Banner"
+}
+
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

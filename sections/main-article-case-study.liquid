@@ -1,0 +1,121 @@
+{{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+{% render 'bread_crumb' back_img:section.settings.bread_crumb_back, title:section.settings.bread_title %}
+
+<style>
+  .article_case_study .blog-content{flex-direction:column}
+  .article_case_study .blog-content .article-template__hero-container{margin:0}
+  .article_case_study .blog-content .article_hero_img img{border-radius:10px}
+  .article_case_study .blog-content .article_content_wrap{display:flex;column-gap:50px;row-gap:40px}
+  .article_case_study .blog-content .article_content_wrap .article-template__content{max-width:50%;margin-top:0}
+  .article_case_study .blog-content header span {position: relative;padding-bottom: 10px;letter-spacing: 1px;font-size: 18px;}
+  .article_case_study .blog-content header span:after {content: "";position: absolute;bottom: 0;left: 0;width: 100%;height: 4px;background-color: #0d3ea7;}
+  @media screen and (max-width:991px){
+  .article_case_study .blog-content .article_content_wrap{flex-direction:column}
+  .article_case_study .blog-content .article_content_wrap .article-template__content{max-width:100%}
+  }
+</style>
+
+<div class="main-blog page-width article_case_study">
+  <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="blog-content">
+
+      <header class="mt-0">
+        <span>{{ blog.title }}</span>
+        <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
+      </header>
+
+      <div class="article_content_wrap">
+        {%- if article.image -%}
+        <div class="article-template__hero-container">
+          <div class="article_hero_img">
+            <img
+                 srcset="{% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
+                         {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
+                         {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
+                         {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
+                         {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
+                         {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
+                         {{ article.image | image_url }} {{ article.image.width }}w"
+                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                 src="{{ article.image | image_url: width: 1100 }}"
+                 loading="lazy"
+                 width="{{ article.image.width }}"
+                 height="{{ article.image.height }}"
+                 alt="{{ article.image.alt | escape }}">
+          </div>
+        </div>
+        {%- endif -%}
+
+        <div class="article-template__content rte" itemprop="articleBody">
+          {{ article.content }}
+        </div>
+      </div>
+      <div class="article-template__back element-margin-top center">
+        <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
+          <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+          Back to Case study
+        </a>
+      </div>
+    </div>
+  </article>
+</div>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "articleBody": {{ article.content | strip_html | json }},
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ request.origin | append: page.url | json }}
+    },
+    "headline": {{ article.title | json }},
+    {% if article.excerpt != blank %}
+      "description": {{ article.excerpt | strip_html | json }},
+    {% endif %}
+    {% if article.image %}
+      "image": [
+        {{ article | image_url: width: article.image.width | prepend: "https:" | json }}
+      ],
+    {% endif %}
+    "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "author": {
+      "@type": "Person",
+      "name": {{ article.author | json }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      {% if settings.share_image %}
+        "logo": {
+          "@type": "ImageObject",
+          "height": {{ settings.share_image.height | json }},
+          "url": {{ settings.share_image | image_url: width: settings.share_image.width | prepend: "https:" | json }},
+          "width": {{ settings.share_image.width | json }}
+        },
+      {% endif %}
+      "name": {{ shop.name | json }}
+    }
+  }
+</script>
+
+
+{% schema %}
+{
+  "name": "Case Study",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+      {
+        "type":"image_picker",
+        "id":"bread_crumb_back",
+        "label":"Title Background image"
+      },
+      {
+        "type":"text",
+        "id":"bread_title",
+        "label":"Page title"
+      }
+  ]
+}
+{% endschema %}

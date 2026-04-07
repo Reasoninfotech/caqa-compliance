@@ -1,0 +1,85 @@
+{% render 'bread_crumb' back_img:section.settings.bread_crumb_back, title:section.settings.bread_title %}
+<style>
+  .our_partner{padding:60px 0;overflow-x:hidden}
+  .our_partner .page_title{text-align: center;font-size:36px;line-height:48px;font-weight:600;margin:40px 0}
+  .our_partner .our_partner_row{display: flex;flex-wrap:wrap;align-items:flex-start;justify-content:center}
+  .our_partner .our_partner_row .our_partner_block{padding:15px;width:33.33%;display: flex;justify-content:center}
+  .our_partner .our_partner_row .our_partner_block a{display: flex;}
+  .our_partner .our_partner_row .our_partner_block img{max-width:300px;max-height:150px;width:100%}
+  @media screen and (max-width:991px){
+    .our_partner .page_title{font-size:30px;line-height:40px;}
+  }
+  @media screen and (max-width:768px){
+    .our_partner{padding:30px 0}
+    .our_partner .page_title{font-size:25px;line-height:35px;}
+    .our_partner .our_partner_row .our_partner_block{width:100%;max-width:250px}
+  }
+</style>
+<div class="our_partner">
+  <div class="page-width">
+    {% if section.settings.title %}<h2 class="page_title">{{ section.settings.title }}</h2>{% endif %}
+    {% assign i = 3 %}
+    {% for block in section.blocks %}
+    {% if forloop.first %}
+    <div class="our_partner_row" data-aos="fade-right">
+      {% endif %}
+      {% assign num = forloop.index | modulo: 3 %}
+      {% assign num2 = forloop.index | modulo: 2 %}
+      {% if block.settings.logo != blank and block.settings.url != blank %}
+      <div class="our_partner_block">
+        <a href="{{ block.settings.url }}" target="_blank"><img src="{{ block.settings.logo | img_url:'500x500' }}"></a>
+      </div>
+      {% if num == 0 %}</div><div class="our_partner_row" data-aos-duration="1000" {% if num2 == 0 %}data-aos="fade-right"{% else %}data-aos="fade-left"{% endif %}>{% endif %}
+    {% endif %}
+    {% if forloop.last %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Our Partner",
+    "settings": [
+		{
+			"type":"image_picker",
+			"id":"bread_crumb_back",
+			"label":"Title Background image"
+		},
+		{
+			"type":"text",
+			"id":"bread_title",
+			"label":"Page title"
+		},
+		{
+			"type":"text",
+			"id":"title",
+			"label":"Section Title"
+		}
+	],
+	"blocks":[
+		{
+			"type":"image",
+			"name":"Partners",
+			"settings":[
+				{
+					"type":"image_picker",
+					"id":"logo",
+					"label":"Logo"
+				},
+				{
+					"type":"url",
+					"id":"url",
+					"label":"url"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

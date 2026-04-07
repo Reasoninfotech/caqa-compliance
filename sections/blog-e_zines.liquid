@@ -1,0 +1,43 @@
+{% render 'bread_crumb', back_img: blog.metafields.custom.heading_image %}
+{%- paginate blog.articles by 20 -%}
+  <section>
+    <div id="e-zine-page" class="container e-zine-page">
+      <div class="row">
+        {% for article in blog.articles %}
+          <div class="col-lg-3 col-md-6 col-sm-6 box">
+            <div class="e-zine-content">
+              <a class="e-zine-img" href="{{ article.url }}">
+                <figure class="pdf_hover">
+                  <img src="{{ article.image | img_url:'master' }}">
+                </figure>
+              </a>
+              <div class="title">
+                <img src="https://cdn.shopify.com/s/files/1/0619/9531/9474/files/pdf-icon.png?v=1659159757">
+                <p>
+                  <span>{{ article.title }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="view_more_scroll">
+        <button id="view_more_scroll_btn" class="view_more button btn_green" data-index="2">Load More</button>
+        {% render 'loader' %}
+      </div>
+    </div>
+  </section>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "E_zines Blog",
+  "settings": []
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

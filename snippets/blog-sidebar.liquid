@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<div class="blog_sidebar"> 
+  {% if section.settings.enable_widget_search %}
+  <div class="widget widget-search">
+    <h2 class="widget-title mb-4 mt-5 mt-md-0">{{section.settings.widget_search_title}}</h2>
+    <form action="/search" method="get" role="search" class="search search-modal__form">
+      <div class="field">
+        <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" role="combobox" aria-expanded="false" aria-owns="predictive-search-results-list" aria-controls="predictive-search-results-list" aria-haspopup="listbox" aria-autocomplete="list" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <label class="field__label" for="Search-In-Modal">Search</label>
+        <input type="hidden" name="options[prefix]" value="last">
+        <input type="hidden" name="type" value="article" />
+        <button class="search__button field__button" aria-label="Search">
+          <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+            <use href="#icon-search">
+            </use></svg>
+        </button>
+      </div><div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search="">
+      <div class="predictive-search__loading-state">
+        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+        </svg>
+      </div>
+      </div>
+      <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+    </form>
+  </div>
+  {% endif %}
+
+  {% if section.settings.enable_widget_cate %}
+  <div class="blog_sidebar_cate">
+    <h2 class="widget-title mt-5 mb-4">{{section.settings.widget_cate_title}}</h2>
+    <div class="widget-content">
+      <ul class="list-category-toggle">
+        {% for link in linklists[section.settings.widget_cate_menu].links %}
+        <li class="item-toggle-tab">
+          <a style="padding: 5px 10px;display: block;" href="{{ link.url }}">❯ {{link.title | split: '[' | first }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if section.settings.enable_widget_related %}
+  <div class="blog_sidebar_recent">
+    {%- assign posts_limit = section.settings.blogs_limit -%}
+    {%- assign blog_selected = section.settings.select_blog -%}
+    <h2 class="widget-title mt-5 mb-4">{{section.settings.widget_related_title}}</h2>
+    <div class="list-posts">
+      {% for article in blogs[blog_selected].articles limit: posts_limit %}
+      <div class="item-post">
+        {% comment %}
+        <div class="post-thumb">
+          <a href="{{ article.url }}" class="">
+          	<img width="100%" src="{{ article.image.src | img_url: 'original' }}" alt="{{ article.title }}" />
+          </a>
+        </div>
+        <div class="post-info">
+          <small class="date-post">{{ article.published_at | date: "%d.%B.%Y" }}</small>
+          <h4 class="post-title"><a href="{{ article.url }}" class="dark">{{ article.title }}</a></h4>
+        </div>
+        {% endcomment %}
+        {% render 'article-card', blog: section.settings.blog,
+              article: article, 
+              media_aspect_ratio: 1.66, 
+              show_image: true,
+              show_date: true, 
+              show_author: false,
+              show_short_title:true,
+              show_excerpt: false %}
+      </div>      
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if section.settings.enable_widget_tag and blog.all_tags.size > 0 %}
+  <div class="widget widget-tags">
+    <h2 class="widget-title mt-5 mb-4">{{section.settings.shop_by_tag_title}}</h2>
+    <ul class="list-tag">
+      {% if blog.all_tags.size > 0 %}
+      {% for tag in blog.all_tags %}
+      {% if current_tags contains tag %}
+      <li>{{ tag }}</li>
+      {% else %}
+      <li>{{ tag | link_to_tag: tag }}</li>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+  {% endif %}
+
+</div>

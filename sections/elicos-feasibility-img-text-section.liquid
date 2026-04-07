@@ -1,0 +1,161 @@
+{% style %}
+  #sec__{{ section.id }}{background-color:{{ section.settings.bg_color }};padding:50px 0;color:#fff;text-align:center;}
+  .elicos-feasibility-img-text-section .img-text-block_main{display:flex;flex-wrap:wrap;gap:20px;margin: 50px 0;}
+  .elicos-feasibility-img-text-section .img-text-block{width:calc(25% - 16px);}
+  .elicos-feasibility-img-text-section .img-text-block figure{margin:0;background: #003ca9;padding: 15px;width: fit-content;margin: 0 auto;border-radius: 50px;}
+  .elicos-feasibility-img-text-section .img-text-block figure img{max-width:100%;height: 62px;width: 62px;}
+  .elicos-feasibility-img-text-section .img-text-block h3{color:#fff;max-width: 155px;margin: 0 auto;margin-top: 5px;font-weight:500;}
+  
+  .elicos-feasibility-img-text-section .img-text--first{font-size:23px;line-height:33px;margin-bottom:30px;font-weight:300}
+  .elicos-feasibility-img-text-section .img-text--first strong{font-weight:600}
+  .elicos-feasibility-img-text-section .img-text--second{font-size: 18px;line-height: 25px;margin-bottom:30px;font-weight:300;}
+  .elicos-feasibility-img-text-section .img-text--second strong{font-weight:700;}
+  .elicos-feasibility-img-text-section .img-text--third{font-size: 18px;line-height: 25px;}
+  .elicos-feasibility-img-text-section .img-text--bottam figure{position:relative;}
+  .elicos-feasibility-img-text-section .img-text--bottam figcaption{position: absolute;top: 50%;left: 0;width: 100%;font-size: 17px;line-height: 22px;}
+  .elicos-feasibility-img-text-section .img-text--bottam img{max-width:100%;}
+
+  .elicos-feasibility-img-text-section .main_heading{margin:0 0 10px 0;font-size:30px;text-align:center;color:#fff;}
+
+  @media screen and (max-width:1200px){
+    .elicos-feasibility-img-text-section .img-text--first {font-size: 18px;line-height: 26px;}
+    .elicos-feasibility-img-text-section .img-text--second {font-size: 15px;line-height: 21px;}
+    .elicos-feasibility-img-text-section .img-text--third{font-size: 15px;line-height: 21px;}
+    .elicos-feasibility-img-text-section .img-text-block h3{font-size: 16px;}
+  }
+  
+  @media screen and (max-width:990px){
+    .elicos-feasibility-img-text-section .img-text-block {width: calc(33.33% - 15px);}
+  }
+
+  @media screen and (max-width:768px){
+      #sec__{{ section.id }}{padding:30px 0;}
+    .elicos-feasibility-img-text-section .main_heading {font-size: 24px;}
+    .elicos-feasibility-img-text-section .img-text-block_main{margin:30px 0;}
+  }
+  
+  @media screen and (max-width:575px){
+    .elicos-feasibility-img-text-section .img-text-block {width: calc(50% - 15px);}
+    .elicos-feasibility-img-text-section .img-text-block figure img {height: 45px;width: 45px;}
+    .elicos-feasibility-img-text-section .img-text--bottam figcaption {font-size: 15px;line-height: 19px;}
+    .elicos-feasibility-img-text-section .main_heading {font-size: 20px;}
+
+  }
+
+  @media screen and (max-width:480px){
+      .elicos-feasibility-img-text-section .img-text--bottam figcaption{font-size: 12px;line-height: 15px;}
+  }
+
+  {{ section.settings.cus_css }}
+  
+{% endstyle %}
+
+<div class="elicos-feasibility-img-text-section {{ section.settings.cus_class }}" id="sec__{{ section.id }}">
+  <div class="page-width">
+      {% if section.settings.main_heading != blank %}
+        <h2 class="main_heading">{{ section.settings.main_heading }}</h2>
+      {% endif %}
+      <div class="elicos-feasibility-img-text--block">
+        {% if section.settings.first_des != blank %}<div class="img-text--first rte">{{ section.settings.first_des }}</div>{% endif %}
+        {% if section.settings.second_des != blank %}<div class="img-text--second rte">{{ section.settings.second_des }}</div>{% endif %}
+        <div class="img-text-block_main">
+          {% for block in section.blocks %}
+              {% if block.settings.img != blank and block.settings.text != blank %}
+                  <div class="img-text-block">
+                    <figure>
+                      <img src="{{ block.settings.img | img_url:"master" }}">
+                    </figure>
+                    <h3>{{ block.settings.text }}</h3>
+                  </div>
+              {% endif %}
+          {% endfor %}
+        </div>
+        {% if section.settings.thirs_des != blank %}<div class="img-text--third rte">{{ section.settings.thirs_des }}</div>{% endif %}
+        {% if section.settings.bottom_text != blank %}
+          <div class="img-text--bottam">
+            <figure>
+              <img src="https://cdn.shopify.com/s/files/1/0619/9531/9474/files/Path_fe472965-c9a2-4a49-9d1a-00362372dec4.png">
+              <figcaption>{{ section.settings.bottom_text }}</figcaption>
+            </figure>
+          </div>
+        {% endif %}
+      </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Elicos Img Text Section",
+    "settings": [
+     {
+        "type":"text",
+        "id":"main_heading",
+        "label":"Main heading"
+      },
+      {
+        "type":"richtext",
+        "id":"first_des",
+        "label":"First Des"
+      },
+      {
+        "type":"richtext",
+        "id":"second_des",
+        "label":"Second Des"
+      },
+      {
+        "type":"richtext",
+        "id":"thirs_des",
+        "label":"Third Des"
+      },
+      {
+        "type":"text",
+        "id":"bottom_text",
+        "label":"Bottom Text"
+      },
+      {
+        "type":"color",
+        "id":"bg_color",
+        "label":"Background Color"
+      },
+      {
+        "type":"text",
+        "id":"cus_class",
+        "label":"Custom Class"
+      },
+      {
+        "type":"html",
+        "id":"cus_css",
+        "label":"Custom CSS"
+      }
+    ],
+    "blocks":[
+      {
+        "name":"Image Text",
+        "type":"text",
+        "settings":[
+          {
+            "type":"image_picker",
+            "id":"img",
+            "label":"Image"
+          },
+          {
+            "type":"text",
+            "id":"text",
+            "label":"Text"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name":"Elicos Img Text Section"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

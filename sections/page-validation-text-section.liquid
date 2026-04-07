@@ -1,0 +1,86 @@
+<style>
+  .page-validation-text-section{position:relative;padding:10px 0 400px;margin:60px 0;overflow:hidden}
+  .page-validation-text-section .bg_object{position:absolute;bottom:0;left:0;height:300px;z-index:-1;}
+  .page-validation-text-section .background{position:absolute;right:0;bottom:0;z-index:-1;max-height:100%}
+  .page-validation-text-section .page-validation-text-section-row{max-width:930px;padding-left:150px;}
+  .page-validation-text-section .title{font-size:35px;color:#01a10b;margin:0 0 50px}
+  .page-validation-text-section .desc{font-size:18px;line-height:30px;}
+
+  @media screen and (max-width:1400px){
+    .page-validation-text-section{padding-bottom:350px}
+    .page-validation-text-section .bg_object{height:220px}
+    .page-validation-text-section .background{max-height:670px}
+
+    .page-validation-text-section .page-validation-text-section-row {max-width: 700px;padding-left: 80px;}
+    .page-validation-text-section .title{font-size:28px;margin-bottom:30px}
+    .page-validation-text-section .desc{font-size:16px;line-height:27px}
+  }
+
+  @media screen and (max-width:991px){
+    .page-validation-text-section .bg_object{display:none}
+    .page-validation-text-section .page-validation-text-section-row{padding-left:50px;max-width:600px;width:70%}
+
+    .page-validation-text-section .title{font-size:24px;margin-bottom:20px}
+    .page-validation-text-section .desc{font-size:16px}
+  }
+
+  @media screen and (max-width:768px){
+    .page-validation-text-section {padding-bottom: 480px;}
+    .page-validation-text-section .background{height:auto;max-height:100%;max-width:100%}
+
+    .page-validation-text-section .page-validation-text-section-row{padding:0 20px;width:80%}
+    .page-validation-text-section .title{font-size:22px;margin-bottom:20px;line-height:normal}
+    .page-validation-text-section .desc{font-size:14px;line-height:18px}
+  }
+
+  @media screen and (max-width:575px){
+    .page-validation-text-section .page-validation-text-section-row{width:90%}
+    .page-validation-text-section {padding-bottom: 400px;}
+  }
+
+  @media screen and (max-width:575px){
+    .page-validation-text-section {padding-bottom: 400px;}
+  }
+  
+</style>
+<section class="page-validation-text-section">
+  <div class="page-validation-text-section-row">
+    {% if section.settings.title %}<h2 class="title">{{ section.settings.title }}</h2>{% endif %}
+    {% if section.settings.desc %}<div class="desc">{{ section.settings.desc }}</div>{% endif %}
+  </div>
+  <img src="https://cdn.shopify.com/s/files/1/0619/9531/9474/files/bg_obj.png?v=1681986380" class="bg_object">
+  {% if section.settings.background %}<img src="{{ section.settings.background | img_url:'900x' }}" class="background">{% endif %}
+</section>
+{% schema %}
+  {
+    "name": "Page Validation Text",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      },
+      {
+        "type":"richtext",
+        "id":"desc",
+        "label":"Description"
+      },
+      {
+        "type":"image_picker",
+        "id":"background",
+        "label":"Background"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Page Validation Text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

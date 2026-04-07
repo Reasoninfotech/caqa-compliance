@@ -1,0 +1,106 @@
+{{ 'component-statistic.css' | asset_url | stylesheet_tag }}
+<section class="statistic_content">
+  <div class="page-width">
+      <div class="statistic_block">        
+        <div class="row row-cols-lg-5 row-cols-2 row-cols-md-3 justify-content-center">
+          {%- for block in section.blocks -%}
+            {% if block.settings.image != blank and block.settings.heading != blank and block.settings.text != blank %} 
+              <div class="col">
+                <figure>
+                    <img width="100%" src="{{ block.settings.image | img_url : "master" }}">              
+                    <figcaption><h2>{{ block.settings.heading }}</h2><p>{{ block.settings.text }}</p></figcaption>
+                </figure>
+              </div>
+            {% endif %}
+          {%- endfor -%}
+        </div>
+      </div>
+  </div>      
+</section>
+
+{% schema %}
+  {
+    "name": "Statistic",
+    "settings": [    
+    ],
+    "blocks": [
+      {
+        "type": "column",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Icon Images"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Statistic",
+        "blocks": [
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

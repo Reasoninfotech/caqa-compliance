@@ -1,0 +1,95 @@
+{% style %}
+  .video__section_block{padding:50px 0;}
+  .video__section_block .section-title{text-align:center;margin-bottom:50px;}
+  .video__section_block_inner {display:flex;flex-wrap:wrap;gap:30px;}
+  .video__section_block_inner .video_section_block{width:calc(50% - 30px);}
+  .video__section_block_inner .video_section_title{font-size:28px;margin:0 0 20px 0;text-align:center;}
+  .video__section_block .video_section_main{position:relative;display:flex;}
+  .video__section_block iframe{height:100%;width:100%;}
+  .video__section_block .video_section_main{height:335px;}
+
+  @media screen and (max-width:990px){
+  .video__section_block .video_section_main{height:500px;}
+  .video__section_block_inner{gap:50px}
+  .video__section_block_inner .video_section_block{width:100%;}
+  .video__section_block .section-title{margin-bottom:35px;}
+  }
+
+  @media screen and (max-width:768px){
+    .video__section_block .video_section_main{height:380px;}
+    .video__section_block .video_section_main .video_control{height:60px;}
+  }
+
+  @media screen and (max-width:575px){
+  .video__section_block_inner .video_section_block{width:100%;}
+  .video__section_block .video_section_main{height:300px;}
+  .video__section_block_inner .video_section_title {font-size: 18px;}
+  .video__section_block .section-title{margin-bottom:20px;}
+  }
+  @media screen and (max-width:460px){
+    .video__section_block .video_section_main{height:240px;}
+  }
+  @media screen and (max-width:400px){
+    .video__section_block .video_section_main{height:200px;}
+  }
+{% endstyle %}
+<section class="video__section_block">
+  <div class="page-width">
+    {% if section.settings.title != blank %}
+      <h2 class="section-title">{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="video__section_block_inner">
+      {% for block in section.blocks %}
+        {% if block.settings.video != blank %}
+          <div class="video_section_block">
+            <h1 class="video_section_title">{{ block.settings.text }}</h1>
+            <div class="video_section_main">
+              {{ block.settings.video }}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Video Gallery",
+  "settings": [
+    {
+      "type":"text",
+      "id":"title",
+      "label":"Title"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"text",
+      "name":"video",
+      "settings":[
+        {
+          "type":"text",
+          "id":"text",
+          "label":"Title"
+        },
+        {
+          "type":"textarea",
+          "id":"video",
+          "label":"Video URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Gallery"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

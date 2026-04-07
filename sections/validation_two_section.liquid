@@ -1,0 +1,92 @@
+<style>
+  .validation-two-side-section{}
+  .validation-two-side-section .validation-two-side-title{width:100%;text-align:center;margin:20px 0 30px;font-size:35px}
+  .validation-two-side-section .validation-two-side-row{display:flex;gap:50px;flex-wrap:wrap}
+  
+  .validation-two-side-section .validation-two-side-row .validation-two-side-block{width: calc(50% - 25px);padding:30px;}
+  .validation-two-side-section .validation-two-side-row .validation-two-side-block h2{color:#fff;}
+  .validation-two-side-section .validation-two-side-row .validation-two-side-block div{color:#fff;}
+  
+
+  @media screen and (max-width:991px){
+    .validation-two-side-section .validation-two-side-row {gap:30px}
+    .validation-two-side-section .validation-two-side-row .validation-two-side-block{width: 100%;}
+  }
+
+  @media screen and (max-width:768px){
+    .validation-two-side-section .validation-two-side-title{font-size:30px}
+  }
+
+  @media screen and (max-width:768px){
+    .validation-two-side-section .validation-two-side-title {font-size: 25px;}
+  }
+  
+</style>
+<div class="validation-two-side-section" id="sec__{{ section.id }}">
+  <div class="page-width">
+    {% if section.settings.main_heading != blank %}<h2 class="validation-two-side-title">{{ section.settings.main_heading }}</h2>{% endif %}
+    <div class="validation-two-side-row">
+        <div class="validation-two-side-block validation-two-side-left" style="background:{{ section.settings.left_color }};">
+            <h2>{{ section.settings.left_heading }}</h2>
+            <div class="rte">{{ section.settings.left_des }}</div>
+        </div>
+        <div class="validation-two-side-block validation-two-side-right" style="background:{{ section.settings.right_color }};">
+          <h2>{{ section.settings.right_heading }}</h2>
+          <div class="rte">{{ section.settings.right_des }}</div>
+        </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Validation 2side Txt Sec",
+    "settings": [
+      {
+        "type":"text",
+        "id":"main_heading",
+        "label":"Main Heading"
+      },
+      {
+        "type":"text",
+        "id":"left_heading",
+        "label":"Left Heading"
+      },
+      {
+        "type":"richtext",
+        "id":"left_des",
+        "label":"left Description"
+      },
+      {
+        "type":"color",
+        "id":"left_color",
+        "label":"left Background Color"
+      },
+      {
+        "type":"text",
+        "id":"right_heading",
+        "label":"Right Heading"
+      },
+      {
+        "type":"richtext",
+        "id":"right_des",
+        "label":"Right Description"
+      },
+      {
+        "type":"color",
+        "id":"right_color",
+        "label":"Right Background Color"
+      }
+    ],
+    "presets":[
+      {
+        "name":"Twoside 2side Text Sec"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,127 @@
+<style>
+  .award_slider{margin-bottom:20px}
+  .award_slider .sechead{font-size: 60px;margin-bottom: 45px;text-align: center;}
+  .award_slider .award_slider_row{}
+  .award_slider .award_slider_row .award_slider_block{padding:20px 20px 30px;border-radius:15px;background:#fff;height:100%}
+  .award_slider .award_slider_row .award_slider_block figure{width:100%;display:flex;justify-content:center;margin-bottom:25px}
+  .award_slider .award_slider_row .award_slider_block figure img{width:auto}
+  .award_slider .award_slider_row .award_slider_block .award_slider_block_text{text-align:center;font-size: 16px;line-height: 20px;font-weight: 500;}
+  .award_slider .award_slider_row .award_slider_block .link{display:block;text-align:center;margin-top:10px}
+  .award_slider .owl-dots{margin-top:20px}
+  .award_slider .owl-stage{display:flex}
+
+  @media (max-width: 1200px){
+    .award_slider .sechead{font-size: 45px;margin-bottom: 25px;}
+  }
+  @media (max-width: 991px){
+    .award_slider .sechead{font-size: 30px;margin-bottom: 10px;}
+  }
+  @media (max-width: 749px){
+    .award_slider .sechead{font-size: 25px;}
+  }
+</style>
+<section class="award_slider">
+  <div class="page-width">
+    {% if section.settings.title != blank %}
+      <h1 class="sechead">{{ section.settings.title }}</h1>
+    {% endif %}
+    <div class="award_slider_row owl-carousel">
+      {% for block in section.blocks %}
+        <div class="award_slider_block">
+          {% if block.settings.a_image != blank %}
+            <figure>
+              <img src="{{ block.settings.a_image | img_url:"200x" }}">
+            </figure>
+          {% endif %}
+
+          {% if block.settings.a_image != blank %}
+            <div class="award_slider_block_text">{{ block.settings.desc }}</div>
+          {% endif %}
+
+          {% if block.settings.url_txt != blank and block.settings.url %}
+            <a href="{{ block.settings.url }}" class="link">{{ block.settings.url_txt }}</a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  $(document).ready(function(){
+    $('.award_slider .award_slider_row').owlCarousel({
+        loop: true,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
+        nav: false,
+        dots: true,
+        items: 3,
+        margin: 30,
+        stagePadding: 20,
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
+    });
+  })
+</script>
+
+{% schema %}
+{
+  "name": "Awards Slider",
+  "settings": [
+    {
+      "type":"text",
+      "id":"title",
+      "label":"Title"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"awards",
+      "name":"awards",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"a_image",
+          "label":"award image"
+        },
+        {
+          "type":"textarea",
+          "id":"desc",
+          "label":"Block Description"
+        },
+        {
+          "type":"text",
+          "id":"url_txt",
+          "label":"Block Url"
+        },
+        {
+          "type":"url",
+          "id":"url",
+          "label":"url"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"Awards Slider"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

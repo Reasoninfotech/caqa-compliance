@@ -1,0 +1,28 @@
+.product-recommendations {
+  display: block;
+}
+
+.product-recommendations:not(.product-recommendations--loaded) {
+  padding: 0;
+  margin: 0;
+}
+
+.product-recommendations__heading {
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+.product-recommendations .card__heading {
+    font-size: 16px;
+}
+.product-recommendations .card__heading {
+    font-size: 16px;
+}
+.product-recommendations .price-item.price-item--sale {
+    font-size: 16px;
+}
+.product-recommendations .price-item.price-item--regular {
+    font-size: 16px;
+}
+
+.product-recommendations .card-information .price s, .product-recommendations .card-information .price{font-size:16px;}

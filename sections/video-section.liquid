@@ -1,0 +1,188 @@
+{% style %}
+  .video-section_index{padding:50px 0}
+  .video-section_index .video_section_block{display:flex;flex-wrap:wrap;}
+  .video-section_index .left_video_block{width:100%;position:relative}
+  .video-section_index .video_title{font-size:45px;margin:0 0 20px;line-height: 48px;letter-spacing:0;color:#26272B;text-align:center}
+  .video-section_index .left_video_subtitle{font-size:24px;margin:14px 0 0;letter-spacing:0;font-weight: 500;color:#26272B;max-width:600px}
+  .video-section_index .video-main{position:relative;display:flex;}
+  .video-section_index .video-main iframe{width:100%;height:325px}
+  .video-section_index .video-main video{border-radius:20px;height: 100%;max-height: 650px;width: 100%;object-fit: contain;}
+  .video-section_index .video-main .video_control {position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);cursor:pointer;color:var(--primary___color)}
+  .video-section_index .video-main .video_svg {position:absolute;top:0;left:0;background:#0000006b;width:100%;height:100%;border-radius: 20px;}
+  .video-section_index .video_section_btn{text-align:center;margin-top:50px;}
+
+  .video-section_index .right_video_block{width:100%;}
+  .video-section_index .left_video_right_subtitle{font-size:24px;margin:28px auto 0;letter-spacing:0;color:#26272B;line-height:normal;text-align:center;max-width:1200px;}
+  .video-section_index .video_description{font-size:18px;margin:24px 0 0 0;letter-spacing:0;line-height:27px;color:#26272B;}
+  .video-section_index .video_description p{margin:0;}
+  .video-section_index .video_description ul{margin-top:28px;display:flex;flex-wrap:wrap;gap:20px;padding: 0;list-style-type: none;}
+  .video-section_index .video_description ul li{position:relative;padding-left:32px;color:#5A5B5F;width:calc(50% - 10px);}
+  .video-section_index .button{padding: 25px 55px;}
+
+  @media screen and (max-width:1600px){
+    .video-section_index .video_title {font-size: 40px;}
+    .video-section_index .left_video_subtitle {font-size: 22px;margin-top:7px;}
+    .video-section_index .left_video_right_subtitle{font-size: 22px;margin-top:20px;}
+    .video-section_index .video_description{font-size: 22px;}
+  }
+
+  @media screen and (max-width:1400px){
+    .video-section_index .video_title {font-size: 36px;line-height: 37px;}
+    .video-section_index .left_video_subtitle {font-size: 20px;}
+    .video-section_index .left_video_right_subtitle{font-size: 18px;margin-top:15px;}
+    .video-section_index .video_description{font-size: 20px;}
+  }
+
+   @media screen and (max-width:1024px){
+    .video-section_index .video_title {font-size: 28px;line-height: 31px;}
+    .video-section_index .left_video_subtitle {font-size: 17px;line-height:19px;}
+    .video-section_index .left_video_right_subtitle{font-size: 15px;margin-top:8px;}
+    .video-section_index .video_description{font-size: 17px;}
+    .video-section_index .video_description ul{margin-top: 15px;gap: 15px;}
+  }
+
+  @media screen and (max-width:990px){
+    .video-section_index .video_title{text-align:center;}
+    .video-section_index .video_description{line-height:25px;}
+    .video-section_index .video-main iframe{height:240px;}
+  }
+
+  @media screen and (max-width:768px){
+    .video-section_index{padding:35px 0}
+  }
+
+  @media screen and (max-width:749px){
+    .video-section_index .video-main iframe{height:400px;}
+    .video-section_index .video_section_btn {margin-top: 25px;}
+    .video-section_index .video_description ul li{width:100%}
+  }
+
+  @media screen and (max-width:575px){
+    .video-section_index .video-main iframe{height:305px;}
+    .video-section_index .video_description ul li:after{height:19px;width:19px;top:6px;}
+    .video-section_index .video_description {font-size: 15px;line-height:22px;}
+    .video-section_index .left_video_right_subtitle {font-size: 14px;}
+    .video-section_index .video_title {font-size: 24px;line-height: 28px;}
+    .video-section_index .left_video_subtitle {font-size: 16px;}
+  }
+  @media screen and (max-width:460px){
+    .video-section_index .video-main iframe{height:240px;}
+  }
+  @media screen and (max-width:400px){
+    .video-section_index .video-main iframe{height:200px;}
+  }
+{% endstyle %}
+
+<div class="video-section_index {{ section.settings.custom_class }}">
+  <div class="page-width">
+    <div class="video_section_block">
+      <div class="left_video_block">
+        {% if section.settings.title != blank -%}
+          <h2 class="video_title">{{ section.settings.title }}</h2>
+        {%- endif %}
+        {% if section.settings.subtitle != blank -%}
+          <h5 class="left_video_subtitle">{{ section.settings.subtitle }}</h5>
+        {%- endif %}
+        <div class="video_section_swiper owl-carousel">
+          {% for block in section.blocks %}
+            {% if block.settings.video_url != blank %}
+              <div class="video-main">
+                {{ block.settings.video_url }}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% if section.settings.btn_title != blank and section.settings.btn_url != blank %}
+          <div class="video_section_btn">
+            <a class="button btn_blue" href="{{ section.settings.btn_url }}">{{ section.settings.btn_title }}</a>
+          </div>
+        {% endif %}
+      </div>
+      <div class="right_video_block">
+        {% if section.settings.right_title != blank -%}
+          <h2 class="video_title">{{ section.settings.right_title }}</h2>
+        {%- endif %}
+        {% if section.settings.right_subtitle != blank -%}
+          <h6 class="left_video_right_subtitle">{{ section.settings.right_subtitle }}</h6>
+        {%- endif %}
+        {% if section.settings.description != blank %}
+          <div class="video_description">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video Section",
+  "settings":[
+    {
+      "type":"text",
+      "id":"title",
+      "label":"Left Side Title"
+    },
+    {
+      "type":"text",
+      "id":"subtitle",
+      "label":"Left Side Sub Title"
+    },
+    {
+      "type":"text",
+      "id":"right_title",
+      "label":"RIght Side Title"
+    },
+    {
+      "type":"text",
+      "id":"right_subtitle",
+      "label":"RIght Side Sub Title"
+    },
+    {
+      "type":"richtext",
+      "id":"description",
+      "label":"RIght Side Description"
+    },
+    {
+      "type":"text",
+      "id":"btn_title",
+      "label":"Button title"
+    },
+    {
+      "type":"url",
+      "id":"btn_url",
+      "label":"Butto URL"
+    },
+    {
+      "type":"text",
+      "id":"custom_class",
+      "label":"Custom Class"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"text",
+      "name":"Video",
+      "settings":[
+        {
+          "type":"text",
+          "id":"video_url",
+          "label":"Video URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

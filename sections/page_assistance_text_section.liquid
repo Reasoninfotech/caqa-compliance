@@ -1,0 +1,99 @@
+<style>
+  .page_assistance_text_section{padding:80px 0 50px;background-image:url(https://cdn.shopify.com/s/files/1/0619/9531/9474/files/announce.png?v=1681542689);background-position:right bottom;background-repeat: no-repeat;position:relative;overflow:hidden;background-size:750px;}
+  .page_assistance_text_section:before{content: '';position: absolute;top: -83px;right: -9px;width: calc(100% - 208px);height: 135px;display: block;background: radial-gradient(circle, #0049b7, #001a58);transform: rotate(4deg);}
+  .page_assistance_text_section .page_assistance_text_section-row{width:60%;max-width: 1000px;padding: 0 30px 0 100px;}
+  .page_assistance_text_section .page_assistance_text_section-row .title{font-size:35px;color:#01a10b;margin:0;line-height:normal;}
+  .page_assistance_text_section .page_assistance_text_section-row .subtitle{font-size:35px;color:#193e92;margin:0;line-height:normal;}
+  .page_assistance_text_section .page_assistance_text_section-row .btn{background-color:#193e92;color:#fff;border-radius:0;padding:10px 20px;font-size:18px;line-height:20px;margin:15px 0}
+  .page_assistance_text_section .page_assistance_text_section-row .desc{margin-top:50px;font-size:15px}
+  .page_assistance_text_section .page_assistance_text_section-row .desc a{font-weight:500}
+  .page_assistance_text_section .page_assistance_text_section-row .desc strong{color:#01a10b;}
+
+  @media screen and (max-width:1600px){
+    .page_assistance_text_section{background-size:650px;}
+    .page_assistance_text_section:before{width: calc(100% - 200px);transform: rotate(6deg);height: 110px;}
+  }
+
+  @media screen and (max-width:1400px){
+    .page_assistance_text_section{padding: 80px 0 300px;}
+    .page_assistance_text_section .page_assistance_text_section-row {width:80%;max-width: 100%;padding: 0 30px 0 50px;}
+    .page_assistance_text_section .page_assistance_text_section-row .title {font-size: 30px;}
+    .page_assistance_text_section .page_assistance_text_section-row .subtitle {font-size: 30px;}
+    .page_assistance_text_section .page_assistance_text_section-row .desc {margin-top: 35px;}
+  }
+
+  @media screen and (max-width:991px){
+    .page_assistance_text_section{background-size:unset;}
+    .page_assistance_text_section:before {width: 100%;transform: rotate(356deg);height: 110px;left: -6px;top: -77px;}
+
+    .page_assistance_text_section .page_assistance_text_section-row {width: 90%;}
+    .page_assistance_text_section .page_assistance_text_section-row .title {font-size: 24px;}
+    .page_assistance_text_section .page_assistance_text_section-row .subtitle {font-size: 24px;}
+    .page_assistance_text_section .page_assistance_text_section-row .btn{font-size:14px}
+    .page_assistance_text_section .page_assistance_text_section-row .desc {font-size: 14px;line-height: 21px;}
+  }
+
+  @media screen and (max-width:575px){
+    .page_assistance_text_section{background-size:contain}
+    
+    .page_assistance_text_section .page_assistance_text_section-row{padding:0 30px;width:100%}
+    .page_assistance_text_section .page_assistance_text_section-row .title {font-size: 20px;}
+    .page_assistance_text_section .page_assistance_text_section-row .subtitle {font-size: 20px;}
+    .page_assistance_text_section .page_assistance_text_section-row .btn {font-size: 11px;}
+  }
+  
+</style>
+<section class="page_assistance_text_section">
+  <div class="page_assistance_text_section-row">
+    {% if section.settings.title != blank %}<h2 class="title">{{ section.settings.title }}</h2>{% endif %}
+    {% if section.settings.subtitle != blank %}<h2 class="subtitle">{{ section.settings.subtitle }}</h2>{% endif %}
+    {% if section.settings.btn_text != blank and section.settings.btn_url != blank %}
+      <a href="{{ section.settings.btn_url }}" class="btn">{{ section.settings.btn_text }}</a>
+    {% endif %}
+    {% if section.settings.desc %}
+    <div class="desc">
+      <div class="rte">
+        {{ section.settings.desc }}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Page Assistance Text",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      },
+      {
+        "type":"text",
+        "id":"subtitle",
+        "label":"Subtitle"
+      },
+      {
+        "type":"text",
+        "id":"btn_text",
+        "label":"Button Text"
+      },
+      {
+        "type":"url",
+        "id":"btn_url",
+        "label":"Button URL"
+      },
+      {
+        "type":"richtext",
+        "id":"desc",
+        "label":"Description"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

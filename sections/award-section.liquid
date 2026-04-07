@@ -1,0 +1,134 @@
+{% style %}
+  .award-section{padding:50px 0;}
+  .award-section .award_main_title{margin:0 auto 30px auto;text-align:center;}
+  .award-section .award_us_subtitle{font-size:18px;margin:0 0 54px 0;color:#5A5B5F;line-height:28px;text-align:center;text-align:center}
+  .award-section .award_block{display: flex;align-items: center; flex-wrap:wrap; justify-content: center; gap: 30px; column-gap: 70px;}
+  .award-section .award_block .award_block_inner{width:calc(25% - 53px);padding: 20px;}
+  .award-section .award_block_inner{border-radius:30px;text-align:center;background: #fff;display: flex;align-items: center;}
+  .award-section img{max-width:100%;width:100px;object-fit: contain;margin-left: -70px;margin-right:15px;}
+  .award-section .award_block_inner > div{text-align:left;}
+  .award-section .award_block_inner > div p, .award-section .award_block_inner > div h3, .award-section .award_block_inner > div h5{margin:0px;}
+  .award-section .award_block_inner > div h3{margin-bottom:10px;}
+  .award-section .award_block_inner > div p{color: #fe5c36;font-size: 22px;font-weight: 600;line-height: 26px; margin-bottom:10px;}
+  .award-section .award_block_des{font-size:14px;font-weight:500;margin:20px 0;line-height:24px;letter-spacing:0;}
+  .award-section .award_block_des p{margin:0;}
+  .award-section .swiper-pagination{position:relative;bottom:unset;margin-top:10px;}
+  .button_bottom{padding: 20px;text-align: center;}
+  .award-section .button_bottom .button {padding: 25px 55px;}
+
+  @media screen and (max-width:1200px){
+    .award-section .award_block_des {margin:15px 0 10px 0;}
+    .award-section .award_block .award_block_inner{width:calc(33.33% - 47px);padding: 20px;}
+  }
+
+  @media screen and (max-width:990px){
+    .award-section .award_us_subtitle {font-size: 16px;line-height: 23px;margin-top:10px;}
+    .award-section .award_block_des {font-size: 16px;}
+    .award-section .award_block_btn {font-size: 15px;}
+    .award-section .award_block{column-gap: 30px;}
+    .award-section .award_block .award_block_inner{width:calc(50% - 15px);padding: 20px;}
+    .award-section img{margin-left: 0px;}
+  }
+
+  @media screen and (max-width:768px){
+    .award-section .award_us_subtitle {font-size: 14px;line-height: 20px;margin-bottom:35px}
+    .award-section{padding:35px 0;}
+    .award-section .award_block .award_block_inner{width:100%;padding: 20px;}
+  }
+
+  @media screen and (max-width:575px){
+    .award-section .award_us_subtitle {font-size: 13px;line-height: 18px;margin-bottom:25px;}
+    .award-section figure {height: 94px;width: 103px}
+  }
+{% endstyle %}
+
+<div class="award-section">
+  <div class="page-width">
+    {% if section.settings.title != blank -%}
+      <h1 class="award_main_title section-title">{{ section.settings.title }}</h1>
+    {%- endif %}
+    {% if section.settings.subtitle != blank -%}
+      <h4 class="award_us_subtitle">{{ section.settings.subtitle }}</h4>
+    {%- endif %}
+    <div class="award_block">
+      {% for block in section.blocks %}
+        {% if block.settings.img != blank and block.settings.description != blank %}
+          <div class="award_block_inner">
+            <img src="{{ block.settings.img | img_url:"master" }}">
+            <div>
+              <p>{{ block.settings.text }}</p>
+              <h3>{{ block.settings.title }}</h3>
+              <h5 class="award_block_des">{{ block.settings.description }}</h5>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% if section.settings.button_link != blank and section.settings.button_text != blank %}
+      <div class="button_bottom">
+        <a class="button btn_blue" href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Award Section",
+"settings":[
+  {
+    "type":"text",
+    "id":"title",
+    "label":"Main Title"
+  },
+  {
+    "type":"text",
+    "id":"subtitle",
+    "label":"Sub Title"
+  },
+  {
+    "type":"text",
+    "id":"button_text",
+    "label":"button text"
+  },
+  {
+    "type":"url",
+    "id":"button_link",
+    "label":"button Link"
+  }
+],
+"blocks":[
+  {
+    "name":"Award Block",
+    "type":"text",
+    "settings":[
+      {
+        "type":"image_picker",
+        "id":"img",
+        "label":"Image"
+      },
+      {
+        "type":"text",
+        "id":"text",
+        "label":"text"
+      },
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      },
+      {
+        "type":"text",
+        "id":"description",
+        "label":"Description"
+      }
+    ]
+  }
+],
+"presets": [
+  {
+    "name": "Award Section"
+  }
+]
+}
+{% endschema %}

@@ -1,0 +1,151 @@
+
+<style>
+.custom-testi{padding:50px 0;}
+.custom-testi .custom-testi-head{text-align: center;max-width: 1000px;margin: 0 auto 25px;}
+.custom-testi .custom-testi-head .subhead{margin:0 auto 10px;}
+.custom-testi .custom-testi-head .head{font-size:60px;}
+
+.custom-testi .custom-testi-btn{text-align:center;padding:10px 0}
+.custom-testi .custom-testi-btn a.button{padding: 25px 70px;border-radius: 68px;font-weight:600}
+
+.custom-testi .custom-testi-main{padding: 90px 120px 30px 120px;max-width: 1090px;margin: 0 auto;position:relative;}
+.custom-testi .custom-testi-main::before{content:"";position:absolute;width:110px;height:88px; top:30px;left:0;background-image:url({{ 'Layer 90.png' | asset_url }});}
+.custom-testi .custom-testi-main::after{content:"";position:absolute;width:110px;height:88px; top:40%;right:0;transform:rotate(180deg); background-image:url({{ 'Layer 90.png' | asset_url }});}
+
+.custom-testi .custom-testi-main .owl-dots{margin-top:30px;}
+
+.custom-testi .custom-testi-main .testi_slide{text-align:center;}
+.custom-testi .custom-testi-main .testi-text{font-size: 26px;line-height: normal;font-weight: 600;margin-bottom:20px;}
+.custom-testi .custom-testi-main .testi-designation{font-size: 18px;font-weight:600}
+.custom-testi .custom-testi-main .testi-label{font-size: 18px;color: #6e6e6e;font-weight: 400;}
+
+@media(max-width:1200px){
+.custom-testi .custom-testi-main{padding:90px 120px 5px 120px}
+.custom-testi .custom-testi-head .head{font-size:50px;}
+.custom-testi .custom-testi-btn a.button{padding:15px 25px;}
+}
+@media(max-width:991px){
+.custom-testi .custom-testi-main{padding:30px 85px 5px 85px}
+
+.custom-testi .custom-testi-main::before,.custom-testi .custom-testi-main::after{width:75px;height:60px;background-size:contain;}
+.custom-testi .custom-testi-main::before{top:5px;}
+.custom-testi .custom-testi-main .testi-text{font-size:20px;}
+.custom-testi .custom-testi-head .head{font-size:40px;}
+}
+@media(max-width:767px){
+.custom-testi .custom-testi-head .head{font-size:25px;}
+
+}
+@media(max-width:575px){
+.custom-testi .custom-testi-head .head{font-size:22px;}
+.custom-testi .custom-testi-main{padding:15px 50px 5px 50px;}
+.custom-testi .custom-testi-main::before,.custom-testi .custom-testi-main::after{width:40px;height:32px;}
+.custom-testi .custom-testi-main .testi-text{font-size:15px;}
+.custom-testi .custom-testi-main .testi-designation,.custom-testi .custom-testi-main .testi-label{font-size:15px;}
+.custom-testi .custom-testi-main .owl-dots{margin-top:8px;}
+
+}
+
+</style>
+
+
+<section class="custom-testi" id="custom-testi-{{ section.id }}">
+<div class="page-width">
+<div class="custom-testi-head">
+{% if section.settings.subhead != blank %}
+        <h4 class="subhead">{{ section.settings.subhead }}</h4>
+        {% endif %}
+        {% if section.settings.head != blank %}
+        <h1 class="head">{{ section.settings.head }}</h1>
+        {% endif %}
+</div>
+<div class="custom-testi-main owl-carousel">
+{%- for block in section.blocks -%}
+        <div class="testi_slide">
+            {% if block.settings.text != blank %}
+            <div class="testi-text">
+            {{ block.settings.text }}
+            </div>
+            {% endif %}
+            {% if block.settings.designation != blank %}
+            <h4 class="testi-designation">
+            {{ block.settings.designation }}
+            </h4>
+            {% endif %}
+            {% if block.settings.label != blank %}
+            <h5 class="testi-label">
+            {{ block.settings.label }}
+            </h5>
+            {% endif %}
+        </div>
+{% endfor %}
+</div>
+{% if section.settings.btn != blank and section.settings.url != blank %}
+<div class="custom-testi-btn">
+    <a href="{{ section.settings.url }}" class="button btn_blue">{{ section.settings.btn }}</a>
+</div>
+{% endif %}
+</div>
+</section>
+
+{% schema %}
+{
+"name": "Custom Testimonials",
+"settings": [
+{
+        "type":"text",
+        "id":"subhead",
+            "label":"Sub Heading"
+    },
+    {
+        "type":"text",
+        "id":"head",
+            "label":"Heading"
+    },
+    {
+        "type":"text",
+        "id":"btn",
+            "label":"Button Label"
+    },
+    {
+        "type":"url",
+        "id":"url",
+            "label":"Url to Navigate"
+    }
+],
+"blocks":[
+    {
+        "type":"text",
+        "name":"Testimonials",
+        "settings":[
+        {
+            "type":"richtext",
+                "id":"text",
+                "label":"Text"
+            },
+            {
+            "type":"text",
+                "id":"designation",
+                "label":"Designation"
+            },
+            {
+            "type":"text",
+                "id":"label",
+                "label":"Custom Label"
+            }
+        ]
+    }
+],
+"presets":[
+{
+"name":"Custom Testimonials"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

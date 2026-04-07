@@ -1,0 +1,76 @@
+{% style %}
+  .rto-patten-text-image{padding:52px 0px;}
+  .rto-patten-text-image .rto-patten-block{display:flex;flex-wrap: wrap;align-items: center;}
+  .rto-patten-text-image .rto-patten-block .rto-patten-txt, .rto-patten-text-image .rto-patten-block .rto-content{width:50%;}
+  .rto-patten-text-image .rto-patten-block .rto-content{padding:15px;}
+  .rto-patten-text-image .rto-patten-block .rto-patten-txt{position:relative;}
+  .rto-patten-text-image .rto-patten-block .rto-patten-txt figure{margin:0px;}
+  .rto-patten-text-image .rto-patten-block .rto-patten-txt figure img{vertical-align: bottom;}
+  .rto-patten-text-image .rto-patten-block .rto-patten-txt .rto-content{position: absolute;top: 50%;right: 0px;transform: translateY(-50%);}
+  .rto-patten-text-image .rto-patten-block .rto-content h3{margin-bottom:15px;}
+
+   @media screen and (max-width:991px){
+    .rto-patten-text-image .rto-patten-block{flex-direction: column-reverse;}
+    .rto-patten-text-image .rto-patten-block .rto-patten-txt, .rto-patten-text-image .rto-patten-block .rto-content{width:100%;}
+     .rto-patten-text-image .rto-patten-block .rto-content{padding: 20px 0px 0px;}
+  }
+{% endstyle %}
+
+<div class="rto-patten-text-image">
+  <div class="page-width">
+    <div class="rto-patten-block">
+      <div class="rto-content">
+        {% if section.settings.text != blank %}
+          <h3>
+            {{ section.settings.text }}
+          </h3>
+        {% endif %}
+        {{ section.settings.content }}
+      </div>
+      {% if section.settings.image != blank %}
+        <div class="rto-patten-txt">
+          <figure>
+            <img
+              width="100%"
+              src="{{ section.settings.image | img_url : "master" }}"
+            >
+          </figure>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Patten Text With Image",
+  "settings": [
+      {
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },
+      {
+        "type":"text",
+        "id":"text",
+        "label":"Text"
+      },
+      {
+        "type":"html",
+        "id":"content",
+        "label":"Content"
+      }
+  ],
+  "presets":[
+    {
+      "name":"Patten Text With Image"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
