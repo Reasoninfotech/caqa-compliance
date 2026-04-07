@@ -1,9 +1,4 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
-
-{% comment %}
-{% assign article_img = article.image | image_url: "master" %}
-{% render 'bread_crumb' back_img:article_img, title:article.title %}
-{% endcomment %}
 {% render 'bread_crumb' back_img:section.settings.bread_crumb_back, title:'' %}
 <div class="main-blog page-width e-zine_single_temp">
   <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">

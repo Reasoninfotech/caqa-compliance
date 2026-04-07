@@ -50,27 +50,6 @@
         </header>
 
         {%- when 'content'-%}
-              {% comment %}
-        <div class="article-template__content rte" itemprop="articleBody" {{ block.shopify_attributes }}>
-          
-          {{ article.content }}
-          
-          {% if template.suffix == 'table' %}
-              <div class="page_table_of_content">
-                <div class="artical_tabel_row">
-                  {% for title in article.metafields.table_info.table_title %}
-                     {% assign i = forloop.index0 %}
-                    <div class="artical_tabel_col--{{ i }}">
-                      <h2 class="artical_table_title">{{article.metafields.table_info.table_title[i]}}</h2>
-                      <div class="artical_table_table rte">{{article.metafields.table_info.data[i]}}</div>
-                      <div class="artical_table_info rte">{{article.metafields.table_info.info[i]}}</div>
-                    </div>
-                  {% endfor %}
-                </div>
-              </div>
-          {% endif %}
-        </div>
-              {% endcomment %}
          <div class="article-template__content rte"><div></div></div>
               <div class="scrollspy scrollspy_new">
                 <div class="main-blog">
@@ -104,44 +83,6 @@
 
         {%- when 'share' -%}
         <div class="article-template__social-sharing" {{ block.shopify_attributes }}>
-          {% comment %}
-          <share-button class="share-button" {{ block.shopify_attributes }}>
-            <button class="share-button__button hidden">
-              {% render 'icon-share' %}
-              {{ block.settings.share_label | escape }}
-            </button>
-            <details id="Details-{{ block.id }}-{{ section.id }}">
-              <summary class="share-button__button">
-                {% render 'icon-share' %}
-                {{ block.settings.share_label | escape }}
-              </summary>
-              <div id="Article-share-{{ section.id }}" class="share-button__fallback motion-reduce">
-                <div class="field">
-                  <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status">
-                  </span>
-                  <input type="text"
-                         class="field__input"
-                         id="url"
-                         value="{{ request.origin | append: article.url }}"
-                         placeholder="{{ 'general.share.share_url' | t }}"
-                         onclick="this.select();"
-                         readonly
-                         >
-                  <label class="field__label" for="url">{{ 'general.share.share_url' | t }}</label>
-                </div>
-                <button class="share-button__close hidden no-js-hidden">
-                  {% render 'icon-close' %}
-                  <span class="visually-hidden">{{ 'general.share.close' | t }}</span>
-                </button>
-                <button class="share-button__copy no-js-hidden">
-                  {% render 'icon-clipboard' %}
-                  <span class="visually-hidden">{{ 'general.share.copy_to_clipboard' | t }}</span>
-                </button>
-              </div>
-            </details>
-          </share-button>
-          <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
-          {% endcomment %}
           {% render 'share-icons' %}
         </div>
         {%- endcase -%}

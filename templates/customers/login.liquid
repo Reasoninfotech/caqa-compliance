@@ -94,11 +94,6 @@
           {% endif %}
           placeholder="{{ 'customer.login_page.email' | t }}"
         >
-        {% comment %}
-        <label for="CustomerEmail">
-          {{ 'customer.login_page.email' | t }}
-        </label>
-      {% endcomment %}
       </div>
 
       {%- if form.password_needed -%}
@@ -114,11 +109,6 @@
             {% endif %}
             placeholder="{{ 'customer.login_page.password' | t }}"
           >
-          {% comment %}
-          <label for="CustomerPassword">
-            {{ 'customer.login_page.password' | t }}
-          </label>
-        {% endcomment %}
         </div>
 
         <a href="#recover">

@@ -1,13 +1,3 @@
-{% comment %}
-    Renders cart notification
-
-    Accepts:
-    - color_scheme: {String} sets the color scheme of the notification (optional)
-
-    Usage:
-    {% render 'cart-notification' %}
-{% endcomment %}
-
 <cart-notification>
   <div class="cart-notification-wrapper page-width">
     <div id="cart-notification" class="cart-notification focus-inset{% if color_scheme %} color-{{ color_scheme }} gradient{% endif %}" aria-modal="true" aria-label="{{ 'general.cart.item_added' | t }}" role="dialog" tabindex="-1">

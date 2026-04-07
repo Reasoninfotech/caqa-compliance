@@ -74,9 +74,6 @@
                   spellcheck="false"
                 {%- endif -%}
               >
-            {% comment %}
-              <label class="field__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
-             {% endcomment %} 
               <input type="hidden" name="options[prefix]" value="last">
               <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
                 <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
@@ -829,18 +826,6 @@
 
       {% if product.description %}
         <div class="product---description rte">
-          {% comment %}
-            {% if product.tags contains 'PRE-ORDER'
-              or product.tags contains 'Pre-order'
-              or product.tags contains 'pre-order'
-              or product.tags contains 'Pre-Order'
-              or product.tags contains 'pre-Order' %}
-              <p style="color: #ff0000;font-weight: 600;padding: 10px;border: 3px dashed #ff0000;font-size: 18px;">
-                Pre-order now available. Individual units will be delivered three months after your payment has been
-                received and qualifications will be delivered up to six months after your payment has been received.
-              </p>
-            {% endif %}
-          {% endcomment %}
           {% assign pro_des_main = false %}
           {% assign pro_des = product.description %}
           {% for tag in product.tags %}

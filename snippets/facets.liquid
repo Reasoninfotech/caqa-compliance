@@ -1,16 +1,3 @@
-{% comment %}
-    Renders facets (filtering and sorting)
-
-    Accepts:
-    - results: {Object} Collection or Search object
-    - enable_filtering: {Boolean} Show filtering when true
-    - enable_sorting: {Boolean} Show sorting when true
-    - filter_type: {String} Type of filter
-
-    Usage:
-    {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical' %}
-{% endcomment %}
-
 {{ 'component-show-more.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
@@ -34,12 +21,10 @@
         {%- endif -%}
 
         {% if enable_filtering %}
-          {% comment %} Heading is the first tabbable element on filter type horizontal {% endcomment %}
           <div id="FacetsWrapperDesktop"{% if filter_type == 'horizontal' %} class="facets__wrapper"{% endif %}>
             {%- if filter_type == 'horizontal' and results.filters != empty -%}
               <h2 class="facets__heading caption-large text-body" id="verticalTitle" tabindex="-1">{{ 'products.facets.filter_by_label' | t }}</h2>
             {%- endif -%}
-            {% comment %} Pills are right below the title for filter type vertical {% endcomment %}
             {%- if filter_type == 'vertical' -%}
               <div class="active-facets active-facets-desktop">
                 <div class="active-facets-vertical-filter">
@@ -82,7 +67,6 @@
             {%- endif -%}
 
             <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
-            {% comment %} Filters for both horizontal and vertical filter {% endcomment %}
             {%- for filter in results.filters -%}
               {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
               {% case filter.type %}
@@ -143,7 +127,6 @@
                           </li> 
                         {%- endfor -%}
                       </ul>
-                      {% comment %} No show more for no JS {% endcomment %}
                       <ul class="{% if filter_type != 'vertical' %} facets__list{% endif %} list-unstyled no-js" role="list">
                         {%- for value in filter.values -%}
                           <li class="list-menu__item facets__item">
@@ -264,7 +247,6 @@
               <button type="submit" class="facets__button-no-js button button--secondary">{{ 'products.facets.filter_button' | t }}</button>
             </noscript>
           </div>
-          {% comment %} Pills after filtes on filter type horizontal {% endcomment %}
           {%- if filter_type == 'horizontal' -%}
             <div class="active-facets active-facets-desktop">
               {%- for filter in results.filters -%}
@@ -307,7 +289,6 @@
         {% endif %}
 
         {%- if filter_type == 'horizontal' -%}
-          {% comment %} Sorting and product count are the last elements when filter type is horizontal {% endcomment %}
           {%- if enable_sorting -%}
             <div class="facet-filters sorting caption">
               <div class="facet-filters__field">
@@ -351,7 +332,6 @@
         {%- endif -%}
       </form>
     </facet-filters-form>
-    {% comment %} Sorting for vertical filter are grouped with filter when no JS{% endcomment %}
     {%- if enable_sorting and filter_type == 'vertical' -%}
       <facet-filters-form class="small-hide">
         <form class="no-js">
@@ -388,7 +368,6 @@
       </facet-filters-form>
     {%- endif -%}    
   {%- endif -%}
-  {% comment %}  Drawer and mobile filter {% endcomment %}
   <menu-drawer class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}" data-breakpoint="mobile">
     <details class="mobile-facets__disclosure disclosure-has-popup">
       <summary class="mobile-facets__open-wrapper focus-offset">
@@ -641,7 +620,6 @@
       </a>
     </facet-remove>
   </div>
-  {% comment %} Sort, product count and filter pills at the end when filter is type of Drawer for the correct tabbing order {% endcomment %}
   {%- if enable_sorting and filter_type == 'drawer' -%}
     <facet-filters-form class="facets small-hide">
       <form id="FacetSortDrawerForm" class="facets__form">

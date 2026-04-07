@@ -44,11 +44,6 @@
         autocomplete="given-name"
         placeholder="{{ 'customer.register.first_name' | t }}"
       >
-      {% comment %}
-      <label for="RegisterForm-FirstName">
-        {{ 'customer.register.first_name' | t }}
-      </label>
-    {% endcomment %}
     </div>
     <div class="field">
       <input
@@ -59,11 +54,6 @@
         autocomplete="family-name"
         placeholder="{{ 'customer.register.last_name' | t }}"
       >
-      {% comment %}
-      <label for="RegisterForm-LastName">
-        {{ 'customer.register.last_name' | t }}
-      </label>
-    {% endcomment %}
     </div>
     <div class="field">      
       <input
@@ -81,11 +71,6 @@
         {% endif %}
         placeholder="{{ 'customer.register.email' | t }}"
       >
-      {% comment %}
-      <label for="RegisterForm-email">
-        {{ 'customer.register.email' | t }}
-      </label>
-    {% endcomment %}
     </div>
     {%- if form.errors contains 'email' -%}
       <span id="RegisterForm-email-error" class="form__message">
@@ -107,11 +92,6 @@
         {% endif %}
         placeholder="{{ 'customer.register.password' | t }}"
       >
-      {% comment %}
-      <label for="RegisterForm-password">
-        {{ 'customer.register.password' | t }}
-      </label>
-    {% endcomment %}
     </div>
     {%- if form.errors contains 'password' -%}
       <span id="RegisterForm-password-error" class="form__message">

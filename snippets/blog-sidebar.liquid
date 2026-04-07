@@ -50,17 +50,6 @@
     <div class="list-posts">
       {% for article in blogs[blog_selected].articles limit: posts_limit %}
       <div class="item-post">
-        {% comment %}
-        <div class="post-thumb">
-          <a href="{{ article.url }}" class="">
-          	<img width="100%" src="{{ article.image.src | img_url: 'original' }}" alt="{{ article.title }}" />
-          </a>
-        </div>
-        <div class="post-info">
-          <small class="date-post">{{ article.published_at | date: "%d.%B.%Y" }}</small>
-          <h4 class="post-title"><a href="{{ article.url }}" class="dark">{{ article.title }}</a></h4>
-        </div>
-        {% endcomment %}
         {% render 'article-card', blog: section.settings.blog,
               article: article, 
               media_aspect_ratio: 1.66, 
