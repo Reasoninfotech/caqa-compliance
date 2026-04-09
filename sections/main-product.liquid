@@ -3,14 +3,14 @@
   class="page-width section-{{ section.id }}-padding product_template_wrapp"
   data-section="{{ section.id }}"
 >
-  {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
-  {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
-  {{ 'component-price.css' | asset_url | stylesheet_tag }}
-  {{ 'component-rte.css' | asset_url | stylesheet_tag }}
-  {{ 'component-slider.css' | asset_url | stylesheet_tag }}
-  {{ 'component-rating.css' | asset_url | stylesheet_tag }}
-  {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
-  {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'section-main-product.min.css' | asset_url | stylesheet_tag }}
+  {{ 'component-accordion.min.css' | asset_url | stylesheet_tag }}
+  {{ 'component-price.min.css' | asset_url | stylesheet_tag }}
+  {{ 'component-rte.min.css' | asset_url | stylesheet_tag }}
+  {{ 'component-slider.min.css' | asset_url | stylesheet_tag }}
+  {{ 'component-rating.min.css' | asset_url | stylesheet_tag }}
+  {{ 'component-loading-overlay.min.css' | asset_url | stylesheet_tag }}
+  {{ 'component-deferred-media.min.css' | asset_url | stylesheet_tag }}
 
   {%- style -%}
     .section-{{ section.id }}-padding {
@@ -26,11 +26,11 @@
     }
   {%- endstyle -%}
 
-  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.min.js' | asset_url }}" defer="defer"></script>
 
   {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
   {%- if first_3d_model -%}
-    {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
+    {{ 'component-product-model.min.css' | asset_url | stylesheet_tag }}
     <link
       id="ModelViewerStyle"
       rel="stylesheet"
@@ -559,7 +559,7 @@
                     </div>
                   </details>
                 </share-button>
-                <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
+                <script src="{{ 'share.min.js' | asset_url }}" defer="defer"></script>
               {%- when 'variant_picker' -%}
                 {%- unless product.has_only_default_variant -%}
                   {%- if block.settings.picker_type == 'button' -%}
@@ -735,7 +735,7 @@
                     {%- endform -%}
                   </product-form>
 
-                  {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
+                  {{ 'component-pickup-availability.min.css' | asset_url | stylesheet_tag }}
 
                   {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
                     | where: 'pick_up_enabled', true
@@ -764,7 +764,7 @@
                   </pickup-availability>
                 </div>
 
-                <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+                <script src="{{ 'pickup-availability.min.js' | asset_url }}" defer="defer"></script>
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   {% liquid
@@ -952,15 +952,15 @@
   {%- endfor -%}
 
   {%- if product.media.size > 0 -%}
-    <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'product-modal.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'media-gallery.min.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
   {%- if first_3d_model -%}
     <script type="application/json" id="ProductJSON-{{ product.id }}">
       {{ product.media | where: 'media_type', 'model' | json }}
     </script>
-    <script src="{{ 'product-model.js' | asset_url }}" defer></script>
+    <script src="{{ 'product-model.min.js' | asset_url }}" defer></script>
   {%- endif -%}
 
   <script>

@@ -61,7 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag: preload: true }}
 
-    <script src="{{ 'global.js' | asset_url }}" defer></script>
+    <script src="{{ 'global.min.js' | asset_url }}" defer></script>
     {{ content_for_header }}
 
     <!-- sora -->
@@ -237,7 +237,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ 'aos.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'app.css' | asset_url | stylesheet_tag }}
-    {{ 'page-audit-services.css' | asset_url | stylesheet_tag }}
+    {{ 'page-audit-services.min.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -262,7 +262,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     </script>
 
-    <script src="{{ 'custom.js' | asset_url }}" defer></script>
+    <script src="{{ 'custom.min.js' | asset_url }}" defer></script>
     
   </head>
 
@@ -332,7 +332,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 
     {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'predictive-search.min.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script>
       $(document).ready(function(){

@@ -1,4 +1,4 @@
-{% if content_for_header contains 'pdfgenerator.js' %} {% render 'pdf_script-id' %} {% endif %}{{ 'customer.css' | asset_url | stylesheet_tag }}
+{% if content_for_header contains 'pdfgenerator.js' %} {% render 'pdf_script-id' %} {% endif %}{{ 'customer.min.css' | asset_url | stylesheet_tag }}
 {% render 'bread_crumb' back_img:section.settings.bread_crumb_back, title:section.settings.bread_title %}
 <div class="customer order">
   <svg style="display:none">

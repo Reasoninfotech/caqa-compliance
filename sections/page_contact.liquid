@@ -1,4 +1,4 @@
-{{ 'tellinput.css' | asset_url | stylesheet_tag }}
+{{ 'tellinput.min.css' | asset_url | stylesheet_tag }}
 <style>
   .contact_page{ padding:50px 0px; }
 
@@ -231,7 +231,7 @@
     </div>
   </div>
 </section>
-<script src="{{ 'tellinput.js' | asset_url }}" defer></script>
+<script src="{{ 'tellinput.min.js' | asset_url }}" defer></script>
 <script>
   var input = document.querySelector("#ContactForm-phone");
   window.intlTelInput(input, {
@@ -255,10 +255,10 @@
     // placeholderNumberType: "MOBILE",
     preferredCountries: ['au'],
     // separateDialCode: true,
-    utilsScript: "{{ 'utils.js' | asset_url }}",
+    utilsScript: "{{ 'utils.min.js' | asset_url }}",
   });
 </script>
-<script src="{{ 'utils.js' | asset_url }}" defer></script>
+<script src="{{ 'utils.min.js' | asset_url }}" defer></script>
 {% schema %}
 {
 "name": "Contact Us",

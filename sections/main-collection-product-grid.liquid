@@ -1,16 +1,16 @@
-{{ 'template-collection.css' | asset_url | stylesheet_tag }}
-{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.min.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.min.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.min.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.min.css' | asset_url | stylesheet_tag }}
 
-<link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ 'component-rte.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 {%- if section.settings.enable_quick_add -%}
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'quick-add.min.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.min.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-rte.min.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
   .section-{{ section.id }}-padding {

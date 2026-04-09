@@ -1,4 +1,4 @@
-{{ 'component-show-more.css' | asset_url | stylesheet_tag }}
+{{ 'component-show-more.min.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign sort_by = results.sort_by | default: results.default_sort_by
@@ -66,7 +66,7 @@
               </div>
             {%- endif -%}
 
-            <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
+            <script src="{{ 'show-more.min.js' | asset_url }}" defer="defer"></script>
             {%- for filter in results.filters -%}
               {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
               {% case filter.type %}
