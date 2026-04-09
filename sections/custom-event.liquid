@@ -5,11 +5,19 @@ iframe[Attributes Style] {
     height: 100%;
 }
 .iframe-wrapper {
-	height:835px !important;	
-	padding-bottom:50px;
+	height: 0;	
+	padding-bottom: 0;
+    overflow: hidden;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+.iframe-wrapper.is-visible {
+    height: 835px !important;
+    padding-bottom: 50px;
+    opacity: 1;
 }
 .iframe-wrapper iframe {
-	height:835px !important;
+	height: 835px !important;
 }
 @media only screen and (max-width: 1200px) {
 	.iframe-wrapper {
@@ -51,22 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 Array.isArray(item.booking_category) &&
                 item.booking_category.includes(67)
             );
-            if (!has67) {
-                hideIframe();
-            } else {
+            if (has67) {
+                const wrapper = document.querySelector('.iframe-wrapper');
+                if (wrapper) wrapper.classList.add('is-visible');
                 console.log("🟢 Category 67 exists — iframe visible");
             }
         })
         .catch(err => {
             console.error("❌ API fetch error:", err);
-            hideIframe();
         });
-    function hideIframe() {
-        const wrapper = document.querySelector('.iframe-wrapper');
-        if (wrapper) {
-            wrapper.style.display = 'none';
-        }
-    }
 });
 </script>
 <div class="iframe-wrapper">

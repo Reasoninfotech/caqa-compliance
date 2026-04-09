@@ -43,11 +43,11 @@
   <div class="hero_banner_section {{ section.settings.cus_class }}" id="sec___{{ section.id }}">
     <div class="hero_banner_block">
         <figure class="hero_banner_img">
-          <img src="{{ section.settings.image | img_url: '2000x' }}" loading="eager" fetchpriority="high">
+          <img src="{{ section.settings.image | img_url: '2000x' }}" loading="eager" fetchpriority="high" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}">
         </figure>
         <div class="hero_banner_text">
               {% if section.settings.heading != blank %}<h1 class="hero_banner_heading">{{ section.settings.heading }}</h1>{% endif %}
-              {% if section.settings.head_logo %}<div class="heading_logo"><img src="{{ section.settings.head_logo | img_url:'500x' }}"></div>{% endif %}
+              {% if section.settings.head_logo %}<div class="heading_logo"><img src="{{ section.settings.head_logo | img_url:'500x' }}" width="{{ section.settings.head_logo.width }}" height="{{ section.settings.head_logo.height }}"></div>{% endif %}
               {% if section.settings.description != blank %}<div class="hero_banner_description">{{ section.settings.description }}</div>{% endif %}
         </div>
     </div>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
-    <script src="//searchserverapi.com/widgets/shopify/init.js?a=0D4m6N1u5H" defer></script>
+    <link rel="preconnect" href="https://searchserverapi.com">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0"
@@ -281,6 +281,32 @@
 
     <script src="{{ 'custom.min.js' | asset_url }}" defer></script>
     
+    <style>
+      /* Critical Perf Fixes */
+      .owl-carousel:not(.owl-loaded) {
+        display: flex !important;
+        overflow: hidden !important;
+        min-height: 400px;
+      }
+      .owl-carousel:not(.owl-loaded) > :not(:first-child) {
+        display: none !important;
+      }
+      .home_page-banner:not(.owl-loaded) {
+        min-height: 600px;
+      }
+      @media (max-width: 991px) {
+        .home_page-banner:not(.owl-loaded) {
+          min-height: 400px;
+        }
+      }
+      /* AOS hidden elements reservation */
+      [data-aos] {
+        visibility: hidden;
+      }
+      .aos-animate[data-aos] {
+        visibility: visible;
+      }
+    </style>
   </head>
 
   <body class="gradient {% if template.suffix %}temp_{{ template.suffix }}{% else %}temp_{{ template }}{% endif %}">
@@ -364,27 +390,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             disable: window.innerWidth < 768
           });
 
-          setInterval(function() {
-           $('.product_recommendations_slider').owlCarousel({
-            loop: true,
-            margin: 20,
-            autoplay:true,
-            autoplayTimeout:3000,
-            autoplayHoverPause:true,
-            nav: false,
-            dots: false,
-            responsiveClass: true,
-            responsive:{
-                0:{ items:1 },
-                600:{ items:2 },
-                1000:{ items:4 }
+          const initRecSlider = () => {
+            const $slider = $('.product_recommendations_slider');
+            if ($slider.length && !$slider.hasClass('owl-loaded')) {
+              $slider.owlCarousel({
+                loop: true,
+                margin: 20,
+                autoplay:true,
+                autoplayTimeout:3000,
+                autoplayHoverPause:true,
+                nav: false,
+                dots: false,
+                responsiveClass: true,
+                responsive:{
+                    0:{ items:1 },
+                    600:{ items:2 },
+                    1000:{ items:4 }
+                }
+              });
             }
-          });
-          }, 100);
+          };
+          initRecSlider();
+          const recObserver = new MutationObserver(initRecSlider);
+          recObserver.observe(document.body, { childList: true, subtree: true });
         });
       }
       initApp();
     </script>
     {% section 'advertisement-banner' %}
+    <script src="//searchserverapi.com/widgets/shopify/init.js?a=0D4m6N1u5H" defer></script>
   </body>
 </html>

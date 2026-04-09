@@ -1,6 +1,6 @@
 <style>
-  .home_page-banner { min-height: 600px; }
-  @media(max-width: 991px) { .home_page-banner { min-height: 400px; } }
+  .home_page-banner { min-height: 600px; aspect-ratio: 1920/800; }
+  @media(max-width: 991px) { .home_page-banner { min-height: 400px; aspect-ratio: auto; } }
   .home_page-banner .home_page-banner-main{display:flex;}
   .home_page-banner .home_page-banner-main .home_page-banner-media{width:50%;text-align:right;}
   .home_page-banner .home_page-banner-main .home_page-banner-media img{width:100%;height:100%;max-width:100%;}
@@ -78,8 +78,8 @@
 
         <div class="home_page-banner-media {% if section.settings.mobimage != blank %}has_mobimage{% endif %}">
           <a href="/pages/contact">
-            <img src="{{ section.settings.image | img_url: '1000x' }}" loading="eager" fetchpriority="high">
-            <img class="mob-img" src="{{ section.settings.mobimage | img_url: '768x' }}" loading="eager" fetchpriority="high">
+            <img src="{{ section.settings.image | img_url: '1000x' }}" loading="eager" fetchpriority="high" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}">
+            <img class="mob-img" src="{{ section.settings.mobimage | img_url: '768x' }}" loading="eager" fetchpriority="high" width="{{ section.settings.mobimage.width }}" height="{{ section.settings.mobimage.height }}">
           </a>
         </div>
       </div>
@@ -122,8 +122,8 @@
 
         <div class="home_page-banner-media {% if section.settings.mobimage1 != blank %}has_mobimage{% endif %}">
           <a href="/pages/contact">
-            <img src="{{ section.settings.image1 | img_url: '1000x' }}" loading="lazy">
-            <img class="mob-img" src="{{ section.settings.mobimage1 | img_url: '768x' }}" loading="lazy">
+            <img src="{{ section.settings.image1 | img_url: '1000x' }}" loading="lazy" width="{{ section.settings.image1.width }}" height="{{ section.settings.image1.height }}">
+            <img class="mob-img" src="{{ section.settings.mobimage1 | img_url: '768x' }}" loading="lazy" width="{{ section.settings.mobimage1.width }}" height="{{ section.settings.mobimage1.height }}">
           </a>
         </div>
       </div>

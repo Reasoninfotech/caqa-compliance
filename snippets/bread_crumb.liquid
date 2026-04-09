@@ -1,9 +1,9 @@
 <div class="bread_crumb">
   <figure>
     {% if back_img != blank %}
-      <img src="{{ back_img | img_url:'1500x' }}">
+      <img src="{{ back_img | img_url:'1500x' }}" width="{{ back_img.width }}" height="{{ back_img.height }}" loading="eager">
     {% else %}
-      <img src="https://cdn.shopify.com/s/files/1/0619/9531/9474/files/about-us-01.jpg?v=1656676817">
+      <img src="https://cdn.shopify.com/s/files/1/0619/9531/9474/files/about-us-01.jpg?v=1656676817" width="1500" height="400" loading="eager">
     {% endif %}
     <figcaption>
       {% if title != blank -%}
