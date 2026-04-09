@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
-    <script src="//searchserverapi.com/widgets/shopify/init.js?a=0D4m6N1u5H"></script>
+    <script src="//searchserverapi.com/widgets/shopify/init.js?a=0D4m6N1u5H" defer></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0"
@@ -11,31 +11,48 @@
 
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW4PZHSCP0"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Delayed Scripts Handler -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function loadDelayedScripts() {
+        if (window.delayedScriptsLoaded) return;
+        window.delayedScriptsLoaded = true;
 
-      gtag('config', 'G-YW4PZHSCP0');
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108618630-4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        // Google Tag Manager
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5GTGMMB');
 
-      gtag('config', 'UA-108618630-4');
+        // Google Analytics (gtag.js)
+        var ga1 = document.createElement('script');
+        ga1.async = true;
+        ga1.src = 'https://www.googletagmanager.com/gtag/js?id=G-YW4PZHSCP0';
+        document.head.appendChild(ga1);
+
+        var ga2 = document.createElement('script');
+        ga2.async = true;
+        ga2.src = 'https://www.googletagmanager.com/gtag/js?id=UA-108618630-4';
+        document.head.appendChild(ga2);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YW4PZHSCP0');
+        gtag('config', 'UA-108618630-4');
+      }
+
+      // Load delayed scripts after 3 seconds or on first user interaction
+      const delayTimer = setTimeout(loadDelayedScripts, 3000);
+      ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'].forEach(event => {
+        window.addEventListener(event, () => {
+          clearTimeout(delayTimer);
+          loadDelayedScripts();
+        }, { once: true, passive: true });
+      });
     </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5GTGMMB');</script>
-<!-- End Google Tag Manager -->
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -55,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
-    <script src="{{ 'jquery.min.js' | asset_url }}"></script>
+    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
     {% render 'meta-tags' %}
     {{ 'bootstrap.min.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag: preload: true }}
@@ -234,10 +251,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .container{max-width: var(--page-width);}
     {% endstyle %}
 
-    {{ 'aos.css' | asset_url | stylesheet_tag }}
-    {{ 'base.css' | asset_url | stylesheet_tag }}
-    {{ 'app.css' | asset_url | stylesheet_tag }}
-    {{ 'page-audit-services.min.css' | asset_url | stylesheet_tag }}
+    {{ 'aos.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'app.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'page-audit-services.min.css' | asset_url | stylesheet_tag: preload: true }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -335,40 +352,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <script src="{{ 'predictive-search.min.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script>
-      $(document).ready(function(){
-        AOS.init({
-          once: true,
-          disable: window.innerWidth < 768
-        });
+      function initApp() {
+        if (typeof jQuery === 'undefined') {
+          setTimeout(initApp, 10);
+          return;
+        }
+        
+        $(document).ready(function(){
+          AOS.init({
+            once: true,
+            disable: window.innerWidth < 768
+          });
 
-        setInterval(function() {
-         $('.product_recommendations_slider').owlCarousel({
-          loop: true,
-          margin: 20,
-          autoplay:true,
-          autoplayTimeout:3000,
-          autoplayHoverPause:true,
-          nav: false,
-          dots: false,
-          responsiveClass: true,
-          responsive:{
-              0:{
-                  items:1
-              },
-              600:{
-                  items:2
-              },
-              1000:{
-                  items:4
-              }
-          }
+          setInterval(function() {
+           $('.product_recommendations_slider').owlCarousel({
+            loop: true,
+            margin: 20,
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true,
+            nav: false,
+            dots: false,
+            responsiveClass: true,
+            responsive:{
+                0:{ items:1 },
+                600:{ items:2 },
+                1000:{ items:4 }
+            }
+          });
+          }, 100);
         });
-        }, 100);
-
-      });
-    </script>
-    <script>
-      // var script_loaded=!1;function loadJSscripts(){if(!script_loaded){observer.disconnect(),script_loaded=!0,document.querySelectorAll("iframe.lazy").forEach(t=>{datasrc=t.dataset.src,null!=datasrc&&(t.src=datasrc)});var t=document.getElementsByTagName("script");for(i=0;i<t.length;i++)if(null!==t[i].getAttribute("data-src")&&(t[i].setAttribute("src",t[i].getAttribute("data-src")),delete t[i].dataset.src),"text/lazyload"==t[i].getAttribute("type")){for(var e=document.createElement("script"),a=0;a<t[i].attributes.length;a++){var n=t[i].attributes[a];e.setAttribute(n.name,n.value)}e.type="text/javascript",e.innerHTML=t[i].innerHTML,t[i].parentNode.removeChild(t[i]),t[i].parentNode.insertBefore(e,t[i])}var r=document.getElementsByTagName("link");for(i=0;i<r.length;i++)null!==r[i].getAttribute("data-href")&&(r[i].setAttribute("href",r[i].getAttribute("data-href")),delete r[i].dataset.href);document.dispatchEvent(new CustomEvent("asyncLazyLoad"))}}var activityEvents=["mousedown","mousemove","keydown","scroll","touchstart","click","keypress","touchmove"];activityEvents.forEach(function(t){window.addEventListener(t,loadJSscripts,!1)}),window.addEventListener?window.addEventListener("load",function(){},!1):window.attachEvent?window.attachEvent("onload",function(){}):window.onload=(t=>{});
+      }
+      initApp();
     </script>
     {% section 'advertisement-banner' %}
   </body>

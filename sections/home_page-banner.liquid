@@ -78,8 +78,8 @@
 
         <div class="home_page-banner-media {% if section.settings.mobimage != blank %}has_mobimage{% endif %}">
           <a href="/pages/contact">
-            <img src="{{ section.settings.image | img_url:"master" }}">
-            <img class="mob-img" src="{{ section.settings.mobimage | img_url:"master" }}">
+            <img src="{{ section.settings.image | img_url: '1000x' }}" loading="eager" fetchpriority="high">
+            <img class="mob-img" src="{{ section.settings.mobimage | img_url: '768x' }}" loading="eager" fetchpriority="high">
           </a>
         </div>
       </div>
@@ -122,8 +122,8 @@
 
         <div class="home_page-banner-media {% if section.settings.mobimage1 != blank %}has_mobimage{% endif %}">
           <a href="/pages/contact">
-            <img src="{{ section.settings.image1 | img_url:"master" }}">
-            <img class="mob-img" src="{{ section.settings.mobimage1 | img_url:"master" }}">
+            <img src="{{ section.settings.image1 | img_url: '1000x' }}" loading="lazy">
+            <img class="mob-img" src="{{ section.settings.mobimage1 | img_url: '768x' }}" loading="lazy">
           </a>
         </div>
       </div>
