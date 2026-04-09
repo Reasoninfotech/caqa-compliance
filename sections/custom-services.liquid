@@ -90,14 +90,24 @@
 </section>
 
 <script>
-  jQuery(document).ready(function($) {
-      $(document).on("click",".services-slider .services-slider-head .services-slider_nav .ser_prev",function(){
-        $(this).parents(".services-slider").find(".services-slider-main .owl-nav .owl-prev").trigger("click");
+  (function() {
+    function initServicesNav() {
+      if (typeof jQuery === 'undefined' || !jQuery.fn.owlCarousel) {
+        setTimeout(initServicesNav, 100);
+        return;
+      }
+      var $ = jQuery;
+      $(document).on("click", ".services-slider .ser_prev", function(e) {
+        e.preventDefault();
+        $(this).closest(".services-slider").find(".services-slider-main").trigger('prev.owl.carousel');
       });
-    $(document).on("click",".services-slider .services-slider-head .services-slider_nav .ser_next",function(){
-        $(this).parents(".services-slider").find(".services-slider-main .owl-nav .owl-next").trigger("click");
+      $(document).on("click", ".services-slider .ser_next", function(e) {
+        e.preventDefault();
+        $(this).closest(".services-slider").find(".services-slider-main").trigger('next.owl.carousel');
       });
-  });
+    }
+    initServicesNav();
+  })();
 </script>
 
 {% schema %}
