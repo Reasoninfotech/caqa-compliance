@@ -74,9 +74,9 @@
     {% endif %}
     <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
     {% render 'meta-tags' %}
-    {{ 'bootstrap.min.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag: preload: true }}
+    <link rel="stylesheet" href="{{ 'bootstrap.min.css' | asset_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ 'owl.carousel.min.css' | asset_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ 'owl.theme.default.min.css' | asset_url }}" media="print" onload="this.media='all'">
 
     <script src="{{ 'global.min.js' | asset_url }}" defer></script>
     {{ content_for_header }}
@@ -251,10 +251,10 @@
       .container{max-width: var(--page-width);}
     {% endstyle %}
 
-    {{ 'aos.css' | asset_url | stylesheet_tag: preload: true }}
+    <link rel="stylesheet" href="{{ 'aos.css' | asset_url }}" media="print" onload="this.media='all'">
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'app.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'page-audit-services.min.css' | asset_url | stylesheet_tag: preload: true }}
+    <link rel="stylesheet" href="{{ 'page-audit-services.min.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -299,12 +299,14 @@
           min-height: 400px;
         }
       }
-      /* AOS hidden elements reservation */
-      [data-aos] {
-        visibility: hidden;
-      }
-      .aos-animate[data-aos] {
-        visibility: visible;
+      /* AOS hidden elements reservation - Only on Desktop where AOS is enabled */
+      @media screen and (min-width: 768px) {
+        [data-aos] {
+          visibility: hidden;
+        }
+        .aos-animate[data-aos] {
+          visibility: visible;
+        }
       }
     </style>
   </head>

@@ -76,8 +76,17 @@
 
         <div class="home_page-banner-media {% if section.settings.mobimage != blank %}has_mobimage{% endif %}">
           <a href="/pages/contact">
-            <img src="{{ section.settings.image | img_url: '1000x' }}" loading="eager" fetchpriority="high" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}">
-            <img class="mob-img" src="{{ section.settings.mobimage | img_url: '768x' }}" loading="eager" fetchpriority="high" width="{{ section.settings.mobimage.width }}" height="{{ section.settings.mobimage.height }}">
+            <picture>
+              {% if section.settings.mobimage != blank %}
+                <source media="(max-width: 767px)" srcset="{{ section.settings.mobimage | img_url: '768x' }}">
+              {% endif %}
+              <img src="{{ section.settings.image | img_url: '1000x' }}" 
+                   loading="eager" 
+                   fetchpriority="high" 
+                   width="{{ section.settings.image.width | default: 1000 }}" 
+                   height="{{ section.settings.image.height | default: 600 }}"
+                   alt="{{ section.settings.image.alt | default: 'Banner' | escape }}">
+            </picture>
           </a>
         </div>
       </div>
@@ -120,8 +129,16 @@
 
         <div class="home_page-banner-media {% if section.settings.mobimage1 != blank %}has_mobimage{% endif %}">
           <a href="/pages/contact">
-            <img src="{{ section.settings.image1 | img_url: '1000x' }}" loading="lazy" width="{{ section.settings.image1.width }}" height="{{ section.settings.image1.height }}">
-            <img class="mob-img" src="{{ section.settings.mobimage1 | img_url: '768x' }}" loading="lazy" width="{{ section.settings.mobimage1.width }}" height="{{ section.settings.mobimage1.height }}">
+            <picture>
+              {% if section.settings.mobimage1 != blank %}
+                <source media="(max-width: 767px)" srcset="{{ section.settings.mobimage1 | img_url: '768x' }}">
+              {% endif %}
+              <img src="{{ section.settings.image1 | img_url: '1000x' }}" 
+                   loading="lazy" 
+                   width="{{ section.settings.image1.width | default: 1000 }}" 
+                   height="{{ section.settings.image1.height | default: 600 }}"
+                   alt="{{ section.settings.image1.alt | default: 'Banner' | escape }}">
+            </picture>
           </a>
         </div>
       </div>
