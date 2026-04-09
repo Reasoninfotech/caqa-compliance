@@ -1,32 +1,24 @@
 <style>
-  #icon-with-text-{{ section.id }} { position: relative; overflow: hidden; }
-  #icon-with-text-{{ section.id }} .iwt-background-image {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;
-  }
-  .icon-with-text {
-    padding-top: 190px; position: relative; margin-top: 0; min-height: 800px;
-  }
-  @media(max-width: 991px) {
-    .icon-with-text { min-height: 500px; padding-top: 100px; margin-top: 0; }
-  }
+#icon-with-text-{{ section.id }}{background-image:url({{ section.settings.image | img_url:"master" }});background-repeat: no-repeat;}
+.icon-with-text{padding-top:190px;overflow:hidden;position:relative;margin-top:-140px;}
 .icon-with-text .icon-with-text-main{display:flex;padding-bottom:40px;}
-.icon-with-text .icon-with-text-main .icon-with-text-block{width:33.33%;text-align:center;padding: 40px;border-radius: 45px;min-height:360px;}
+.icon-with-text .icon-with-text-main .icon-with-text-block{width:33.33%;text-align:center;padding: 40px;border-radius: 45px;}
 .icon-with-text .icon-with-text-main .icon-with-text-block:nth-child(2){background: #193f97;color: #96A7CE;}
 .icon-with-text .icon-with-text-main .icon-with-text-block:nth-child(2) h2{color:white;}
-.icon-with-text .icon-with-text-main .icon-with-text-block figure{max-width:145px;min-height:145px;display:flex;align-items:center;justify-content:center;margin:0 auto;}
-.icon-with-text .icon-with-text-main .icon-with-text-block figure img{width:100%;height:auto;object-fit:contain;}
+.icon-with-text .icon-with-text-main .icon-with-text-block figure{max-width:145px;margin:0 auto;}
+.icon-with-text .icon-with-text-main .icon-with-text-block figure img{width:100%;height:100%;}
 .icon-with-text .icon-with-text-main .icon-with-text-block h2{font-size:24px;margin:20px 0 15px;}
-.icon-with-text .icon-with-text-main .icon-with-text-block .iwt-text{font-size:17px;line-height:1.4;min-height:72px;}
+.icon-with-text .icon-with-text-main .icon-with-text-block .iwt-text{font-size:17px;line-height:normal;}
 
   
   .icon-with-text .img_text-main{display:flex;padding:0 70px 255px;position:relative;}
-.icon-with-text .img_text-main::before{content: "";position: absolute;bottom: 145px;width: 155px;left: 0px;height: 410px;background:url({{ section.settings.image2 | image_url: width: 200 }});background-repeat: no-repeat;z-index:-1;}
-.icon-with-text .img_text-main::after{content: "";position: absolute;bottom: 0;width: 310px;right:0px;height: 650px;background:url({{ section.settings.image3 | image_url: width: 400 }});background-repeat: no-repeat;z-index:-1;}
+.icon-with-text .img_text-main::before{content: "";position: absolute;bottom: 145px;width: 155px;left: 0px;height: 410px;background:url({{ section.settings.image2 | img_url:"master" }});background-repeat: no-repeat;z-index:-1;}
+.icon-with-text .img_text-main::after{content: "";position: absolute;bottom: 0;width: 310px;right:0px;height: 650px;background:url({{ section.settings.image3 | img_url:"master" }});background-repeat: no-repeat;z-index:-1;}
   
-  .icon-with-text .img_text-main figure{margin:0;width:50%;aspect-ratio: 4 / 3;}
+  .icon-with-text .img_text-main figure{margin:0;width:50%;}
   
   
-  .icon-with-text .img_text-main figure img{width:100%;height:100%;object-fit:contain;}
+  .icon-with-text .img_text-main figure img{width:100%;height:100%;}
   .icon-with-text .img_text-main-content{width:50%;display: flex;align-items: center;padding: 0 75px;max-width: 800px;}
 
   .icon-with-text .img_text-main-content .head{font-size:60px;}
@@ -42,8 +34,8 @@
     
   }
   @media(max-width:1200px){
-  .icon-with-text .icon-with-text-main .icon-with-text-block{padding:25px;min-height:300px;}
-    .icon-with-text .icon-with-text-main .icon-with-text-block figure{max-width:100px;min-height:100px;}
+  .icon-with-text .icon-with-text-main .icon-with-text-block{padding:25px;}
+    .icon-with-text .icon-with-text-main .icon-with-text-block figure{max-width:100px;}
     .icon-with-text .icon-with-text-main .icon-with-text-block h2{font-size:18px;}
     .icon-with-text .icon-with-text-main .icon-with-text-block .iwt-text{font-size:14px;}
 
@@ -54,7 +46,7 @@
 
   @media(max-width:991px){
   #icon-with-text-{{ section.id }}{background-size:contain;}
-    .icon-with-text .icon-with-text-main .icon-with-text-block figure{max-width:75px;min-height:75px;}
+    .icon-with-text .icon-with-text-main .icon-with-text-block figure{max-width:75px;}
     .icon-with-text .icon-with-text-main .icon-with-text-block .iwt-text{font-size:12px;}
     .icon-with-text .icon-with-text-main .icon-with-text-block h2{margin:10px 0;}
 
@@ -66,7 +58,7 @@
   @media(max-width:749px){
   .icon-with-text{padding-top:70px;}
   .icon-with-text .icon-with-text-main{flex-direction:column;justify-content:center;}
-  .icon-with-text .icon-with-text-main .icon-with-text-block{width:100%;max-width:350px;margin:0 auto;min-height:0;}
+  .icon-with-text .icon-with-text-main .icon-with-text-block{width:100%;max-width:350px;margin:0 auto;}
 
 .icon-with-text .img_text-main{padding:0 15px 180px;}
     .icon-with-text .img_text-main-content{padding:40px 0 20px;}
@@ -81,36 +73,13 @@
 
 
 <section class="icon-with-text" id="icon-with-text-{{ section.id }}">
-  {% if section.settings.image != blank %}
-    {{ section.settings.image
-      | image_url: width: 2000
-      | image_tag:
-      class: 'iwt-background-image',
-      loading: 'lazy',
-      fetchpriority: 'auto',
-      sizes: '100vw',
-      widths: '375, 550, 750, 1100, 1500, 1780, 2000',
-      width: section.settings.image.width,
-      height: section.settings.image.height,
-      decoding: 'async'
-    }}
-  {% endif %}
   <div class="page-width">
     <div class="icon-with-text-main">
       {% for block in section.blocks %}
         <div class="icon-with-text-block">
           {% if block.settings.icon != blank %}
           <figure>
-            {%- assign icon_height = block.settings.icon.height | times: 145 | divided_by: block.settings.icon.width | round -%}
-            {{ block.settings.icon
-              | image_url: width: 300
-              | image_tag:
-              width: 145, 
-              height: icon_height,
-              loading: 'lazy', 
-              alt: block.settings.head | default: "Icon",
-              decoding: 'async'
-            }}
+            <img src="{{ block.settings.icon | img_url:"master" }}">
           </figure>
             {% endif %}
         {% if block.settings.head != blank %}
@@ -125,16 +94,7 @@
   </div>
   <div class="img_text-main">
     <figure>
-      {{ section.settings.img
-        | image_url: width: 1000
-        | image_tag: 
-        width: 800, 
-        loading: 'lazy', 
-        sizes: '(min-width: 992px) 50vw, 100vw', 
-        widths: '400, 600, 800, 1000',
-        height: section.settings.img.height,
-        decoding: 'async'
-      }}
+      <img src="{{ section.settings.img | img_url:"master" }}">
     </figure>
     <div class="img_text-main-content">
       <div class="img_text-main-content-inner">
