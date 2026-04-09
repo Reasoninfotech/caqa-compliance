@@ -73,13 +73,36 @@
 
 
 <section class="icon-with-text" id="icon-with-text-{{ section.id }}">
+  {% if section.settings.image != blank %}
+    {{ section.settings.image
+      | image_url: width: 2000
+      | image_tag:
+      class: 'iwt-background-image',
+      loading: 'lazy',
+      fetchpriority: 'auto',
+      sizes: '100vw',
+      widths: '375, 550, 750, 1100, 1500, 1780, 2000',
+      width: section.settings.image.width,
+      height: section.settings.image.height,
+      decoding: 'async'
+    }}
+  {% endif %}
   <div class="page-width">
     <div class="icon-with-text-main">
       {% for block in section.blocks %}
         <div class="icon-with-text-block">
           {% if block.settings.icon != blank %}
           <figure>
-            <img src="{{ block.settings.icon | img_url:"master" }}">
+            {%- assign icon_height = block.settings.icon.height | times: 145 | divided_by: block.settings.icon.width | round -%}
+            {{ block.settings.icon
+              | image_url: width: 300
+              | image_tag:
+              width: 145, 
+              height: icon_height,
+              loading: 'lazy', 
+              alt: block.settings.head | default: "Icon",
+              decoding: 'async'
+            }}
           </figure>
             {% endif %}
         {% if block.settings.head != blank %}
@@ -94,7 +117,16 @@
   </div>
   <div class="img_text-main">
     <figure>
-      <img src="{{ section.settings.img | img_url:"master" }}">
+      {{ section.settings.img
+        | image_url: width: 1000
+        | image_tag: 
+        width: 800, 
+        loading: 'lazy', 
+        sizes: '(min-width: 992px) 50vw, 100vw', 
+        widths: '400, 600, 800, 1000',
+        height: section.settings.img.height,
+        decoding: 'async'
+      }}
     </figure>
     <div class="img_text-main-content">
       <div class="img_text-main-content-inner">
