@@ -1,4 +1,4 @@
-{{ 'tellinput.min.css' | asset_url | stylesheet_tag }}
+{{ 'tellinput.css' | asset_url | stylesheet_tag }}
 <style>
   .contact-form{background-repeat: no-repeat; background-size: contain; padding:245px 0px; }
   .contact-form .contact-form-main{display:flex;align-items:center;}
@@ -221,7 +221,7 @@
     </div>
   </div>
 </section>
-<script src="{{ 'tellinput.min.js' | asset_url }}" defer></script>
+<script src="{{ 'tellinput.js' | asset_url }}"></script>
 <script>
   var input = document.querySelector("#ContactForm-phone");
   window.intlTelInput(input, {
@@ -245,11 +245,11 @@
     // placeholderNumberType: "MOBILE",
     preferredCountries: ['au'],
     // separateDialCode: true,
-    utilsScript: "{{ 'utils.min.js' | asset_url }}",
+    utilsScript: "{{ 'utils.js' | asset_url }}",
   });
 </script>
-<script src="{{ 'utils.min.js' | asset_url }}" defer></script>
-{% schema %}  
+<script src="{{ 'utils.js' | asset_url }}"></script>
+{% schema %}
 {
 "name": "t:sections.contact-form.name",
 "tag": "section",
