@@ -41,10 +41,7 @@
     {% if section.settings.img != blank %}
       <div class="rto_about_content">
         <figure>
-          <img width="100%" src="{{ section.settings.img | img_url : "master" }}">
-          {% if section.settings.text != blank -%}
-            <figcaption>{{ section.settings.text }}</figcaption>
-          {%- endif %}
+          <img width="100%" src="{{ block.settings.img | img_url : "master" }}">
         </figure>
       </div>
     {% endif %}
@@ -57,7 +54,6 @@
           <div class="rto_block{% if block.settings.full_width %} full_block{% endif %}">
             <figure>
               <img width="100%" src="{{ block.settings.img | img_url : "master" }}">
-              <figcaption>{{ block.settings.text }}</figcaption>
             </figure>
           </div>
         {% endif %}
