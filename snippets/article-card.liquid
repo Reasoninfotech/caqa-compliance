@@ -1,21 +1,3 @@
-{% comment %}
-    Renders an article card for a given blog with settings to either show the image or not.
-
-    Accepts:
-    - blog: {Object} Blog object
-    - article: {Object} Article object
-    - media_aspect_ratio: {String} The setting changes the aspect ratio of the article image, if shown
-    - media_height: {String} The setting changes the height of the article image. Overrides media_aspect_ratio.
-    - show_image: {String} The setting either show the article image or not. If it's not included it will show the image by default
-    - show_date: {String} The setting either show the article date or not. If it's not included it will not show the image by default
-    - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
-    - show_badge: {String} The setting either show the blog badge or not.
-    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
-
-    Usage:
-    {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
-{% endcomment %}
-
 {%- if article and article != empty -%}
   {%- liquid
     assign ratio = 1
@@ -24,7 +6,6 @@
     endif
   -%}
   <div class="card-wrapper underline-links-hover">
-    {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
     <div class="card article-card border-0 card--{{ settings.card_style }}
       {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
       {% if article.image and show_image %} card--media{% else %} card--text{% endif %}
@@ -37,7 +18,7 @@
           <div class="article-card__image-wrapper card__media">
             <a href="{{ article.url }}" class="article-card__image media media--hover-effect" {% if section.settings.media_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-              <img
+             <img
                 srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
                   {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
                   {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
@@ -53,7 +34,6 @@
                 width="{{ article.image.width }}"
                 height="{{ article.image.height }}"
               >
-              {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
             </a>
           </div>
         {%- endif -%}
