@@ -209,15 +209,27 @@
   </div>
 </section>
 <script>
-  $(document).ready(function(){
-    $('.page_faqs .page_faqs_blocks .page_faqs_block .quetion').click(function(){
-      if($(this).parent('.page_faqs_block').hasClass('active')){
-        $(this).siblings('.answer').slideUp();
-        $(this).parent('.page_faqs_block').removeClass('active');
-      }else{
-        $(this).parent('.page_faqs_block').addClass('active');
-        $(this).siblings('.answer').slideDown();
-      }
+  document.addEventListener('DOMContentLoaded', function(){
+    var questions = document.querySelectorAll('.page_faqs_block .quetion');
+    
+    questions.forEach(function(quetion){
+      quetion.addEventListener('click', function(){
+        var block = this.closest('.page_faqs_block');
+        var answer = block.querySelector('.answer');
+        var isActive = block.classList.contains('active');
+
+        // Badha band karo
+        document.querySelectorAll('.page_faqs_block').forEach(function(b){
+          b.classList.remove('active');
+          b.querySelector('.answer').style.display = 'none';
+        });
+
+        // Aa active na hoy to open karo
+        if(!isActive){
+          block.classList.add('active');
+          answer.style.display = 'block';
+        }
+      });
     });
   });
 </script>
