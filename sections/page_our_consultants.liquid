@@ -14,7 +14,8 @@
   .temp_our_consultants_person .consultants_link .consultants_img img{height:auto;max-width:100%;width:100%;}
   .temp_our_consultants_person .consultants_link .consultants_name{margin-top:10px;font-size:22px;font-weight:600;line-height:normal;}
   .temp_our_consultants_person .consultants_link .consultants_desig{margin-top:5px;line-height:normal;font-size:15px;}
-  .temp_our_consultants_person .consultants_info{position:fixed;top:0;left:0;height:100%;width:100%;background-color:#00000080;z-index:99999;display:none;cursor:pointer}
+  .temp_our_consultants_person .consultants_info{position:fixed;top:0;left:0;height:100%;width:100%;background-color:#00000080;z-index:99999;display:none;cursor:pointer;opacity:0;transition:opacity 0.5s ease}
+  .temp_our_consultants_person .consultants_info.is-open{display:block;opacity:1}
   .temp_our_consultants_person .consultants_info .consultants_info_body{position: absolute;left:0;right:0;top:0;bottom:0;margin: auto;background-color: #FFF;max-height:90%;height:fit-content;max-width: 800px;width: 90%;display: flex;}
   .temp_our_consultants_person .consultants_info .consultants_info_wrap{width:100%;overflow-y:auto;box-shadow: 0 11px 15px -7px rgb(0 0 0 / 20%), 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%);padding:25px;display:flex;flex-direction:column;align-items:center;cursor:auto}
   .temp_our_consultants_person .consultants_info .consultants_info_wrap .consultants_img img{max-height:150px}
@@ -187,18 +188,68 @@
   
 </section>
 <script>
-  $(document).ready(function(){
-    $('.temp_our_consultants_person .consultants_link').click(function(){
-      $(this).parent('.temp_our_consultants_person').find('.consultants_info').fadeIn(500);
-    });
+  (function() {
+    function initConsultants() {
+      // Use event delegation for efficiency
+      document.addEventListener('click', function(e) {
+        // Handle Open Modal
+        const link = e.target.closest('.consultants_link');
+        if (link) {
+          e.preventDefault();
+          const person = link.closest('.temp_our_consultants_person');
+          const info = person ? person.querySelector('.consultants_info') : null;
+          if (info) {
+            info.style.display = 'block';
+            // Slight delay to trigger animation
+            setTimeout(function() {
+              info.classList.add('is-open');
+            }, 10);
+          }
+        }
 
-    $('.temp_our_consultants_person .consultants_info').click(function(){
-      $(this).fadeOut(500)
-    });
-    $('.temp_our_consultants_person .consultants_info .consultants_info_wrap').click(function(e){
-      e.stopPropagation();
-    });
-  });
+        // Handle Close Modal via Background Click
+        if (e.target.classList.contains('consultants_info')) {
+          closeModal(e.target);
+        }
+
+        // Handle Close Modal via Button
+        const closeBtn = e.target.closest('.close__btn');
+        if (closeBtn) {
+          e.preventDefault();
+          const info = closeBtn.closest('.consultants_info');
+          if (info) {
+            closeModal(info);
+          }
+        }
+      });
+
+      // Stop propagation for clicks inside the modal content
+      document.addEventListener('click', function(e) {
+        if (e.target.closest('.consultants_info_body')) {
+          const info = e.target.closest('.consultants_info');
+          // If we click the body but NOT a close button/link, stop it from closing the modal
+          if (!e.target.closest('.close__btn')) {
+            e.stopPropagation();
+          }
+        }
+      }, true); // Use capture phase to handle it before delegation if needed, but delegation is fine
+    }
+
+    function closeModal(el) {
+      el.classList.remove('is-open');
+      setTimeout(function() {
+        if (!el.classList.contains('is-open')) {
+          el.style.display = 'none';
+        }
+      }, 500); // Match CSS transition duration
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initConsultants);
+    } else {
+      initConsultants();
+    }
+  })();
 </script>
 {% schema %}
  {
