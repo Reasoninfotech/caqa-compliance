@@ -1,12 +1,12 @@
 body.temp_index{background:#f7f8fa;}
 
 /* header */
-.header-wrapper.fixed_header{position:fixed;width:100%;top:0;background:transparent;transition:background 0.2s;}
+.header-wrapper.fixed_header{position:absolute;width:100%;background:transparent;transition:background 0.2s;z-index:9;}
 .header-wrapper.fixed_header header .header__icons .header__icon{color:#f3cc13;}
 .header-wrapper.fixed_header header .header__icons .header__icon svg{color:#f3cc13;}
 .header-wrapper.fixed_header  header header-drawer .header__icon svg{color:white;}
 
-.fixed_header.header_fill{background:#f4f6fa;box-shadow:0 0 6px #00000052}
+.fixed_header.header_fill{position:fixed;top:0;background:#f4f6fa;box-shadow:0 0 6px #00000052;z-index:99;}
 .fixed_header.header_fill header .header__icons .header__icon{color:black;}
 .fixed_header.header_fill header .header__icons .header__icon svg{color:black;}
 .fixed_header.header_fill header header-drawer .header__icon svg{color:black;}
@@ -51,7 +51,7 @@ header .menu-drawer__inner-container {border-top: 1px solid #e3e3e3;}
 header .menu-drawer__utility-links a{color:#193e99}
 
 /* Megamenu */
-header .logos_megamenu{position: absolute;left:0;right:0;margin:0 auto;top:100%;width:90%;max-width: 1450px;background-color:#fff;opacity:0;visibility: hidden;transition:0.2s;box-shadow: 0 0 5px #00000047;}
+header .logos_megamenu{position: absolute;left:0;right:0;margin:5px auto;top:100%;width:90%;max-width: 1450px;background-color:#fff;opacity:0;visibility: hidden;transition:0.2s;box-shadow: 0 0 5px #00000047;z-index: 99;}
 header .logos_megamenu .logos_megamenu_wrap{display: flex;flex-wrap: wrap;row-gap: 30px;padding: 30px;transition: 0.4s;}
 header .logos_megamenu .logos_megamenu_wrap .logo_megamenu_block{position:relative;position:relative;width:20%;display:flex;flex-direction:column;padding:0 20px;}
 header .logos_megamenu .logos_megamenu_wrap figure{position:relative;margin:0;text-align:center;display: flex;justify-content:center;align-items:center}
@@ -60,7 +60,7 @@ header .logos_megamenu .logos_megamenu_wrap .logo_megamenu_caption{display:block
 header .logos_megamenu .logos_megamenu_wrap a{position:absolute;top:0;left:0;height:100%;width:100%;}
 header .main__links:hover > .logos_megamenu{opacity:1;visibility: visible;transform: translateY(-25px);}
 
-header .megamenu_wrap{position: absolute;left:0;right:0;margin:0 auto;top:100%;width:90%;max-width: 1450px;background-color:#fff;opacity:0;visibility: hidden;;transition:0.2s;padding: 30px;box-shadow: 0 0 5px #00000047;}
+header .megamenu_wrap{position: absolute;left:0;right:0;margin:5px auto;top:100%;width:90%;max-width: 1450px;background-color:#fff;opacity:0;visibility: hidden;;transition:0.2s;padding: 30px;box-shadow: 0 0 5px #00000047;z-index: 99;}
 header .megamenu_wrap ul{display: block;column-count:3;font-size:16px;column-gap: 30px;column-rule: solid 1px #D8D8D8;}
 header .megamenu_wrap li a.link{padding:8px 10px;font-weight:400 !important;font-size:16px;text-transform:capitalize}
 
