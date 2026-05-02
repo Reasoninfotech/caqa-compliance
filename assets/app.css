@@ -58,9 +58,11 @@ header .logos_megamenu .logos_megamenu_wrap figure{position:relative;margin:0;te
 header .logos_megamenu .logos_megamenu_wrap figure img{max-width:100%;max-height:100px;object-fit:contain}
 header .logos_megamenu .logos_megamenu_wrap .logo_megamenu_caption{display:block;padding:15px 0;font-weight:600;text-align:center;line-height:normal}
 header .logos_megamenu .logos_megamenu_wrap a{position:absolute;top:0;left:0;height:100%;width:100%;}
+header .logos_megamenu::before {content: '';position: absolute;top: -30px;left: 0;width: 100%;height: 30px;background: transparent;}
 header .main__links:hover > .logos_megamenu{opacity:1;visibility: visible;transform: translateY(-25px);}
 
 header .megamenu_wrap{position: absolute;left:0;right:0;margin:5px auto;top:100%;width:90%;max-width: 1450px;background-color:#fff;opacity:0;visibility: hidden;;transition:0.2s;padding: 30px;box-shadow: 0 0 5px #00000047;z-index: 99;}
+header .megamenu_wrap::before {content: '';position: absolute;top: -30px;left: 0;width: 100%;height: 30px;background: transparent;}
 header .megamenu_wrap ul{display: block;column-count:3;font-size:16px;column-gap: 30px;column-rule: solid 1px #D8D8D8;}
 header .megamenu_wrap li a.link{padding:8px 10px;font-weight:400 !important;font-size:16px;text-transform:capitalize}
 
