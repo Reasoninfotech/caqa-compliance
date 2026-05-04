@@ -1,1 +1,1429 @@
-{"current":{"colors_solid_button_labels":"#ffffff","colors_accent_1":"#0b57e3","gradient_accent_1":"","colors_accent_2":"#334fb4","gradient_accent_2":"","colors_text":"#0e0e0e","colors_outline_button_labels":"#0e0e0e","colors_background_1":"#ffffff","gradient_background_1":"","colors_background_2":"#f3f3f3","gradient_background_2":"","type_header_font":"poppins_n6","heading_scale":110,"type_body_font":"poppins_n4","body_scale":100,"page_width":1400,"spacing_sections":0,"spacing_grid_horizontal":16,"spacing_grid_vertical":16,"buttons_border_thickness":0,"buttons_border_opacity":100,"buttons_radius":30,"buttons_shadow_opacity":0,"buttons_shadow_horizontal_offset":0,"buttons_shadow_vertical_offset":0,"buttons_shadow_blur":0,"variant_pills_border_thickness":1,"variant_pills_border_opacity":55,"variant_pills_radius":40,"variant_pills_shadow_opacity":0,"variant_pills_shadow_horizontal_offset":0,"variant_pills_shadow_vertical_offset":4,"variant_pills_shadow_blur":5,"inputs_border_thickness":1,"inputs_border_opacity":55,"inputs_radius":4,"inputs_shadow_opacity":0,"inputs_shadow_horizontal_offset":0,"inputs_shadow_vertical_offset":4,"inputs_shadow_blur":5,"card_style":"standard","card_image_padding":0,"card_text_alignment":"left","card_color_scheme":"background-2","card_border_thickness":0,"card_border_opacity":10,"card_corner_radius":0,"card_shadow_opacity":0,"card_shadow_horizontal_offset":0,"card_shadow_vertical_offset":4,"card_shadow_blur":5,"text_boxes_border_thickness":0,"text_boxes_border_opacity":10,"text_boxes_radius":0,"text_boxes_shadow_opacity":0,"text_boxes_shadow_horizontal_offset":0,"text_boxes_shadow_vertical_offset":4,"text_boxes_shadow_blur":5,"media_border_thickness":1,"media_border_opacity":5,"media_radius":0,"media_shadow_opacity":0,"media_shadow_horizontal_offset":0,"media_shadow_vertical_offset":4,"media_shadow_blur":5,"popup_border_thickness":1,"popup_border_opacity":10,"popup_corner_radius":0,"popup_shadow_opacity":0,"popup_shadow_horizontal_offset":0,"popup_shadow_vertical_offset":4,"popup_shadow_blur":5,"drawer_border_thickness":1,"drawer_border_opacity":10,"drawer_shadow_opacity":0,"drawer_shadow_horizontal_offset":0,"drawer_shadow_vertical_offset":4,"drawer_shadow_blur":5,"badge_position":"bottom left","badge_corner_radius":40,"sale_badge_color_scheme":"accent-2","sold_out_badge_color_scheme":"inverse","accent_icons":"text","social_twitter_link":"https:\/\/twitter.com\/caqaonline","social_facebook_link":"https:\/\/www.facebook.com\/CAQAOnline\/","social_pinterest_link":"","social_instagram_link":"https:\/\/www.instagram.com\/CAQAOnline\/","social_tiktok_link":"","social_tumblr_link":"","social_snapchat_link":"","social_youtube_link":"","social_vimeo_link":"","social_linkedin_link":"https:\/\/www.linkedin.com\/company\/compliance-and-quality-assurance-caqa-\/","predictive_search_enabled":true,"predictive_search_show_vendor":false,"predictive_search_show_price":false,"favicon":"shopify:\/\/shop_images\/Frame_1000005642.png","currency_code_enabled":true,"cart_type":"notification","show_vendor":false,"show_cart_note":false,"checkout_logo_image":"shopify:\/\/shop_images\/logo.png","checkout_logo_position":"left","checkout_logo_size":"large","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement_eHD9WX":{"type":"announcement","disabled":true,"settings":{"text":"New Sale Prices are updating now. Check back shortly for the latest deals!","color_scheme":"accent-1","link":""}},"announcement_TCMYcD":{"type":"announcement","disabled":true,"settings":{"text":"Site Under Maintenance! We’re making improvements and will be back shortly.","color_scheme":"accent-1","link":""}},"announcement_N6UWBf":{"type":"announcement","settings":{"text":"🐰 Easter Sale! Get 67% Off* RTO Training Resources!","color_scheme":"accent-1","link":"shopify:\/\/collections\/all"}}},"block_order":["announcement_eHD9WX","announcement_TCMYcD","announcement_N6UWBf"],"settings":{}},"header":{"type":"header","blocks":{"0a5dfa9f-2254-4ce0-a31c-6b98e088a0e8":{"type":"logo_menu","settings":{"megamenu_title":"CAQA Services","megamenu_img1":"shopify:\/\/shop_images\/j.png","megamenu_txt1":"CAQA Compliance","megamenu_url1":"https:\/\/caqa.com.au\/","megamenu_img2":"shopify:\/\/shop_images\/k.png","megamenu_txt2":"CAQA Resources","megamenu_url2":"https:\/\/caqaresources.com.au\/","megamenu_img3":"shopify:\/\/shop_images\/CAQA_Skills.png","megamenu_txt3":"CAQA Skills","megamenu_url3":"https:\/\/caqaskills.com.au\/","megamenu_img4":"shopify:\/\/shop_images\/CAQA_llnd.png","megamenu_txt4":"CAQA LLND","megamenu_url4":"https:\/\/www.caqallnd.com\/","megamenu_img5":"shopify:\/\/shop_images\/CAQA_intelligence.png","megamenu_txt5":"CAQA Intelligence","megamenu_url5":"https:\/\/caqa.com.au\/","megamenu_img6":"shopify:\/\/shop_images\/h.png","megamenu_txt6":"CAQA Publications","megamenu_url6":"https:\/\/caqapublications.com\/","megamenu_img7":"shopify:\/\/shop_images\/c.png","megamenu_txt7":"CAQA Courses","megamenu_url7":"https:\/\/caqacourses.com.au\/","megamenu_img8":"shopify:\/\/shop_images\/c1.png","megamenu_txt8":"The VET Sector","megamenu_url8":"https:\/\/vetsector.com.au\/","megamenu_img9":"shopify:\/\/shop_images\/a.png","megamenu_txt9":"AHEG","megamenu_url9":"https:\/\/aheg.com.au","megamenu_img10":"shopify:\/\/shop_images\/CareerCallingInternational_Logo_Color.jpg","megamenu_txt10":"Career Calling International","megamenu_url10":"https:\/\/careercalling.international\/","megamenu_txt11":"","megamenu_url11":"","megamenu_txt12":"","megamenu_url12":""}},"dfc2376a-81bc-4d11-a3a8-b429b0e875cd":{"type":"megamenu","settings":{"megamenu_title":"Services","megamenu_menu":"services-megamenu"}}},"block_order":["0a5dfa9f-2254-4ce0-a31c-6b98e088a0e8","dfc2376a-81bc-4d11-a3a8-b429b0e875cd"],"settings":{"color_scheme":"background-1","logo":"shopify:\/\/shop_images\/logo.png","logo_width":250,"logo_position":"middle-left","menu":"main-menu","menu_type_desktop":"dropdown","show_line_separator":false,"enable_sticky_header":true,"margin_bottom":0,"padding_top":20,"padding_bottom":20,"head_btn_1":"Book Free demo","head_btn_1_url":"https:\/\/caqaconsultants.com.au\/book-free-demo\/","head_btn_2":"Contact","head_btn_2_url":"shopify:\/\/pages\/contact"}},"footer":{"type":"footer","blocks":{"ff44d64c-e332-4220-8106-10f100e26c87":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Layer_104.png","image_width":300,"html":"<p>Melbourne :\n2\/10 Lawn Court, Craigieburn, VIC 3064<\/p>\n<p>Adelaide : 3\/19-21 Metro Parade, Mawson Lakes, SA 5095<\/p>\n<p><span>Phone:<\/span><a href=\"tel:03-8103-8000\" target=\"_blank\"> 03-8103-8000,<\/a><a href=\"tel:1800-266-160\" target=\"_blank\">1800-266-160<\/a><br>\n<span>Email:<\/span><a href=\"mailto:info@caqa.com.au\" target=\"_blank\"> info@caqa.com.au<\/a>\n<\/p>\n<h3 class=\"light-blue\">Mon – Fri: 9 am – 5 pm<\/h3>","social":true,"alignment":"center"}},"footer-0":{"type":"link_list","settings":{"heading":"","menu":"footer"}},"9e6191f7-0881-490a-9cee-d7d24a62dd87":{"type":"link_list","settings":{"heading":"","menu":"footer-menu-2"}},"footer-1":{"type":"link_list","settings":{"heading":"","menu":"footer-menu-3"}},"fa1d68b9-b57d-4687-952e-25612ff4d71d":{"type":"newsletter","settings":{"heading":"Newsletter Subscription"}}},"block_order":["ff44d64c-e332-4220-8106-10f100e26c87","footer-0","9e6191f7-0881-490a-9cee-d7d24a62dd87","footer-1","fa1d68b9-b57d-4687-952e-25612ff4d71d"],"settings":{"color_scheme":"accent-2","newsletter_enable":false,"newsletter_heading":"Subscribe to our emails","show_social":false,"enable_country_selector":false,"enable_language_selector":false,"payment_enable":true,"custom_copyright":"<p>© 1999 - {{ 'now' | date: \"%Y\" }} Compliance And Quality Assurance (CAQA). A <a href=\"https:\/\/careercalling.international\/\" target=\"_blank\" title=\"https:\/\/careercalling.international\/\" bis_skin_checked=\"1\">Career Calling International<\/a> initiative.<br>ABN: 53 162 651 238 | ACN \/ ARBN: 162 651 238<br>Designed and developed by <a href=\"https:\/\/onlinemediasolutions.com.au\/\" target=\"_blank\" title=\"https:\/\/onlinemediasolutions.com.au\/\" bis_skin_checked=\"1\">Online Media Solutions<\/a><\/p>","margin_top":48,"padding_top":36,"padding_bottom":36}},"main-password-header":{"type":"main-password-header","settings":{"logo":"{{ shop.brand.logo }}","logo_max_width":100,"color_scheme":"background-1"}},"main-password-footer":{"type":"main-password-footer","settings":{"color_scheme":"background-1"}},"page_testimonial":{"type":"page_testimonial","blocks":{"492139b7-ddcb-48e7-ab60-630bbae6ddc9":{"type":"testimonial","settings":{"desc":"The course was very well structured, efficiently conducted, and built using a blend of core and customised content that we had requested.  Being new to running an RTO this has filled in all my gaps, ones I knew, and those I did not know I had.  \n\nI found Sukh and Michelle incredibly knowledgeable, constantly providing real-life examples for us to learning from.  It is an added benefit to have two people who remain as active consultants in the space bringing us the most recent examples to share in the learning. \n\nI would suggest any person new to leading an RTO invest in this training, I wish I had done this earlier, it will help you make more informed decisions as you get your RTO up and running.","title":"Luke Kenny","subtitle":"Local Government Procurement","review":5}},"926169e3-9ea9-4f51-bd21-0a594e3cbff1":{"type":"testimonial","settings":{"desc":"The faclitators are very knowledgeable and customised the training based on the needs of our organisation. Practical case study examples were shared throughout which helped to contextusalise our learnings. The training was delivered online with regular breaks, which helped to maintain focus and sustain concentration levels. I highly recommend the CEO Awareness training to any person who is responsible for a Registered Training Organisation.","title":"Emma Murray","subtitle":"Local Government Procurement","review":5}},"75e55ba8-7932-42d6-8ed4-8393faf3330a":{"type":"testimonial","settings":{"desc":"\"The best resources currently in the industry.\"","title":"Jasmeen Batra","subtitle":"RTO Trainer, Hobart, Tasmania","review":5}},"0bd4faf4-b1de-4533-98e4-8aa9a5134a18":{"type":"testimonial","settings":{"desc":"\"We appreciate the support that CAQA has and continues to provide in maintaining compliance and achieving 100% success in our ASQA RTO reregistration audit. You really give us fantastic support and assistance.\"","title":"RTO","subtitle":"Melbourne","review":5}},"d90204b3-5cd9-461d-a5a4-8ee50c51cb1e":{"type":"testimonial","settings":{"desc":"\"We are really impressed on Sukh and his team’s experience in dealing with different compliance issues and governing bodies with exceptional outlook on identifying gaps within a short period of time. His high level of professionalism, commitment and dedication in getting our RTO Registration was very  sublime.","title":"Mahendra and Bhavi","subtitle":"Directors, Australian College for Excellence Pty Ltd., Melbourne","review":5}},"c89c2223-a7c3-44ba-98ec-59c26b2c1d9d":{"type":"testimonial","settings":{"desc":"\"It was nice to meet you and thank you for all the support and consulting services that you provided to us during our audit.\nWith great pleasure, I have no hesitation to recommend your resources and services to anyone who may be willing to purchase from you. Your support and guidance and friendly service during audit was parallel to none. Your company has provided very professional, honest, dependable services to us.\"\nHopefully, we will be in touch sometime soon for other services that you provide which we have not utilised yet.","title":"Gopal Pokharel","subtitle":"Chief Executive Officer, Australian National Academy of Education (ANAE)","review":5}},"13c1dff1-9904-4385-93f0-da079ef7b778":{"type":"testimonial","settings":{"desc":"\"CAQA resources has been the backbone of our RTO for resources.\nOur Audit was cleared without any rectification even when the Training Package was on High risk . Highly recommend CAQA resources. Sukh and Michelle are always there to assist even on their day off.\"","title":"Neeraj Khurana","subtitle":"Director, Institute of Science Management & Technology","review":5}},"f923ea3f-539a-4924-9eca-20b00d3b9884":{"type":"testimonial","settings":{"desc":"\"These are by far the best I have seen in my search so far. Really good visually and lots of real workplace examples and drawings.\"","title":"Sherlyn Moynihan","subtitle":"Training and Quality Manager, New South Wales","review":5}},"1ccebb76-6dc1-4563-9bed-54f51e2bb802":{"type":"testimonial","settings":{"desc":"\"The services we received were outstanding. You have top quality people working in your organization with excellent interpersonal skills.\"","title":"CEO","subtitle":"RTO - Perth","review":5}},"26a5128d-dfec-466d-bebb-fd9b8e3f9553":{"type":"testimonial","settings":{"desc":"\"We found your staff very approachable and always willing to help others.\"","title":"Anu Arora","subtitle":"IT officer, Melbourne","review":5}},"5e005cd1-2260-435f-9bb6-e6ed11a166e6":{"type":"testimonial","settings":{"desc":"\"I have been very fortunate to have Sukh Sandu as my manager of the VET Programs I delivered at UIT. His wealth of knowledge and experience in this sector, ESOS and quality management, facilitated the smooth running of the programs and team I was involved with. Sukh was supportive in all aspects of my work and approachable whenever I needed assistance. His understanding of leadership in terms of both trainers and students coupled with his business and commercial acumen were outstanding.\"","title":"Alice Christie","subtitle":"Training Consultant, Ballarat, Victoria","review":5}},"c1d2b681-5fc0-4eda-b3d6-079e618d7389":{"type":"testimonial","settings":{"desc":"\"I just wanted to let you know that I found your assessments to be the most detailed and well planned assessments I have seen. The information made available to both the learner and the assessor is extensive. The detail and structure of the simulated workplace is thorough and gives the learner plenty of information to address the questions and role plays. Well done.\"","title":"Independent validator and auditor","subtitle":"Brisbane, Queensland","review":5}},"84db24e3-2b71-4332-90e0-2acd72a92435":{"type":"testimonial","settings":{"desc":"\"There are no other resources that can meet the standard and quality of your assessment and learner resources.\"","title":"RTO Manager","subtitle":"Melbourne, Victoria","review":5}},"f5bcda4b-7807-48ba-a1e4-0a4f90e14f78":{"type":"testimonial","settings":{"desc":"\"If you want to deal with absolutely the best professionals in the business there is NO other option ! Thank you guys for amazing work and ongoing support throughout. You are the best !!\"","title":"Hubert Kozub","subtitle":"Dreamlux","review":5}},"31704e00-68aa-4e98-a0f9-f71e357ddd33":{"type":"testimonial","settings":{"desc":"\"The most qualified individuals in the industry for ASQA compliance, Validation Standards, and High-Quality Training.\"","title":"Ed Williams","subtitle":"UIT","review":5}},"bfcc4d26-ab5c-4ca2-8211-ab4372cb8441":{"type":"testimonial","settings":{"desc":"I have been using CAQA Resources for my training and assessment needs, and I am extremely satisfied with their services. The resources they provide are comprehensive, well-structured, and aligned with industry standards. The team at CAQA Resources is professional, supportive, and always willing to go the extra mile. I highly recommend their resources.","title":"Edward Logan","subtitle":"","review":5}},"35eeab41-6416-49ec-936c-6a5b1477e316":{"type":"testimonial","settings":{"desc":"I have been using CAQA Resources for my training and assessment needs, and I am thoroughly impressed with their resources. The materials are well-designed, easy to understand, and cover all the necessary topics. The team at CAQA Resources is responsive, knowledgeable, and always willing to assist. I highly recommend their services.","title":"Spencer Butts","subtitle":"","review":5}},"ab247b5c-fc77-4e2a-beff-4f4615d9140a":{"type":"testimonial","settings":{"desc":"CAQA Resources has been an excellent resource provider for our training organization. The materials they offer are well-structured, up-to-date, and aligned with industry standards. The team at CAQA Resources is responsive, knowledgeable, and always willing to provide support. I highly recommend their services to anyone in need of quality training resources.","title":"Brock Cuper","subtitle":"","review":5}},"89d9ed63-c9a2-409a-89c2-32a256ca9ae8":{"type":"testimonial","settings":{"desc":"I have been using CAQA Resources for my training and assessment needs, and I am impressed with the quality of their resources. The materials are well-written, easy to understand, and cover all the necessary topics. The team at CAQA Resources is professional, supportive, and always available to provide assistance. I highly recommend their services.","title":"Roy Dean","subtitle":"","review":5}},"b0695537-a8eb-45f7-a34d-9e8f4d7efaad":{"type":"testimonial","settings":{"desc":"CAQA Resources has been an invaluable partner in our training and assessment efforts. Their resources are well-designed, easy to navigate, and tailored to meet the needs of learners. The team at CAQA Resources is knowledgeable, responsive, and always available to provide support. I would highly recommend their services to anyone in the training industry.","title":"Archie Hyde","subtitle":"","review":5}},"b7100991-c2f9-4bda-8a1b-3ac9a688702d":{"type":"testimonial","settings":{"desc":"CAQA Resources is the best training and assessment resource provider I have ever worked with! The staff are incredibly knowledgeable and always go above and beyond to help me meet my training needs. The resources they provide are top-notch and always up-to-date with the latest industry standards. I highly recommend CAQA Resources to anyone looking for quality training and assessment resources.","title":"Kaleb Evans","subtitle":"","review":5}},"4ac5e336-ed25-4ecc-aace-ddb67b6fd074":{"type":"testimonial","settings":{"desc":"I have been using CAQA Resources for my training and assessment needs and am extremely satisfied with their services. The resources are comprehensive, up-to-date, and aligned with industry standards. The team at CAQA Resources is friendly, knowledgeable, and always ready to assist. I would highly recommend their services to anyone in the training and assessment field.","title":"Harry Rose","subtitle":"","review":5}},"9b2020c8-5c5a-42a7-8f9c-8f80497d3421":{"type":"testimonial","settings":{"desc":"I have been using CAQA Resources for my training programs, and I must say that their resources are exceptional. The materials are well-structured, comprehensive, and aligned with industry standards. The team at CAQA Resources is highly professional and always available to provide support. I am grateful for their contribution to the success of our training programs.","title":"Victoria Gould","subtitle":"","review":5}},"c0c53e9c-989c-41c1-824d-3f7e2baf125a":{"type":"testimonial","settings":{"desc":"I have been using CAQA Resources for several years, and I have always been impressed with their professionalism and expertise. Their resources are comprehensive, well-structured, and aligned with industry standards. I can always rely on CAQA Resources to deliver high-quality training and assessment materials that meet the needs of my learners—highly recommended!","title":"Jake Peter","subtitle":"","review":5}},"f2d22a38-54df-45dd-9b50-dee83f9e6f10":{"type":"testimonial","settings":{"desc":"I have been using CAQA Resources for my training programs, and I am impressed with the quality of their resources. The materials are well-researched, comprehensive, and engaging. The team at CAQA Resources is professional, knowledgeable, and always ready to assist. I highly recommend their resources to anyone looking for high-quality training materials.","title":"Tyler Tracy","subtitle":"","review":5}},"50e6924d-2616-463e-a98e-716fc05e248a":{"type":"testimonial","settings":{"desc":"I have been using CAQA Resources for my training and assessment needs, and I can confidently say that they are the best in the industry. The resources they provide are comprehensive, well-designed, and user-friendly. The team at CAQA Resources is knowledgeable, responsive, and always willing to go the extra mile. I highly recommend their services.","title":"Dominic Morrison","subtitle":"","review":5}},"cce21824-3607-4dad-84a9-fe79be64bb32":{"type":"testimonial","settings":{"desc":"I have recently started using CAQA Resources, and I am extremely impressed with the quality of their resources. The materials are well-structured, engaging, and designed to meet the needs of diverse learners. The team at CAQA Resources has been supportive and responsive throughout the process. I am confident that their resources will significantly benefit my students.","title":"Amy Thompson","subtitle":"","review":5}},"1284abfd-9109-4df6-a433-e56b55912c64":{"type":"testimonial","settings":{"desc":"The support I have received from CAQA Resources has been outstanding. Their team is always available to answer any questions I have and provide guidance when needed. Their resources are well-designed and easy to navigate, making my job as an assessor much easier. I appreciate the level of care and attention to detail that CAQA Resources team puts into its training and assessment materials.","title":"Jackson Fosbery","subtitle":"","review":5}},"1b6d50d0-68c2-4391-ac12-f7b0d9866245":{"type":"testimonial","settings":{"desc":"CAQA Resources has exceeded my expectations regarding the quality and relevance of their resources. The materials are well-structured, easy to follow, and provide a great learning experience for my students. The CAQA Resources team is professional, responsive, and goes above and beyond to ensure customer satisfaction. I am grateful for their support and highly recommend their resources.","title":"Amy cooper","subtitle":"","review":5}},"e915aa56-36fd-4b57-be11-6cb6b2031fff":{"type":"testimonial","settings":{"desc":"CAQA Resources has been an invaluable partner in our training initiatives. Their resources are comprehensive, well-structured, and aligned with industry standards. The team at CAQA Resources is knowledgeable, responsive, and always willing to provide support. I am grateful for their contribution to the success of our training programs.","title":"Henry ingram","subtitle":"","review":5}},"b2888d4e-0f4c-4eea-96fd-6ac3c7e400d7":{"type":"testimonial","settings":{"desc":"CAQA Resources is the best training and assessment provider I have ever worked with. The staff are incredibly knowledgeable and always take the time to help me understand everything. I wouldn't hesitate to recommend them to anyone looking for quality resources.","title":"Scott johnson","subtitle":"","review":5}},"99b189d6-80e5-4fd3-8b6e-5d8ba0401c9c":{"type":"testimonial","settings":{"desc":"I have worked with many different training and assessment providers over the years, and CAQA Resources is by far the best. Their team is professional, knowledgeable, and always goes the extra mile to make sure their clients are happy. I would highly recommend them to anyone looking for top-quality resources","title":"Brittney Leonard","subtitle":"","review":5}},"32ce8c3b-1718-4ef4-a859-93202845700e":{"type":"testimonial","settings":{"desc":"CAQA Resources has been a game-changer for our training organisation. Their resources have helped us enhance the quality of our training programs and improve the learning outcomes for our students. The team at CAQA Resources is knowledgeable, responsive, and dedicated to ensuring customer satisfaction. I cannot speak highly enough of their services.","title":"Michael Bainton","subtitle":"","review":5}},"b65974a2-972a-463c-af8c-dc2336e8100b":{"type":"testimonial","settings":{"desc":"CAQA Resources has been an invaluable resource for our team. The team at CAQA are always on hand to help with any questions we have, and the resources they provide are of the highest quality. I would highly recommend them to anyone looking for quality training and assessment resources.","title":"Austin Reade","subtitle":"","review":5}},"ef599568-4006-4b82-9639-aec23bd64837":{"type":"testimonial","settings":{"desc":"CAQA Resources is the best place to go for training and assessment resources. Their subject matter experts and resource writers are incredibly knowledgeable and experienced, and their resources are the best in the VET sector. I would highly recommend them to anyone looking for a great training and assessment resources.","title":"Junia Delice","subtitle":"","review":5}},"9dc981d1-7699-4a2a-b1e5-a5e9043597fa":{"type":"testimonial","settings":{"desc":"I wholeheartedly endorse CAQA Resources for all of your training and evaluation requirements. I solely utilize CAQA Resources as a resource provider. Their writing is excellent, and their materials reflect the most recent business developments.","title":"Junick Thomas","subtitle":"","review":5}},"defb0a96-560a-4ee7-85a5-217b24922847":{"type":"testimonial","settings":{"desc":"CAQA Resources have been an integral part of our business for over 3 years now. Their resources are current, relevant and easy to use. The team at CAQA Resources are always available to offer support and answer any questions we may have.","title":"Christian Ball","subtitle":"","review":5}},"9c5acf8c-8b51-4b87-a5fa-7506dfc423ae":{"type":"testimonial","settings":{"desc":"The team at CAQA Resources are experts in their field. I was very impressed with the quality of the eLearning course materials and the support I received from the team. I would highly recommend their services.","title":"Samantha Murray","subtitle":"","review":5}},"63cc8062-38ba-4b59-8578-0c1f4b9874ec":{"type":"testimonial","settings":{"desc":"I have found the online training provided by CAQA Resources to be comprehensive and up-to-date. The resources are easy to use and the customer service is fantastic.","title":"David Larkin","subtitle":"","review":5}},"97355e33-4562-4052-9b97-3eda0fbe993a":{"type":"testimonial","settings":{"desc":"The team at CAQA Resources are extremely knowledgeable and always go the extra mile to help. I have found their customer service to be exceptional and would recommend them without hesitation.","title":"Tracy Conway","subtitle":"","review":5}},"24bb7be1-c524-4a21-adcb-f4adc85ea1c9":{"type":"testimonial","settings":{"desc":"There is no one in Australia who can match the standard of CAQA Resources' assessment and learner resources. We have been buying all of our resources from them without problem for the past two years. CAQA Resources' customer service is excellent, and we highly recommend them.","title":"Stuart Webb","subtitle":"","review":5}},"9749c6d5-45ea-47a7-abc1-e4f091f7cc11":{"type":"testimonial","settings":{"desc":"CAQA Resources has always been extremely professional, supportive, and prompt in providing resources. There resources were compliant and easy to use. I highly recommend CAQA Resources for their great support and assistance. I tried the others and have now decided to be with the best! Fully customizable resources - and let me tell you that you will not be disappointed if you use their resources and tools correctly. We are very pleased with the product's quality.","title":"Aarav Malhotra","subtitle":"","review":5}},"4e4b06c1-e618-40ef-8efa-f860dd2720c6":{"type":"testimonial","settings":{"desc":"The CAQA team is always responsive and professional to respond to our requests, and their products are of excellent quality. Their website is simple to use, and materials are delivered quickly. We continue to use them for the majority of our courses because their support and resources are excellent.","title":"Ananadi Vashist","subtitle":"","review":5}},"b3178a99-61bd-4d8e-b054-3000db6e15a7":{"type":"testimonial","settings":{"desc":"CAQA resources are well customized as per the student's need with the simulated business environment that gives the student the actual workplace experience. These resources engages the students all time by providing class activity books and self-study guides.","title":"Bhavani Mahendra","subtitle":"","review":5}},"60779b4b-d3b1-45c2-b947-04ba8faa711c":{"type":"testimonial","settings":{"desc":"I highly recommend using CAQA as their service is outstanding. The team is very supportive, helpful and knowledgeable in all aspects of training compliance. I especially would like to thank Suhk Sandu for all of his assistance and dedication. He helped our school when we had major problems and without his help we may have lost our school.","title":"Dr Peter Lewis","subtitle":"CEO, CMI","review":5}}},"block_order":["492139b7-ddcb-48e7-ab60-630bbae6ddc9","926169e3-9ea9-4f51-bd21-0a594e3cbff1","75e55ba8-7932-42d6-8ed4-8393faf3330a","0bd4faf4-b1de-4533-98e4-8aa9a5134a18","d90204b3-5cd9-461d-a5a4-8ee50c51cb1e","c89c2223-a7c3-44ba-98ec-59c26b2c1d9d","13c1dff1-9904-4385-93f0-da079ef7b778","f923ea3f-539a-4924-9eca-20b00d3b9884","1ccebb76-6dc1-4563-9bed-54f51e2bb802","26a5128d-dfec-466d-bebb-fd9b8e3f9553","5e005cd1-2260-435f-9bb6-e6ed11a166e6","c1d2b681-5fc0-4eda-b3d6-079e618d7389","84db24e3-2b71-4332-90e0-2acd72a92435","f5bcda4b-7807-48ba-a1e4-0a4f90e14f78","31704e00-68aa-4e98-a0f9-f71e357ddd33","bfcc4d26-ab5c-4ca2-8211-ab4372cb8441","35eeab41-6416-49ec-936c-6a5b1477e316","ab247b5c-fc77-4e2a-beff-4f4615d9140a","89d9ed63-c9a2-409a-89c2-32a256ca9ae8","b0695537-a8eb-45f7-a34d-9e8f4d7efaad","b7100991-c2f9-4bda-8a1b-3ac9a688702d","4ac5e336-ed25-4ecc-aace-ddb67b6fd074","9b2020c8-5c5a-42a7-8f9c-8f80497d3421","c0c53e9c-989c-41c1-824d-3f7e2baf125a","f2d22a38-54df-45dd-9b50-dee83f9e6f10","50e6924d-2616-463e-a98e-716fc05e248a","cce21824-3607-4dad-84a9-fe79be64bb32","1284abfd-9109-4df6-a433-e56b55912c64","1b6d50d0-68c2-4391-ac12-f7b0d9866245","e915aa56-36fd-4b57-be11-6cb6b2031fff","b2888d4e-0f4c-4eea-96fd-6ac3c7e400d7","99b189d6-80e5-4fd3-8b6e-5d8ba0401c9c","32ce8c3b-1718-4ef4-a859-93202845700e","b65974a2-972a-463c-af8c-dc2336e8100b","ef599568-4006-4b82-9639-aec23bd64837","9dc981d1-7699-4a2a-b1e5-a5e9043597fa","defb0a96-560a-4ee7-85a5-217b24922847","9c5acf8c-8b51-4b87-a5fa-7506dfc423ae","63cc8062-38ba-4b59-8578-0c1f4b9874ec","97355e33-4562-4052-9b97-3eda0fbe993a","24bb7be1-c524-4a21-adcb-f4adc85ea1c9","9749c6d5-45ea-47a7-abc1-e4f091f7cc11","4e4b06c1-e618-40ef-8efa-f860dd2720c6","b3178a99-61bd-4d8e-b054-3000db6e15a7","60779b4b-d3b1-45c2-b947-04ba8faa711c"],"settings":{"bread_crumb_back":"shopify:\/\/shop_images\/about-us-03.jpg","bread_title":"Testimonials","title":"We have many reviews from our satisfied clients.","desc":"<p>It’s always a joy to hear what people are saying about our products and services.<\/p>"}},"page-our-partner":{"type":"page-our-partner","blocks":{"6a9f937c-a425-40b4-a18c-16efd5cc7ed5":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/Blank_CareerCallingInternational_Logo_Color.png","url":"https:\/\/careercalling.com.au\/"}},"image_UHfi9r":{"type":"image","disabled":true,"settings":{"url":""}},"ea1fdc75-656f-4d33-aed6-d899eb275a03":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/VET-Sector.jpg","url":"https:\/\/www.vetsector.com\/"}},"06c7df0c-ce59-48fc-bf32-7a12cae1f868":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/CAQA-Resources.jpg","url":"https:\/\/caqaresources.com.au\/"}},"0817cb3a-5b3e-488f-8a73-57cfb9d6dcef":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/oms-1.jpg","url":"https:\/\/onlinesolutions.media\/"}},"cbb504b3-093f-434b-9d8d-0d71e758a6bf":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/Blank_CareerCallingJobs_Logo_Color.png","url":"https:\/\/www.jobs.careercalling.com.au\/"}},"3c0417e3-93cf-4489-b1fe-60ea7946a1ee":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/RTO-Training-Resources.png","url":"https:\/\/rtotrainingresources.com.au\/"}},"104d1335-eb32-4c79-b3c5-5e20e72966a6":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/rto-consulting-group-1.jpg","url":"https:\/\/rtotraininggroup.com.au\/"}},"d509543a-3c6f-4cab-9fb7-e9303f091bda":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/AHEG-1.jpg","url":"https:\/\/www.aheg.com.au\/"}},"468b718c-d80d-499e-9cfe-11e2911709fd":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/Khalsa-migration-1.jpg","url":"http:\/\/khalsamigration.com\/"}},"56be4b19-f338-47ba-9bad-c9c5d9af95aa":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/pd-web-solutions.jpg","url":"https:\/\/pdweb.com.au\/"}},"b31938e2-3873-4812-8b46-4756b7d53eeb":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/proba-1.jpg","url":"https:\/\/proba.com.au\/"}},"ee97bd02-2ef4-4140-8190-f598bc815a76":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/CAQA-Technology.jpg","url":"https:\/\/caqa.com.au\/pages\/our-partners#"}},"03f0fb47-0037-4124-8276-46dbc4880563":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/CAQA-Systems.jpg","url":"https:\/\/caqasystems.com.au\/"}},"d687b23a-c55c-4ab8-884f-bf586c1aad7e":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/CAQA-Recruitment.jpg","url":"https:\/\/caqarecruitment.com.au\/"}},"d0a9b72b-d2ce-489d-b4da-c67059eb9e4f":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/the-immigration-world-wide.jpg","url":"https:\/\/theimmigrationworldwide.com\/"}},"7efa23cc-3fc9-4223-bd08-1ad50f0b5cdc":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/commonwealth-school-of-languages-1.jpg","url":"https:\/\/commonwealthenglish.com\/"}},"3b27f210-9ceb-4d9a-832b-f68be962b36c":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/CAQA-Publications.jpg","url":"https:\/\/caqapublications.com\/"}},"b1036244-4600-40d1-8777-cdfaa44484b7":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/Edu-Learning-1.jpg","url":"https:\/\/edulearning.com.au\/"}},"7102244e-2a19-493b-b450-bbbf0897eb21":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/CAQA-Labs.jpg","url":"https:\/\/caqalabs.com.au\/"}},"f57e6dc2-c183-4f7d-8e78-d4b970e654ff":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/CAQA-Discover.jpg","url":"https:\/\/caqadiscover.com\/"}},"c073b60f-c933-490b-aa42-c22df8938288":{"type":"image","settings":{"logo":"shopify:\/\/shop_images\/CAQA-Digital.jpg","url":"https:\/\/caqadigital.com.au\/"}}},"block_order":["6a9f937c-a425-40b4-a18c-16efd5cc7ed5","image_UHfi9r","ea1fdc75-656f-4d33-aed6-d899eb275a03","06c7df0c-ce59-48fc-bf32-7a12cae1f868","0817cb3a-5b3e-488f-8a73-57cfb9d6dcef","cbb504b3-093f-434b-9d8d-0d71e758a6bf","3c0417e3-93cf-4489-b1fe-60ea7946a1ee","104d1335-eb32-4c79-b3c5-5e20e72966a6","d509543a-3c6f-4cab-9fb7-e9303f091bda","468b718c-d80d-499e-9cfe-11e2911709fd","56be4b19-f338-47ba-9bad-c9c5d9af95aa","b31938e2-3873-4812-8b46-4756b7d53eeb","ee97bd02-2ef4-4140-8190-f598bc815a76","03f0fb47-0037-4124-8276-46dbc4880563","d687b23a-c55c-4ab8-884f-bf586c1aad7e","d0a9b72b-d2ce-489d-b4da-c67059eb9e4f","7efa23cc-3fc9-4223-bd08-1ad50f0b5cdc","3b27f210-9ceb-4d9a-832b-f68be962b36c","b1036244-4600-40d1-8777-cdfaa44484b7","7102244e-2a19-493b-b450-bbbf0897eb21","f57e6dc2-c183-4f7d-8e78-d4b970e654ff","c073b60f-c933-490b-aa42-c22df8938288"],"settings":{"bread_crumb_back":"shopify:\/\/shop_images\/about-us-03.jpg","bread_title":"CAQA Partners","title":"Meet our awesome partners \/ clients"}},"page-faqs":{"type":"page-faqs","blocks":{"7445ec28-52a1-4b7c-9509-12772ad8aa3f":{"type":"text","settings":{"que":"Who we are?","ans":"<p>We are RTO compliance and regulatory consultants. Our consultants have been assisting the training organisations for over 20 years.<\/p>","ans_h":""}},"915dbeb4-9d6e-41d8-9280-75dab80645fd":{"type":"text","settings":{"que":"How are we different from other consultants?","ans":"<p>Our track record is the evidence of how we are different from other consultants. We provide true, honest and right advice to all our clients. The people who have followed our advice have achieved 100% success in their RTO businesses and regulatory audits. <\/p>","ans_h":""}},"12f878c5-2b08-4da3-9cc4-87214efe2dcb":{"type":"text","settings":{"que":"Where do you provide your consultancy services?","ans":"<p>Our consultants are available to provide advice Australia wide and overseas. Contact us today and find out more about how we can help you. <\/p>","ans_h":""}},"220f7199-0a08-4f62-ad86-86fddbe6c022":{"type":"text","settings":{"que":"Do I need to use a consultant?","ans":"<p>No. You do not need to hire a consultancy to set up or operate an RTO, but hiring a good consultant would empower you to concentrate on managing the RTO, just like a good accountant or lawyer provides you support, so a good RTO consultant. Tell us how we can help you and your RTO.<\/p>","ans_h":""}},"0bcac34e-d4cc-48f7-a273-438de3aaf797":{"type":"text","settings":{"que":"What are your terms and conditions of sale?","ans":"","ans_h":"<ul>\n<li>Materials supplied are on a “one-off” upfront payment model. Once you purchase the training resources, you won’t have to pay other ongoing fees. <\/li>\n<li>The licence agreement is unrestricted. Once purchased, you’re allowed to continually reproduce, edit, and use the material on an on-going basis. <\/li>\n<li>Training and assessment materials are editable so your RTO can modify, amend, and adapt these resources as you see fit. <\/li>\n<li>You may upload your training and assessment materials on your own Learning Management System (LMS) or send them out to students in any secure method.<\/li>\n<li>You’re free to print your training materials for distribution to your students.<\/li>\n<li>CAQA retains all intellectual property and related materials that are developed or produced. The title, copyright, intellectual property rights, and distribution rights of the CAQA training and assessment materials will remain with the resource developer.<\/li>\n<li>These training and assessment resources were created for the use of education and \/or training provider\/personal.<\/li>\n<li>CAQA does not provide the right to resell or use these resources for other organisations or personnel.<\/li>\n<li>RTOs are expected to customise the documents and adapt the materials to suit business requirements and assessment models. <\/li>\n<li>The RTO is responsible for ensuring that the training materials are contextualised and align with their Training and Assessment Strategy and other compliance documents.<\/li>\n<li>The RTO is responsible for making sure their unit selection meets qualification or skillset packaging rules.<\/li>\n<\/ul>"}},"03bb8bb9-df79-4e2c-a546-d99a6974c538":{"type":"text","settings":{"que":"What rectification assistance do you provide?","ans":"","ans_h":"<ul>\n<li>The price of these training materials includes a rectification assistance guarantee that applies only if training and assessment materials supplied in the form provided by CAQA fail to comply with any regulatory requirements, you may reach out for rectification assistance for no charge.<\/li>\n<li>This rectification assistance only applies to audits conducted by an official registered body such as ASQA. <\/li>\n<li>Additional rectification assistance fees apply to training and assessment resources which have been found non-compliant after the original form has been modified. <\/li>\n<li>You must submit the audit report to [brand] as proof that the resources were found non-compliant. We will not be able to assist you without the official audit report. Submit the required documents as soon as possible to give us sufficient time to complete the rectifications.<\/li>\n<li>A minimum of 15 business days’ notice is required to resource and complete updates to assessment tools.<\/li>\n<\/ul>"}},"a8d9d142-0fc3-47e5-b6fd-7beb262b515e":{"type":"text","settings":{"que":"Where can I find more information about you and your services?","ans":"<p>You can simply Google and find out hundreds of audit reports with successful outcomes associated with our <a href=\"\/pages\/contact\" title=\"Contact\">RTO consultants<\/a>. If you want to speak to someone, contact us today and we will provide you with the contact details of our clients to directly speak to them to know more about us and our values and services.<\/p>","ans_h":""}},"4c894634-150d-4711-aa3c-82a416984885":{"type":"text","settings":{"que":"How can I contact you?","ans":"<p><a href=\"\/pages\/contact\" title=\"Contact\">The best way to fill the contact form and send it to us. <\/a>We will allocate the inquiry to a case officer and they will contact you to find out how we can help you to achieve a successful and sustainable training business.<\/p>","ans_h":""}},"6f80d6eb-2aac-4dbf-a24a-f39244918260":{"type":"text","settings":{"que":"Do you have more questions for us?","ans":"<p>Use the contact us form and write as much information as possible for us to understand your matter and one of our consultants will approach you to find out how we can offer our quality services to you and your organisation.<\/p>","ans_h":""}},"62a2a110-f5ce-4711-b25f-65ec97ad867f":{"type":"text","settings":{"que":"Can I pre-order the resources?","ans":"<p>Yes, you can pre-order the resources.<br\/><br\/>Simply visit the <a href=\"\/collections\/pre-order\" title=\"Pre-Order\">Pre-order collection <\/a>on our store and place the order.<br\/><br\/>Please note that the pre-order individual units will be delivered three months after your payment has been received and pre-order qualifications will be delivered up to six months after your payment has been received.<br\/><br\/>Please <a href=\"\/pages\/contact\" title=\"Contact\">contact us<\/a> if you are unable to find the resources you are looking for. We are happy to provide you with the timeline and quote.<\/p>","ans_h":""}},"36f0cb8b-dedf-42c3-914a-9b6b4297a892":{"type":"text","settings":{"que":"Are Learner Guides and Self Study Guides same?","ans":"<p>No. <a href=\"https:\/\/caqa-com-au.myshopify.com\/\" title=\"https:\/\/caqa-com-au.myshopify.com\/\"><strong>The self Study guide<\/strong><\/a><strong> <\/strong>contains references and links for students to read additional information related to their units of competency or course and as additional support to the learner guide.<br\/>We provide a comprehensive <a href=\"https:\/\/caqa-com-au.myshopify.com\/\" title=\"https:\/\/caqa-com-au.myshopify.com\/\"><strong>learner guide<\/strong><\/a><strong> <\/strong>as a separate document.<\/p>","ans_h":""}},"c5279ab7-4ff5-450f-8c22-206978c71c11":{"type":"text","settings":{"que":"What are the timeframes for delivery?","ans":"","ans_h":"<ul>\n<li>Once the order is confirmed, we will generate an invoice for the training resources requested.<\/li>\n<li>After payment is made, it may take up to 1-2 business days for funds to clear to our account and finance to verify receipt of payment.<\/li>\n<li>When payment is confirmed, we will confirm any remaining details required before delivery.<\/li>\n<li>We will send you a copy of the license agreement to sign within 1-2 business days.<\/li>\n<li>Once all required information and the signed license agreement has been received, we’ll process the order and typically deliver materials within 1-3 business days (exception is pre-order products).  Please refer to our website for more details regarding pre-order delivery timeframes.<\/li>\n<li>Your materials will be delivered in digital format via a secure document delivery service (Dropbox, Sharepoint or similar application)<\/li>\n<li>We work on a “first-come, first-served” basis to be fair to all our clients. Orders go into the delivery queue once payment and licensing have been finalised, and all required information received. <\/li>\n<li>Any delays to these steps by the client may result in longer delivery timeframes. <\/li>\n<\/ul>"}}},"block_order":["7445ec28-52a1-4b7c-9509-12772ad8aa3f","915dbeb4-9d6e-41d8-9280-75dab80645fd","12f878c5-2b08-4da3-9cc4-87214efe2dcb","220f7199-0a08-4f62-ad86-86fddbe6c022","0bcac34e-d4cc-48f7-a273-438de3aaf797","03bb8bb9-df79-4e2c-a546-d99a6974c538","a8d9d142-0fc3-47e5-b6fd-7beb262b515e","4c894634-150d-4711-aa3c-82a416984885","6f80d6eb-2aac-4dbf-a24a-f39244918260","62a2a110-f5ce-4711-b25f-65ec97ad867f","36f0cb8b-dedf-42c3-914a-9b6b4297a892","c5279ab7-4ff5-450f-8c22-206978c71c11"],"settings":{"title":"Frequently Asked Questions","subtitle":"FAQs","c_title":"For any inquiries contact us","c_subtitle":"Contact","loca_title":"Location","loca_desc":"<p>2\/10 Lawn Court, Craigieburn,<br\/>VIC 3064.<br\/><strong>Monday - Friday<\/strong>: 9 am - 5 pm<\/p>","mail_title":"Mail","mail1":"info@caqa.com.au","mail2":"","phone_title":"Phone","phone1":"03 8103 8000","phone2":"1800 266 160"}},"logo-list":{"type":"logo-list","blocks":{"9ba43228-6bf6-4c9d-ae60-09b4d7241548":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Blank_CareerCallingInternational_Logo_Color.png","url":"https:\/\/careercalling.com.au\/","image2":"shopify:\/\/shop_images\/c1.png","url2":"https:\/\/www.vetsector.com\/","image3":"shopify:\/\/shop_images\/k.png","url3":"https:\/\/caqaresources.com.au\/"}},"4f9c4837-aa1f-4f50-bede-a6d5f6ec3ceb":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/j.png","url":"https:\/\/caqa.com.au\/","image2":"shopify:\/\/shop_images\/c.png","url2":"https:\/\/caqacourses.com.au\/","image3":"shopify:\/\/shop_images\/l.png","url3":"https:\/\/caqasystems.com.au\/"}},"6229edd3-2dd6-45ab-bd84-b785ff8017dd":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/i.png","url":"https:\/\/caqarecruitment.com.au\/","image2":"shopify:\/\/shop_images\/h.png","url2":"https:\/\/caqapublications.com\/","image3":"shopify:\/\/shop_images\/d.png","url3":"https:\/\/caqadigital.com.au\/"}},"b6ea724b-3c33-404e-b51c-d02cf3f6f5b8":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/e.png","url":"https:\/\/caqadiscover.com\/","image2":"shopify:\/\/shop_images\/f.png","url2":"https:\/\/caqalabs.com.au\/","image3":"shopify:\/\/shop_images\/y.png","url3":"https:\/\/rtotraininggroup.com.au\/"}},"b1e5f6e2-a444-47a0-9424-655d70388ab0":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/u.png","url":"https:\/\/onlinemediasolutions.com.au\/","image2":"shopify:\/\/shop_images\/a.png","url2":"https:\/\/aheg.com.au\/","image3":"shopify:\/\/shop_images\/r.png","url3":"https:\/\/edulearning.com.au\/"}},"a1673271-8a55-472d-9a48-49be01b182a1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/q.png","url":"https:\/\/commonwealthenglish.com\/","image2":"shopify:\/\/shop_images\/Blank_CareerCallingJobs_Logo_Color.png","url2":"https:\/\/jobs.careercalling.com.au\/","image3":"shopify:\/\/shop_images\/v.png","url3":"https:\/\/pdweb.com.au\/"}},"6bfc0b58-ead6-44fb-a908-ee1fc879c70a":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/w.png","url":"https:\/\/proba.com.au\/","image2":"shopify:\/\/shop_images\/b1.png","url2":"https:\/\/validationexperts.com.au\/","image3":"shopify:\/\/shop_images\/x.png","url3":"https:\/\/rplexperts.com.au\/"}},"b49a393c-799d-45a9-a81b-f5e3ed1e5076":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/t.png","url":"https:\/\/llnexperts.com.au\/","image2":"shopify:\/\/shop_images\/b.png","url2":"https:\/\/auditexperts.com.au\/","image3":"shopify:\/\/shop_images\/Blank_CareerCallingCourses_Logo_Color.png","url3":"https:\/\/courses.careercalling.com.au\/"}},"b4e60304-ad64-46df-9d49-3da0a242ec7a":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Bank_CareerCallingEducation_Logo_Color.png","url":"https:\/\/careercalling.edu.au\/","image2":"shopify:\/\/shop_images\/z.png","url2":"https:\/\/sukhsandhu.com\/","image3":"shopify:\/\/shop_images\/a1.png","url3":"https:\/\/theimmigrationworldwide.com\/"}},"f3cb69d7-b12f-441f-8a12-7b3cb5215839":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/s.png","url":"http:\/\/khalsamigration.com\/","url2":"","url3":""}}},"block_order":["9ba43228-6bf6-4c9d-ae60-09b4d7241548","4f9c4837-aa1f-4f50-bede-a6d5f6ec3ceb","6229edd3-2dd6-45ab-bd84-b785ff8017dd","b6ea724b-3c33-404e-b51c-d02cf3f6f5b8","b1e5f6e2-a444-47a0-9424-655d70388ab0","a1673271-8a55-472d-9a48-49be01b182a1","6bfc0b58-ead6-44fb-a908-ee1fc879c70a","b49a393c-799d-45a9-a81b-f5e3ed1e5076","b4e60304-ad64-46df-9d49-3da0a242ec7a","f3cb69d7-b12f-441f-8a12-7b3cb5215839"],"settings":{}},"advertisement-banner":{"type":"advertisement-banner","settings":{"show_block":false,"show_one_time":false,"url":"","value_first":"0","value_min":"10","value_max":"40"}}},"content_for_index":[],"blocks":{"12318114026695823084":{"type":"shopify:\/\/apps\/yeps\/blocks\/yeps\/e514c124-b6d8-42cf-8001-0defa550f08e","disabled":true,"settings":{}},"6897675550240258559":{"type":"shopify:\/\/apps\/promolayer\/blocks\/app-embed\/e4a9128f-b151-4feb-ad9e-ef8fbb63bf07","disabled":false,"settings":{}}}},"presets":{"Default":{"colors_solid_button_labels":"#ffffff","colors_accent_1":"#121212","gradient_accent_1":"","colors_accent_2":"#334fb4","gradient_accent_2":"","colors_text":"#121212","colors_outline_button_labels":"#121212","colors_background_1":"#ffffff","gradient_background_1":"","colors_background_2":"#f3f3f3","gradient_background_2":"","type_header_font":"assistant_n4","heading_scale":100,"type_body_font":"assistant_n4","body_scale":100,"page_width":1200,"spacing_sections":0,"spacing_grid_horizontal":8,"spacing_grid_vertical":8,"buttons_border_thickness":1,"buttons_border_opacity":100,"buttons_radius":0,"buttons_shadow_opacity":0,"buttons_shadow_horizontal_offset":0,"buttons_shadow_vertical_offset":4,"buttons_shadow_blur":5,"variant_pills_border_thickness":1,"variant_pills_border_opacity":55,"variant_pills_radius":40,"variant_pills_shadow_opacity":0,"variant_pills_shadow_horizontal_offset":0,"variant_pills_shadow_vertical_offset":4,"variant_pills_shadow_blur":5,"inputs_border_thickness":1,"inputs_border_opacity":55,"inputs_radius":0,"inputs_shadow_opacity":0,"inputs_shadow_horizontal_offset":0,"inputs_shadow_vertical_offset":4,"inputs_shadow_blur":5,"card_style":"standard","card_image_padding":0,"card_text_alignment":"left","card_color_scheme":"background-2","card_border_thickness":0,"card_border_opacity":10,"card_corner_radius":0,"card_shadow_opacity":0,"card_shadow_horizontal_offset":0,"card_shadow_vertical_offset":4,"card_shadow_blur":5,"text_boxes_border_thickness":0,"text_boxes_border_opacity":10,"text_boxes_radius":0,"text_boxes_shadow_opacity":0,"text_boxes_shadow_horizontal_offset":0,"text_boxes_shadow_vertical_offset":4,"text_boxes_shadow_blur":5,"media_border_thickness":1,"media_border_opacity":5,"media_radius":0,"media_shadow_opacity":0,"media_shadow_horizontal_offset":0,"media_shadow_vertical_offset":4,"media_shadow_blur":5,"popup_border_thickness":1,"popup_border_opacity":10,"popup_corner_radius":0,"popup_shadow_opacity":0,"popup_shadow_horizontal_offset":0,"popup_shadow_vertical_offset":4,"popup_shadow_blur":5,"drawer_border_thickness":1,"drawer_border_opacity":10,"drawer_shadow_opacity":0,"drawer_shadow_horizontal_offset":0,"drawer_shadow_vertical_offset":4,"drawer_shadow_blur":5,"badge_position":"bottom left","badge_corner_radius":40,"sale_badge_color_scheme":"accent-2","sold_out_badge_color_scheme":"inverse","accent_icons":"text","social_twitter_link":"","social_facebook_link":"","social_pinterest_link":"","social_instagram_link":"","social_tiktok_link":"","social_tumblr_link":"","social_snapchat_link":"","social_youtube_link":"","social_vimeo_link":"","predictive_search_enabled":true,"predictive_search_show_vendor":false,"predictive_search_show_price":false,"currency_code_enabled":true,"cart_type":"notification","show_vendor":false,"show_cart_note":false,"sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement-bar-0":{"type":"announcement","settings":{"text":"Welcome to our store","color_scheme":"background-1","link":""}}},"block_order":["announcement-bar-0"],"settings":{}},"header":{"type":"header","settings":{"color_scheme":"background-1","logo":"{{ shop.brand.logo }}","logo_width":90,"logo_position":"middle-left","menu":"main-menu","show_line_separator":true,"enable_sticky_header":true,"margin_bottom":0,"padding_top":20,"padding_bottom":20}},"footer":{"type":"footer","blocks":{"footer-0":{"type":"link_list","settings":{"heading":"Quick links","menu":"footer"}},"footer-1":{"type":"link_list","settings":{"heading":"Info","menu":"footer"}},"footer-2":{"type":"text","settings":{"heading":"Our mission","subtext":"<p>Share contact information, store details, and brand content with your customers.<\/p>"}}},"block_order":["footer-0","footer-1","footer-2"],"settings":{"color_scheme":"background-1","newsletter_enable":true,"newsletter_heading":"Subscribe to our emails","show_social":true,"enable_country_selector":false,"enable_language_selector":false,"payment_enable":true,"margin_top":48,"padding_top":36,"padding_bottom":36}},"main-password-header":{"type":"main-password-header","settings":{"logo":"{{ shop.brand.logo }}","logo_max_width":100,"color_scheme":"background-1"}},"main-password-footer":{"type":"main-password-footer","settings":{"color_scheme":"background-1"}}}}}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "colors_solid_button_labels": "#ffffff",
+    "colors_accent_1": "#0b57e3",
+    "gradient_accent_1": "",
+    "colors_accent_2": "#334fb4",
+    "gradient_accent_2": "",
+    "colors_text": "#0e0e0e",
+    "colors_outline_button_labels": "#0e0e0e",
+    "colors_background_1": "#ffffff",
+    "gradient_background_1": "",
+    "colors_background_2": "#f3f3f3",
+    "gradient_background_2": "",
+    "type_header_font": "poppins_n6",
+    "heading_scale": 110,
+    "type_body_font": "poppins_n4",
+    "body_scale": 100,
+    "page_width": 1400,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 16,
+    "spacing_grid_vertical": 16,
+    "buttons_border_thickness": 0,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 30,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 0,
+    "buttons_shadow_blur": 0,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 55,
+    "variant_pills_radius": 40,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 4,
+    "variant_pills_shadow_blur": 5,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 55,
+    "inputs_radius": 4,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_blur": 5,
+    "card_style": "standard",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "background-2",
+    "card_border_thickness": 0,
+    "card_border_opacity": 10,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
+    "card_shadow_horizontal_offset": 0,
+    "card_shadow_vertical_offset": 4,
+    "card_shadow_blur": 5,
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 10,
+    "text_boxes_radius": 0,
+    "text_boxes_shadow_opacity": 0,
+    "text_boxes_shadow_horizontal_offset": 0,
+    "text_boxes_shadow_vertical_offset": 4,
+    "text_boxes_shadow_blur": 5,
+    "media_border_thickness": 1,
+    "media_border_opacity": 5,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "media_shadow_horizontal_offset": 0,
+    "media_shadow_vertical_offset": 4,
+    "media_shadow_blur": 5,
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 10,
+    "popup_corner_radius": 0,
+    "popup_shadow_opacity": 0,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 4,
+    "popup_shadow_blur": 5,
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 0,
+    "drawer_shadow_horizontal_offset": 0,
+    "drawer_shadow_vertical_offset": 4,
+    "drawer_shadow_blur": 5,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "accent-2",
+    "sold_out_badge_color_scheme": "inverse",
+    "accent_icons": "text",
+    "social_twitter_link": "https://twitter.com/caqaonline",
+    "social_facebook_link": "https://www.facebook.com/CAQAOnline/",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https://www.instagram.com/CAQAOnline/",
+    "social_tiktok_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_linkedin_link": "https://www.linkedin.com/company/compliance-and-quality-assurance-caqa-/",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "favicon": "shopify://shop_images/Frame_1000005642.png",
+    "currency_code_enabled": true,
+    "cart_type": "notification",
+    "show_vendor": false,
+    "show_cart_note": false,
+    "checkout_logo_image": "shopify://shop_images/logo.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement_eHD9WX": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "New Sale Prices are updating now. Check back shortly for the latest deals!",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          },
+          "announcement_TCMYcD": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Site Under Maintenance! We’re making improvements and will be back shortly.",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          },
+          "announcement_N6UWBf": {
+            "type": "announcement",
+            "settings": {
+              "text": "Mothers Day Sale! Get 65% Off* RTO Training Resources!",
+              "color_scheme": "accent-1",
+              "link": "shopify://collections/all"
+            }
+          }
+        },
+        "block_order": [
+          "announcement_eHD9WX",
+          "announcement_TCMYcD",
+          "announcement_N6UWBf"
+        ],
+        "settings": {}
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "0a5dfa9f-2254-4ce0-a31c-6b98e088a0e8": {
+            "type": "logo_menu",
+            "settings": {
+              "megamenu_title": "CAQA Services",
+              "megamenu_img1": "shopify://shop_images/j.png",
+              "megamenu_txt1": "CAQA Compliance",
+              "megamenu_url1": "https://caqa.com.au/",
+              "megamenu_img2": "shopify://shop_images/k.png",
+              "megamenu_txt2": "CAQA Resources",
+              "megamenu_url2": "https://caqaresources.com.au/",
+              "megamenu_img3": "shopify://shop_images/CAQA_Skills.png",
+              "megamenu_txt3": "CAQA Skills",
+              "megamenu_url3": "https://caqaskills.com.au/",
+              "megamenu_img4": "shopify://shop_images/CAQA_llnd.png",
+              "megamenu_txt4": "CAQA LLND",
+              "megamenu_url4": "https://www.caqallnd.com/",
+              "megamenu_img5": "shopify://shop_images/CAQA_intelligence.png",
+              "megamenu_txt5": "CAQA Intelligence",
+              "megamenu_url5": "https://caqa.com.au/",
+              "megamenu_img6": "shopify://shop_images/h.png",
+              "megamenu_txt6": "CAQA Publications",
+              "megamenu_url6": "https://caqapublications.com/",
+              "megamenu_img7": "shopify://shop_images/c.png",
+              "megamenu_txt7": "CAQA Courses",
+              "megamenu_url7": "https://caqacourses.com.au/",
+              "megamenu_img8": "shopify://shop_images/c1.png",
+              "megamenu_txt8": "The VET Sector",
+              "megamenu_url8": "https://vetsector.com.au/",
+              "megamenu_img9": "shopify://shop_images/a.png",
+              "megamenu_txt9": "AHEG",
+              "megamenu_url9": "https://aheg.com.au",
+              "megamenu_img10": "shopify://shop_images/CareerCallingInternational_Logo_Color.jpg",
+              "megamenu_txt10": "Career Calling International",
+              "megamenu_url10": "https://careercalling.international/",
+              "megamenu_txt11": "",
+              "megamenu_url11": "",
+              "megamenu_txt12": "",
+              "megamenu_url12": ""
+            }
+          },
+          "dfc2376a-81bc-4d11-a3a8-b429b0e875cd": {
+            "type": "megamenu",
+            "settings": {
+              "megamenu_title": "Services",
+              "megamenu_menu": "services-megamenu"
+            }
+          }
+        },
+        "block_order": [
+          "0a5dfa9f-2254-4ce0-a31c-6b98e088a0e8",
+          "dfc2376a-81bc-4d11-a3a8-b429b0e875cd"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "logo": "shopify://shop_images/logo.png",
+          "logo_width": 250,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "menu_type_desktop": "dropdown",
+          "show_line_separator": false,
+          "enable_sticky_header": true,
+          "margin_bottom": 0,
+          "padding_top": 20,
+          "padding_bottom": 20,
+          "head_btn_1": "Book Free demo",
+          "head_btn_1_url": "https://caqaconsultants.com.au/book-free-demo/",
+          "head_btn_2": "Contact",
+          "head_btn_2_url": "shopify://pages/contact"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "ff44d64c-e332-4220-8106-10f100e26c87": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Layer_104.png",
+              "image_width": 300,
+              "html": "<p>Melbourne :\n2/10 Lawn Court, Craigieburn, VIC 3064</p>\n<p>Adelaide : 3/19-21 Metro Parade, Mawson Lakes, SA 5095</p>\n<p><span>Phone:</span><a href=\"tel:03-8103-8000\" target=\"_blank\"> 03-8103-8000,</a><a href=\"tel:1800-266-160\" target=\"_blank\">1800-266-160</a><br>\n<span>Email:</span><a href=\"mailto:info@caqa.com.au\" target=\"_blank\"> info@caqa.com.au</a>\n</p>\n<h3 class=\"light-blue\">Mon – Fri: 9 am – 5 pm</h3>",
+              "social": true,
+              "alignment": "center"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "",
+              "menu": "footer"
+            }
+          },
+          "9e6191f7-0881-490a-9cee-d7d24a62dd87": {
+            "type": "link_list",
+            "settings": {
+              "heading": "",
+              "menu": "footer-menu-2"
+            }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "heading": "",
+              "menu": "footer-menu-3"
+            }
+          },
+          "fa1d68b9-b57d-4687-952e-25612ff4d71d": {
+            "type": "newsletter",
+            "settings": {
+              "heading": "Newsletter Subscription"
+            }
+          }
+        },
+        "block_order": [
+          "ff44d64c-e332-4220-8106-10f100e26c87",
+          "footer-0",
+          "9e6191f7-0881-490a-9cee-d7d24a62dd87",
+          "footer-1",
+          "fa1d68b9-b57d-4687-952e-25612ff4d71d"
+        ],
+        "settings": {
+          "color_scheme": "accent-2",
+          "newsletter_enable": false,
+          "newsletter_heading": "Subscribe to our emails",
+          "show_social": false,
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "payment_enable": true,
+          "custom_copyright": "<p>© 1999 - {{ 'now' | date: \"%Y\" }} Compliance And Quality Assurance (CAQA). A <a href=\"https://careercalling.international/\" target=\"_blank\" title=\"https://careercalling.international/\" bis_skin_checked=\"1\">Career Calling International</a> initiative.<br>ABN: 53 162 651 238 | ACN / ARBN: 162 651 238<br>Designed and developed by <a href=\"https://onlinemediasolutions.com.au/\" target=\"_blank\" title=\"https://onlinemediasolutions.com.au/\" bis_skin_checked=\"1\">Online Media Solutions</a></p>",
+          "margin_top": 48,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "logo": "{{ shop.brand.logo }}",
+          "logo_max_width": 100,
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "page_testimonial": {
+        "type": "page_testimonial",
+        "blocks": {
+          "492139b7-ddcb-48e7-ab60-630bbae6ddc9": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "The course was very well structured, efficiently conducted, and built using a blend of core and customised content that we had requested.  Being new to running an RTO this has filled in all my gaps, ones I knew, and those I did not know I had.  \n\nI found Sukh and Michelle incredibly knowledgeable, constantly providing real-life examples for us to learning from.  It is an added benefit to have two people who remain as active consultants in the space bringing us the most recent examples to share in the learning. \n\nI would suggest any person new to leading an RTO invest in this training, I wish I had done this earlier, it will help you make more informed decisions as you get your RTO up and running.",
+              "title": "Luke Kenny",
+              "subtitle": "Local Government Procurement",
+              "review": 5
+            }
+          },
+          "926169e3-9ea9-4f51-bd21-0a594e3cbff1": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "The faclitators are very knowledgeable and customised the training based on the needs of our organisation. Practical case study examples were shared throughout which helped to contextusalise our learnings. The training was delivered online with regular breaks, which helped to maintain focus and sustain concentration levels. I highly recommend the CEO Awareness training to any person who is responsible for a Registered Training Organisation.",
+              "title": "Emma Murray",
+              "subtitle": "Local Government Procurement",
+              "review": 5
+            }
+          },
+          "75e55ba8-7932-42d6-8ed4-8393faf3330a": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"The best resources currently in the industry.\"",
+              "title": "Jasmeen Batra",
+              "subtitle": "RTO Trainer, Hobart, Tasmania",
+              "review": 5
+            }
+          },
+          "0bd4faf4-b1de-4533-98e4-8aa9a5134a18": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"We appreciate the support that CAQA has and continues to provide in maintaining compliance and achieving 100% success in our ASQA RTO reregistration audit. You really give us fantastic support and assistance.\"",
+              "title": "RTO",
+              "subtitle": "Melbourne",
+              "review": 5
+            }
+          },
+          "d90204b3-5cd9-461d-a5a4-8ee50c51cb1e": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"We are really impressed on Sukh and his team’s experience in dealing with different compliance issues and governing bodies with exceptional outlook on identifying gaps within a short period of time. His high level of professionalism, commitment and dedication in getting our RTO Registration was very  sublime.",
+              "title": "Mahendra and Bhavi",
+              "subtitle": "Directors, Australian College for Excellence Pty Ltd., Melbourne",
+              "review": 5
+            }
+          },
+          "c89c2223-a7c3-44ba-98ec-59c26b2c1d9d": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"It was nice to meet you and thank you for all the support and consulting services that you provided to us during our audit.\nWith great pleasure, I have no hesitation to recommend your resources and services to anyone who may be willing to purchase from you. Your support and guidance and friendly service during audit was parallel to none. Your company has provided very professional, honest, dependable services to us.\"\nHopefully, we will be in touch sometime soon for other services that you provide which we have not utilised yet.",
+              "title": "Gopal Pokharel",
+              "subtitle": "Chief Executive Officer, Australian National Academy of Education (ANAE)",
+              "review": 5
+            }
+          },
+          "13c1dff1-9904-4385-93f0-da079ef7b778": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"CAQA resources has been the backbone of our RTO for resources.\nOur Audit was cleared without any rectification even when the Training Package was on High risk . Highly recommend CAQA resources. Sukh and Michelle are always there to assist even on their day off.\"",
+              "title": "Neeraj Khurana",
+              "subtitle": "Director, Institute of Science Management & Technology",
+              "review": 5
+            }
+          },
+          "f923ea3f-539a-4924-9eca-20b00d3b9884": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"These are by far the best I have seen in my search so far. Really good visually and lots of real workplace examples and drawings.\"",
+              "title": "Sherlyn Moynihan",
+              "subtitle": "Training and Quality Manager, New South Wales",
+              "review": 5
+            }
+          },
+          "1ccebb76-6dc1-4563-9bed-54f51e2bb802": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"The services we received were outstanding. You have top quality people working in your organization with excellent interpersonal skills.\"",
+              "title": "CEO",
+              "subtitle": "RTO - Perth",
+              "review": 5
+            }
+          },
+          "26a5128d-dfec-466d-bebb-fd9b8e3f9553": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"We found your staff very approachable and always willing to help others.\"",
+              "title": "Anu Arora",
+              "subtitle": "IT officer, Melbourne",
+              "review": 5
+            }
+          },
+          "5e005cd1-2260-435f-9bb6-e6ed11a166e6": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"I have been very fortunate to have Sukh Sandu as my manager of the VET Programs I delivered at UIT. His wealth of knowledge and experience in this sector, ESOS and quality management, facilitated the smooth running of the programs and team I was involved with. Sukh was supportive in all aspects of my work and approachable whenever I needed assistance. His understanding of leadership in terms of both trainers and students coupled with his business and commercial acumen were outstanding.\"",
+              "title": "Alice Christie",
+              "subtitle": "Training Consultant, Ballarat, Victoria",
+              "review": 5
+            }
+          },
+          "c1d2b681-5fc0-4eda-b3d6-079e618d7389": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"I just wanted to let you know that I found your assessments to be the most detailed and well planned assessments I have seen. The information made available to both the learner and the assessor is extensive. The detail and structure of the simulated workplace is thorough and gives the learner plenty of information to address the questions and role plays. Well done.\"",
+              "title": "Independent validator and auditor",
+              "subtitle": "Brisbane, Queensland",
+              "review": 5
+            }
+          },
+          "84db24e3-2b71-4332-90e0-2acd72a92435": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"There are no other resources that can meet the standard and quality of your assessment and learner resources.\"",
+              "title": "RTO Manager",
+              "subtitle": "Melbourne, Victoria",
+              "review": 5
+            }
+          },
+          "f5bcda4b-7807-48ba-a1e4-0a4f90e14f78": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"If you want to deal with absolutely the best professionals in the business there is NO other option ! Thank you guys for amazing work and ongoing support throughout. You are the best !!\"",
+              "title": "Hubert Kozub",
+              "subtitle": "Dreamlux",
+              "review": 5
+            }
+          },
+          "31704e00-68aa-4e98-a0f9-f71e357ddd33": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "\"The most qualified individuals in the industry for ASQA compliance, Validation Standards, and High-Quality Training.\"",
+              "title": "Ed Williams",
+              "subtitle": "UIT",
+              "review": 5
+            }
+          },
+          "bfcc4d26-ab5c-4ca2-8211-ab4372cb8441": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I have been using CAQA Resources for my training and assessment needs, and I am extremely satisfied with their services. The resources they provide are comprehensive, well-structured, and aligned with industry standards. The team at CAQA Resources is professional, supportive, and always willing to go the extra mile. I highly recommend their resources.",
+              "title": "Edward Logan",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "35eeab41-6416-49ec-936c-6a5b1477e316": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I have been using CAQA Resources for my training and assessment needs, and I am thoroughly impressed with their resources. The materials are well-designed, easy to understand, and cover all the necessary topics. The team at CAQA Resources is responsive, knowledgeable, and always willing to assist. I highly recommend their services.",
+              "title": "Spencer Butts",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "ab247b5c-fc77-4e2a-beff-4f4615d9140a": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA Resources has been an excellent resource provider for our training organization. The materials they offer are well-structured, up-to-date, and aligned with industry standards. The team at CAQA Resources is responsive, knowledgeable, and always willing to provide support. I highly recommend their services to anyone in need of quality training resources.",
+              "title": "Brock Cuper",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "89d9ed63-c9a2-409a-89c2-32a256ca9ae8": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I have been using CAQA Resources for my training and assessment needs, and I am impressed with the quality of their resources. The materials are well-written, easy to understand, and cover all the necessary topics. The team at CAQA Resources is professional, supportive, and always available to provide assistance. I highly recommend their services.",
+              "title": "Roy Dean",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "b0695537-a8eb-45f7-a34d-9e8f4d7efaad": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA Resources has been an invaluable partner in our training and assessment efforts. Their resources are well-designed, easy to navigate, and tailored to meet the needs of learners. The team at CAQA Resources is knowledgeable, responsive, and always available to provide support. I would highly recommend their services to anyone in the training industry.",
+              "title": "Archie Hyde",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "b7100991-c2f9-4bda-8a1b-3ac9a688702d": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA Resources is the best training and assessment resource provider I have ever worked with! The staff are incredibly knowledgeable and always go above and beyond to help me meet my training needs. The resources they provide are top-notch and always up-to-date with the latest industry standards. I highly recommend CAQA Resources to anyone looking for quality training and assessment resources.",
+              "title": "Kaleb Evans",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "4ac5e336-ed25-4ecc-aace-ddb67b6fd074": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I have been using CAQA Resources for my training and assessment needs and am extremely satisfied with their services. The resources are comprehensive, up-to-date, and aligned with industry standards. The team at CAQA Resources is friendly, knowledgeable, and always ready to assist. I would highly recommend their services to anyone in the training and assessment field.",
+              "title": "Harry Rose",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "9b2020c8-5c5a-42a7-8f9c-8f80497d3421": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I have been using CAQA Resources for my training programs, and I must say that their resources are exceptional. The materials are well-structured, comprehensive, and aligned with industry standards. The team at CAQA Resources is highly professional and always available to provide support. I am grateful for their contribution to the success of our training programs.",
+              "title": "Victoria Gould",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "c0c53e9c-989c-41c1-824d-3f7e2baf125a": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I have been using CAQA Resources for several years, and I have always been impressed with their professionalism and expertise. Their resources are comprehensive, well-structured, and aligned with industry standards. I can always rely on CAQA Resources to deliver high-quality training and assessment materials that meet the needs of my learners—highly recommended!",
+              "title": "Jake Peter",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "f2d22a38-54df-45dd-9b50-dee83f9e6f10": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I have been using CAQA Resources for my training programs, and I am impressed with the quality of their resources. The materials are well-researched, comprehensive, and engaging. The team at CAQA Resources is professional, knowledgeable, and always ready to assist. I highly recommend their resources to anyone looking for high-quality training materials.",
+              "title": "Tyler Tracy",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "50e6924d-2616-463e-a98e-716fc05e248a": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I have been using CAQA Resources for my training and assessment needs, and I can confidently say that they are the best in the industry. The resources they provide are comprehensive, well-designed, and user-friendly. The team at CAQA Resources is knowledgeable, responsive, and always willing to go the extra mile. I highly recommend their services.",
+              "title": "Dominic Morrison",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "cce21824-3607-4dad-84a9-fe79be64bb32": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I have recently started using CAQA Resources, and I am extremely impressed with the quality of their resources. The materials are well-structured, engaging, and designed to meet the needs of diverse learners. The team at CAQA Resources has been supportive and responsive throughout the process. I am confident that their resources will significantly benefit my students.",
+              "title": "Amy Thompson",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "1284abfd-9109-4df6-a433-e56b55912c64": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "The support I have received from CAQA Resources has been outstanding. Their team is always available to answer any questions I have and provide guidance when needed. Their resources are well-designed and easy to navigate, making my job as an assessor much easier. I appreciate the level of care and attention to detail that CAQA Resources team puts into its training and assessment materials.",
+              "title": "Jackson Fosbery",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "1b6d50d0-68c2-4391-ac12-f7b0d9866245": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA Resources has exceeded my expectations regarding the quality and relevance of their resources. The materials are well-structured, easy to follow, and provide a great learning experience for my students. The CAQA Resources team is professional, responsive, and goes above and beyond to ensure customer satisfaction. I am grateful for their support and highly recommend their resources.",
+              "title": "Amy cooper",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "e915aa56-36fd-4b57-be11-6cb6b2031fff": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA Resources has been an invaluable partner in our training initiatives. Their resources are comprehensive, well-structured, and aligned with industry standards. The team at CAQA Resources is knowledgeable, responsive, and always willing to provide support. I am grateful for their contribution to the success of our training programs.",
+              "title": "Henry ingram",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "b2888d4e-0f4c-4eea-96fd-6ac3c7e400d7": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA Resources is the best training and assessment provider I have ever worked with. The staff are incredibly knowledgeable and always take the time to help me understand everything. I wouldn't hesitate to recommend them to anyone looking for quality resources.",
+              "title": "Scott johnson",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "99b189d6-80e5-4fd3-8b6e-5d8ba0401c9c": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I have worked with many different training and assessment providers over the years, and CAQA Resources is by far the best. Their team is professional, knowledgeable, and always goes the extra mile to make sure their clients are happy. I would highly recommend them to anyone looking for top-quality resources",
+              "title": "Brittney Leonard",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "32ce8c3b-1718-4ef4-a859-93202845700e": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA Resources has been a game-changer for our training organisation. Their resources have helped us enhance the quality of our training programs and improve the learning outcomes for our students. The team at CAQA Resources is knowledgeable, responsive, and dedicated to ensuring customer satisfaction. I cannot speak highly enough of their services.",
+              "title": "Michael Bainton",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "b65974a2-972a-463c-af8c-dc2336e8100b": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA Resources has been an invaluable resource for our team. The team at CAQA are always on hand to help with any questions we have, and the resources they provide are of the highest quality. I would highly recommend them to anyone looking for quality training and assessment resources.",
+              "title": "Austin Reade",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "ef599568-4006-4b82-9639-aec23bd64837": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA Resources is the best place to go for training and assessment resources. Their subject matter experts and resource writers are incredibly knowledgeable and experienced, and their resources are the best in the VET sector. I would highly recommend them to anyone looking for a great training and assessment resources.",
+              "title": "Junia Delice",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "9dc981d1-7699-4a2a-b1e5-a5e9043597fa": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I wholeheartedly endorse CAQA Resources for all of your training and evaluation requirements. I solely utilize CAQA Resources as a resource provider. Their writing is excellent, and their materials reflect the most recent business developments.",
+              "title": "Junick Thomas",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "defb0a96-560a-4ee7-85a5-217b24922847": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA Resources have been an integral part of our business for over 3 years now. Their resources are current, relevant and easy to use. The team at CAQA Resources are always available to offer support and answer any questions we may have.",
+              "title": "Christian Ball",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "9c5acf8c-8b51-4b87-a5fa-7506dfc423ae": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "The team at CAQA Resources are experts in their field. I was very impressed with the quality of the eLearning course materials and the support I received from the team. I would highly recommend their services.",
+              "title": "Samantha Murray",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "63cc8062-38ba-4b59-8578-0c1f4b9874ec": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I have found the online training provided by CAQA Resources to be comprehensive and up-to-date. The resources are easy to use and the customer service is fantastic.",
+              "title": "David Larkin",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "97355e33-4562-4052-9b97-3eda0fbe993a": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "The team at CAQA Resources are extremely knowledgeable and always go the extra mile to help. I have found their customer service to be exceptional and would recommend them without hesitation.",
+              "title": "Tracy Conway",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "24bb7be1-c524-4a21-adcb-f4adc85ea1c9": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "There is no one in Australia who can match the standard of CAQA Resources' assessment and learner resources. We have been buying all of our resources from them without problem for the past two years. CAQA Resources' customer service is excellent, and we highly recommend them.",
+              "title": "Stuart Webb",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "9749c6d5-45ea-47a7-abc1-e4f091f7cc11": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA Resources has always been extremely professional, supportive, and prompt in providing resources. There resources were compliant and easy to use. I highly recommend CAQA Resources for their great support and assistance. I tried the others and have now decided to be with the best! Fully customizable resources - and let me tell you that you will not be disappointed if you use their resources and tools correctly. We are very pleased with the product's quality.",
+              "title": "Aarav Malhotra",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "4e4b06c1-e618-40ef-8efa-f860dd2720c6": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "The CAQA team is always responsive and professional to respond to our requests, and their products are of excellent quality. Their website is simple to use, and materials are delivered quickly. We continue to use them for the majority of our courses because their support and resources are excellent.",
+              "title": "Ananadi Vashist",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "b3178a99-61bd-4d8e-b054-3000db6e15a7": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "CAQA resources are well customized as per the student's need with the simulated business environment that gives the student the actual workplace experience. These resources engages the students all time by providing class activity books and self-study guides.",
+              "title": "Bhavani Mahendra",
+              "subtitle": "",
+              "review": 5
+            }
+          },
+          "60779b4b-d3b1-45c2-b947-04ba8faa711c": {
+            "type": "testimonial",
+            "settings": {
+              "desc": "I highly recommend using CAQA as their service is outstanding. The team is very supportive, helpful and knowledgeable in all aspects of training compliance. I especially would like to thank Suhk Sandu for all of his assistance and dedication. He helped our school when we had major problems and without his help we may have lost our school.",
+              "title": "Dr Peter Lewis",
+              "subtitle": "CEO, CMI",
+              "review": 5
+            }
+          }
+        },
+        "block_order": [
+          "492139b7-ddcb-48e7-ab60-630bbae6ddc9",
+          "926169e3-9ea9-4f51-bd21-0a594e3cbff1",
+          "75e55ba8-7932-42d6-8ed4-8393faf3330a",
+          "0bd4faf4-b1de-4533-98e4-8aa9a5134a18",
+          "d90204b3-5cd9-461d-a5a4-8ee50c51cb1e",
+          "c89c2223-a7c3-44ba-98ec-59c26b2c1d9d",
+          "13c1dff1-9904-4385-93f0-da079ef7b778",
+          "f923ea3f-539a-4924-9eca-20b00d3b9884",
+          "1ccebb76-6dc1-4563-9bed-54f51e2bb802",
+          "26a5128d-dfec-466d-bebb-fd9b8e3f9553",
+          "5e005cd1-2260-435f-9bb6-e6ed11a166e6",
+          "c1d2b681-5fc0-4eda-b3d6-079e618d7389",
+          "84db24e3-2b71-4332-90e0-2acd72a92435",
+          "f5bcda4b-7807-48ba-a1e4-0a4f90e14f78",
+          "31704e00-68aa-4e98-a0f9-f71e357ddd33",
+          "bfcc4d26-ab5c-4ca2-8211-ab4372cb8441",
+          "35eeab41-6416-49ec-936c-6a5b1477e316",
+          "ab247b5c-fc77-4e2a-beff-4f4615d9140a",
+          "89d9ed63-c9a2-409a-89c2-32a256ca9ae8",
+          "b0695537-a8eb-45f7-a34d-9e8f4d7efaad",
+          "b7100991-c2f9-4bda-8a1b-3ac9a688702d",
+          "4ac5e336-ed25-4ecc-aace-ddb67b6fd074",
+          "9b2020c8-5c5a-42a7-8f9c-8f80497d3421",
+          "c0c53e9c-989c-41c1-824d-3f7e2baf125a",
+          "f2d22a38-54df-45dd-9b50-dee83f9e6f10",
+          "50e6924d-2616-463e-a98e-716fc05e248a",
+          "cce21824-3607-4dad-84a9-fe79be64bb32",
+          "1284abfd-9109-4df6-a433-e56b55912c64",
+          "1b6d50d0-68c2-4391-ac12-f7b0d9866245",
+          "e915aa56-36fd-4b57-be11-6cb6b2031fff",
+          "b2888d4e-0f4c-4eea-96fd-6ac3c7e400d7",
+          "99b189d6-80e5-4fd3-8b6e-5d8ba0401c9c",
+          "32ce8c3b-1718-4ef4-a859-93202845700e",
+          "b65974a2-972a-463c-af8c-dc2336e8100b",
+          "ef599568-4006-4b82-9639-aec23bd64837",
+          "9dc981d1-7699-4a2a-b1e5-a5e9043597fa",
+          "defb0a96-560a-4ee7-85a5-217b24922847",
+          "9c5acf8c-8b51-4b87-a5fa-7506dfc423ae",
+          "63cc8062-38ba-4b59-8578-0c1f4b9874ec",
+          "97355e33-4562-4052-9b97-3eda0fbe993a",
+          "24bb7be1-c524-4a21-adcb-f4adc85ea1c9",
+          "9749c6d5-45ea-47a7-abc1-e4f091f7cc11",
+          "4e4b06c1-e618-40ef-8efa-f860dd2720c6",
+          "b3178a99-61bd-4d8e-b054-3000db6e15a7",
+          "60779b4b-d3b1-45c2-b947-04ba8faa711c"
+        ],
+        "settings": {
+          "bread_crumb_back": "shopify://shop_images/about-us-03.jpg",
+          "bread_title": "Testimonials",
+          "title": "We have many reviews from our satisfied clients.",
+          "desc": "<p>It’s always a joy to hear what people are saying about our products and services.</p>"
+        }
+      },
+      "page-our-partner": {
+        "type": "page-our-partner",
+        "blocks": {
+          "6a9f937c-a425-40b4-a18c-16efd5cc7ed5": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/Blank_CareerCallingInternational_Logo_Color.png",
+              "url": "https://careercalling.com.au/"
+            }
+          },
+          "image_UHfi9r": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "url": ""
+            }
+          },
+          "ea1fdc75-656f-4d33-aed6-d899eb275a03": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/VET-Sector.jpg",
+              "url": "https://www.vetsector.com/"
+            }
+          },
+          "06c7df0c-ce59-48fc-bf32-7a12cae1f868": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/CAQA-Resources.jpg",
+              "url": "https://caqaresources.com.au/"
+            }
+          },
+          "0817cb3a-5b3e-488f-8a73-57cfb9d6dcef": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/oms-1.jpg",
+              "url": "https://onlinesolutions.media/"
+            }
+          },
+          "cbb504b3-093f-434b-9d8d-0d71e758a6bf": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/Blank_CareerCallingJobs_Logo_Color.png",
+              "url": "https://www.jobs.careercalling.com.au/"
+            }
+          },
+          "3c0417e3-93cf-4489-b1fe-60ea7946a1ee": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/RTO-Training-Resources.png",
+              "url": "https://rtotrainingresources.com.au/"
+            }
+          },
+          "104d1335-eb32-4c79-b3c5-5e20e72966a6": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/rto-consulting-group-1.jpg",
+              "url": "https://rtotraininggroup.com.au/"
+            }
+          },
+          "d509543a-3c6f-4cab-9fb7-e9303f091bda": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/AHEG-1.jpg",
+              "url": "https://www.aheg.com.au/"
+            }
+          },
+          "468b718c-d80d-499e-9cfe-11e2911709fd": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/Khalsa-migration-1.jpg",
+              "url": "http://khalsamigration.com/"
+            }
+          },
+          "56be4b19-f338-47ba-9bad-c9c5d9af95aa": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/pd-web-solutions.jpg",
+              "url": "https://pdweb.com.au/"
+            }
+          },
+          "b31938e2-3873-4812-8b46-4756b7d53eeb": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/proba-1.jpg",
+              "url": "https://proba.com.au/"
+            }
+          },
+          "ee97bd02-2ef4-4140-8190-f598bc815a76": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/CAQA-Technology.jpg",
+              "url": "https://caqa.com.au/pages/our-partners#"
+            }
+          },
+          "03f0fb47-0037-4124-8276-46dbc4880563": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/CAQA-Systems.jpg",
+              "url": "https://caqasystems.com.au/"
+            }
+          },
+          "d687b23a-c55c-4ab8-884f-bf586c1aad7e": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/CAQA-Recruitment.jpg",
+              "url": "https://caqarecruitment.com.au/"
+            }
+          },
+          "d0a9b72b-d2ce-489d-b4da-c67059eb9e4f": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/the-immigration-world-wide.jpg",
+              "url": "https://theimmigrationworldwide.com/"
+            }
+          },
+          "7efa23cc-3fc9-4223-bd08-1ad50f0b5cdc": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/commonwealth-school-of-languages-1.jpg",
+              "url": "https://commonwealthenglish.com/"
+            }
+          },
+          "3b27f210-9ceb-4d9a-832b-f68be962b36c": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/CAQA-Publications.jpg",
+              "url": "https://caqapublications.com/"
+            }
+          },
+          "b1036244-4600-40d1-8777-cdfaa44484b7": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/Edu-Learning-1.jpg",
+              "url": "https://edulearning.com.au/"
+            }
+          },
+          "7102244e-2a19-493b-b450-bbbf0897eb21": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/CAQA-Labs.jpg",
+              "url": "https://caqalabs.com.au/"
+            }
+          },
+          "f57e6dc2-c183-4f7d-8e78-d4b970e654ff": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/CAQA-Discover.jpg",
+              "url": "https://caqadiscover.com/"
+            }
+          },
+          "c073b60f-c933-490b-aa42-c22df8938288": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify://shop_images/CAQA-Digital.jpg",
+              "url": "https://caqadigital.com.au/"
+            }
+          }
+        },
+        "block_order": [
+          "6a9f937c-a425-40b4-a18c-16efd5cc7ed5",
+          "image_UHfi9r",
+          "ea1fdc75-656f-4d33-aed6-d899eb275a03",
+          "06c7df0c-ce59-48fc-bf32-7a12cae1f868",
+          "0817cb3a-5b3e-488f-8a73-57cfb9d6dcef",
+          "cbb504b3-093f-434b-9d8d-0d71e758a6bf",
+          "3c0417e3-93cf-4489-b1fe-60ea7946a1ee",
+          "104d1335-eb32-4c79-b3c5-5e20e72966a6",
+          "d509543a-3c6f-4cab-9fb7-e9303f091bda",
+          "468b718c-d80d-499e-9cfe-11e2911709fd",
+          "56be4b19-f338-47ba-9bad-c9c5d9af95aa",
+          "b31938e2-3873-4812-8b46-4756b7d53eeb",
+          "ee97bd02-2ef4-4140-8190-f598bc815a76",
+          "03f0fb47-0037-4124-8276-46dbc4880563",
+          "d687b23a-c55c-4ab8-884f-bf586c1aad7e",
+          "d0a9b72b-d2ce-489d-b4da-c67059eb9e4f",
+          "7efa23cc-3fc9-4223-bd08-1ad50f0b5cdc",
+          "3b27f210-9ceb-4d9a-832b-f68be962b36c",
+          "b1036244-4600-40d1-8777-cdfaa44484b7",
+          "7102244e-2a19-493b-b450-bbbf0897eb21",
+          "f57e6dc2-c183-4f7d-8e78-d4b970e654ff",
+          "c073b60f-c933-490b-aa42-c22df8938288"
+        ],
+        "settings": {
+          "bread_crumb_back": "shopify://shop_images/about-us-03.jpg",
+          "bread_title": "CAQA Partners",
+          "title": "Meet our awesome partners / clients"
+        }
+      },
+      "page-faqs": {
+        "type": "page-faqs",
+        "blocks": {
+          "7445ec28-52a1-4b7c-9509-12772ad8aa3f": {
+            "type": "text",
+            "settings": {
+              "que": "Who we are?",
+              "ans": "<p>We are RTO compliance and regulatory consultants. Our consultants have been assisting the training organisations for over 20 years.</p>",
+              "ans_h": ""
+            }
+          },
+          "915dbeb4-9d6e-41d8-9280-75dab80645fd": {
+            "type": "text",
+            "settings": {
+              "que": "How are we different from other consultants?",
+              "ans": "<p>Our track record is the evidence of how we are different from other consultants. We provide true, honest and right advice to all our clients. The people who have followed our advice have achieved 100% success in their RTO businesses and regulatory audits. </p>",
+              "ans_h": ""
+            }
+          },
+          "12f878c5-2b08-4da3-9cc4-87214efe2dcb": {
+            "type": "text",
+            "settings": {
+              "que": "Where do you provide your consultancy services?",
+              "ans": "<p>Our consultants are available to provide advice Australia wide and overseas. Contact us today and find out more about how we can help you. </p>",
+              "ans_h": ""
+            }
+          },
+          "220f7199-0a08-4f62-ad86-86fddbe6c022": {
+            "type": "text",
+            "settings": {
+              "que": "Do I need to use a consultant?",
+              "ans": "<p>No. You do not need to hire a consultancy to set up or operate an RTO, but hiring a good consultant would empower you to concentrate on managing the RTO, just like a good accountant or lawyer provides you support, so a good RTO consultant. Tell us how we can help you and your RTO.</p>",
+              "ans_h": ""
+            }
+          },
+          "0bcac34e-d4cc-48f7-a273-438de3aaf797": {
+            "type": "text",
+            "settings": {
+              "que": "What are your terms and conditions of sale?",
+              "ans": "",
+              "ans_h": "<ul>\n<li>Materials supplied are on a “one-off” upfront payment model. Once you purchase the training resources, you won’t have to pay other ongoing fees. </li>\n<li>The licence agreement is unrestricted. Once purchased, you’re allowed to continually reproduce, edit, and use the material on an on-going basis. </li>\n<li>Training and assessment materials are editable so your RTO can modify, amend, and adapt these resources as you see fit. </li>\n<li>You may upload your training and assessment materials on your own Learning Management System (LMS) or send them out to students in any secure method.</li>\n<li>You’re free to print your training materials for distribution to your students.</li>\n<li>CAQA retains all intellectual property and related materials that are developed or produced. The title, copyright, intellectual property rights, and distribution rights of the CAQA training and assessment materials will remain with the resource developer.</li>\n<li>These training and assessment resources were created for the use of education and /or training provider/personal.</li>\n<li>CAQA does not provide the right to resell or use these resources for other organisations or personnel.</li>\n<li>RTOs are expected to customise the documents and adapt the materials to suit business requirements and assessment models. </li>\n<li>The RTO is responsible for ensuring that the training materials are contextualised and align with their Training and Assessment Strategy and other compliance documents.</li>\n<li>The RTO is responsible for making sure their unit selection meets qualification or skillset packaging rules.</li>\n</ul>"
+            }
+          },
+          "03bb8bb9-df79-4e2c-a546-d99a6974c538": {
+            "type": "text",
+            "settings": {
+              "que": "What rectification assistance do you provide?",
+              "ans": "",
+              "ans_h": "<ul>\n<li>The price of these training materials includes a rectification assistance guarantee that applies only if training and assessment materials supplied in the form provided by CAQA fail to comply with any regulatory requirements, you may reach out for rectification assistance for no charge.</li>\n<li>This rectification assistance only applies to audits conducted by an official registered body such as ASQA. </li>\n<li>Additional rectification assistance fees apply to training and assessment resources which have been found non-compliant after the original form has been modified. </li>\n<li>You must submit the audit report to [brand] as proof that the resources were found non-compliant. We will not be able to assist you without the official audit report. Submit the required documents as soon as possible to give us sufficient time to complete the rectifications.</li>\n<li>A minimum of 15 business days’ notice is required to resource and complete updates to assessment tools.</li>\n</ul>"
+            }
+          },
+          "a8d9d142-0fc3-47e5-b6fd-7beb262b515e": {
+            "type": "text",
+            "settings": {
+              "que": "Where can I find more information about you and your services?",
+              "ans": "<p>You can simply Google and find out hundreds of audit reports with successful outcomes associated with our <a href=\"/pages/contact\" title=\"Contact\">RTO consultants</a>. If you want to speak to someone, contact us today and we will provide you with the contact details of our clients to directly speak to them to know more about us and our values and services.</p>",
+              "ans_h": ""
+            }
+          },
+          "4c894634-150d-4711-aa3c-82a416984885": {
+            "type": "text",
+            "settings": {
+              "que": "How can I contact you?",
+              "ans": "<p><a href=\"/pages/contact\" title=\"Contact\">The best way to fill the contact form and send it to us. </a>We will allocate the inquiry to a case officer and they will contact you to find out how we can help you to achieve a successful and sustainable training business.</p>",
+              "ans_h": ""
+            }
+          },
+          "6f80d6eb-2aac-4dbf-a24a-f39244918260": {
+            "type": "text",
+            "settings": {
+              "que": "Do you have more questions for us?",
+              "ans": "<p>Use the contact us form and write as much information as possible for us to understand your matter and one of our consultants will approach you to find out how we can offer our quality services to you and your organisation.</p>",
+              "ans_h": ""
+            }
+          },
+          "62a2a110-f5ce-4711-b25f-65ec97ad867f": {
+            "type": "text",
+            "settings": {
+              "que": "Can I pre-order the resources?",
+              "ans": "<p>Yes, you can pre-order the resources.<br/><br/>Simply visit the <a href=\"/collections/pre-order\" title=\"Pre-Order\">Pre-order collection </a>on our store and place the order.<br/><br/>Please note that the pre-order individual units will be delivered three months after your payment has been received and pre-order qualifications will be delivered up to six months after your payment has been received.<br/><br/>Please <a href=\"/pages/contact\" title=\"Contact\">contact us</a> if you are unable to find the resources you are looking for. We are happy to provide you with the timeline and quote.</p>",
+              "ans_h": ""
+            }
+          },
+          "36f0cb8b-dedf-42c3-914a-9b6b4297a892": {
+            "type": "text",
+            "settings": {
+              "que": "Are Learner Guides and Self Study Guides same?",
+              "ans": "<p>No. <a href=\"https://caqa-com-au.myshopify.com/\" title=\"https://caqa-com-au.myshopify.com/\"><strong>The self Study guide</strong></a><strong> </strong>contains references and links for students to read additional information related to their units of competency or course and as additional support to the learner guide.<br/>We provide a comprehensive <a href=\"https://caqa-com-au.myshopify.com/\" title=\"https://caqa-com-au.myshopify.com/\"><strong>learner guide</strong></a><strong> </strong>as a separate document.</p>",
+              "ans_h": ""
+            }
+          },
+          "c5279ab7-4ff5-450f-8c22-206978c71c11": {
+            "type": "text",
+            "settings": {
+              "que": "What are the timeframes for delivery?",
+              "ans": "",
+              "ans_h": "<ul>\n<li>Once the order is confirmed, we will generate an invoice for the training resources requested.</li>\n<li>After payment is made, it may take up to 1-2 business days for funds to clear to our account and finance to verify receipt of payment.</li>\n<li>When payment is confirmed, we will confirm any remaining details required before delivery.</li>\n<li>We will send you a copy of the license agreement to sign within 1-2 business days.</li>\n<li>Once all required information and the signed license agreement has been received, we’ll process the order and typically deliver materials within 1-3 business days (exception is pre-order products).  Please refer to our website for more details regarding pre-order delivery timeframes.</li>\n<li>Your materials will be delivered in digital format via a secure document delivery service (Dropbox, Sharepoint or similar application)</li>\n<li>We work on a “first-come, first-served” basis to be fair to all our clients. Orders go into the delivery queue once payment and licensing have been finalised, and all required information received. </li>\n<li>Any delays to these steps by the client may result in longer delivery timeframes. </li>\n</ul>"
+            }
+          }
+        },
+        "block_order": [
+          "7445ec28-52a1-4b7c-9509-12772ad8aa3f",
+          "915dbeb4-9d6e-41d8-9280-75dab80645fd",
+          "12f878c5-2b08-4da3-9cc4-87214efe2dcb",
+          "220f7199-0a08-4f62-ad86-86fddbe6c022",
+          "0bcac34e-d4cc-48f7-a273-438de3aaf797",
+          "03bb8bb9-df79-4e2c-a546-d99a6974c538",
+          "a8d9d142-0fc3-47e5-b6fd-7beb262b515e",
+          "4c894634-150d-4711-aa3c-82a416984885",
+          "6f80d6eb-2aac-4dbf-a24a-f39244918260",
+          "62a2a110-f5ce-4711-b25f-65ec97ad867f",
+          "36f0cb8b-dedf-42c3-914a-9b6b4297a892",
+          "c5279ab7-4ff5-450f-8c22-206978c71c11"
+        ],
+        "settings": {
+          "title": "Frequently Asked Questions",
+          "subtitle": "FAQs",
+          "c_title": "For any inquiries contact us",
+          "c_subtitle": "Contact",
+          "loca_title": "Location",
+          "loca_desc": "<p>2/10 Lawn Court, Craigieburn,<br/>VIC 3064.<br/><strong>Monday - Friday</strong>: 9 am - 5 pm</p>",
+          "mail_title": "Mail",
+          "mail1": "info@caqa.com.au",
+          "mail2": "",
+          "phone_title": "Phone",
+          "phone1": "03 8103 8000",
+          "phone2": "1800 266 160"
+        }
+      },
+      "logo-list": {
+        "type": "logo-list",
+        "blocks": {
+          "9ba43228-6bf6-4c9d-ae60-09b4d7241548": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/Blank_CareerCallingInternational_Logo_Color.png",
+              "url": "https://careercalling.com.au/",
+              "image2": "shopify://shop_images/c1.png",
+              "url2": "https://www.vetsector.com/",
+              "image3": "shopify://shop_images/k.png",
+              "url3": "https://caqaresources.com.au/"
+            }
+          },
+          "4f9c4837-aa1f-4f50-bede-a6d5f6ec3ceb": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/j.png",
+              "url": "https://caqa.com.au/",
+              "image2": "shopify://shop_images/c.png",
+              "url2": "https://caqacourses.com.au/",
+              "image3": "shopify://shop_images/l.png",
+              "url3": "https://caqasystems.com.au/"
+            }
+          },
+          "6229edd3-2dd6-45ab-bd84-b785ff8017dd": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/i.png",
+              "url": "https://caqarecruitment.com.au/",
+              "image2": "shopify://shop_images/h.png",
+              "url2": "https://caqapublications.com/",
+              "image3": "shopify://shop_images/d.png",
+              "url3": "https://caqadigital.com.au/"
+            }
+          },
+          "b6ea724b-3c33-404e-b51c-d02cf3f6f5b8": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/e.png",
+              "url": "https://caqadiscover.com/",
+              "image2": "shopify://shop_images/f.png",
+              "url2": "https://caqalabs.com.au/",
+              "image3": "shopify://shop_images/y.png",
+              "url3": "https://rtotraininggroup.com.au/"
+            }
+          },
+          "b1e5f6e2-a444-47a0-9424-655d70388ab0": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/u.png",
+              "url": "https://onlinemediasolutions.com.au/",
+              "image2": "shopify://shop_images/a.png",
+              "url2": "https://aheg.com.au/",
+              "image3": "shopify://shop_images/r.png",
+              "url3": "https://edulearning.com.au/"
+            }
+          },
+          "a1673271-8a55-472d-9a48-49be01b182a1": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/q.png",
+              "url": "https://commonwealthenglish.com/",
+              "image2": "shopify://shop_images/Blank_CareerCallingJobs_Logo_Color.png",
+              "url2": "https://jobs.careercalling.com.au/",
+              "image3": "shopify://shop_images/v.png",
+              "url3": "https://pdweb.com.au/"
+            }
+          },
+          "6bfc0b58-ead6-44fb-a908-ee1fc879c70a": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/w.png",
+              "url": "https://proba.com.au/",
+              "image2": "shopify://shop_images/b1.png",
+              "url2": "https://validationexperts.com.au/",
+              "image3": "shopify://shop_images/x.png",
+              "url3": "https://rplexperts.com.au/"
+            }
+          },
+          "b49a393c-799d-45a9-a81b-f5e3ed1e5076": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/t.png",
+              "url": "https://llnexperts.com.au/",
+              "image2": "shopify://shop_images/b.png",
+              "url2": "https://auditexperts.com.au/",
+              "image3": "shopify://shop_images/Blank_CareerCallingCourses_Logo_Color.png",
+              "url3": "https://courses.careercalling.com.au/"
+            }
+          },
+          "b4e60304-ad64-46df-9d49-3da0a242ec7a": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/Bank_CareerCallingEducation_Logo_Color.png",
+              "url": "https://careercalling.edu.au/",
+              "image2": "shopify://shop_images/z.png",
+              "url2": "https://sukhsandhu.com/",
+              "image3": "shopify://shop_images/a1.png",
+              "url3": "https://theimmigrationworldwide.com/"
+            }
+          },
+          "f3cb69d7-b12f-441f-8a12-7b3cb5215839": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/s.png",
+              "url": "http://khalsamigration.com/",
+              "url2": "",
+              "url3": ""
+            }
+          }
+        },
+        "block_order": [
+          "9ba43228-6bf6-4c9d-ae60-09b4d7241548",
+          "4f9c4837-aa1f-4f50-bede-a6d5f6ec3ceb",
+          "6229edd3-2dd6-45ab-bd84-b785ff8017dd",
+          "b6ea724b-3c33-404e-b51c-d02cf3f6f5b8",
+          "b1e5f6e2-a444-47a0-9424-655d70388ab0",
+          "a1673271-8a55-472d-9a48-49be01b182a1",
+          "6bfc0b58-ead6-44fb-a908-ee1fc879c70a",
+          "b49a393c-799d-45a9-a81b-f5e3ed1e5076",
+          "b4e60304-ad64-46df-9d49-3da0a242ec7a",
+          "f3cb69d7-b12f-441f-8a12-7b3cb5215839"
+        ],
+        "settings": {}
+      },
+      "advertisement-banner": {
+        "type": "advertisement-banner",
+        "settings": {
+          "show_block": false,
+          "show_one_time": false,
+          "url": "",
+          "value_first": "0",
+          "value_min": "10",
+          "value_max": "40"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "12318114026695823084": {
+        "type": "shopify://apps/yeps/blocks/yeps/e514c124-b6d8-42cf-8001-0defa550f08e",
+        "disabled": true,
+        "settings": {}
+      },
+      "6897675550240258559": {
+        "type": "shopify://apps/promolayer/blocks/app-embed/e4a9128f-b151-4feb-ad9e-ef8fbb63bf07",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "colors_solid_button_labels": "#ffffff",
+      "colors_accent_1": "#121212",
+      "gradient_accent_1": "",
+      "colors_accent_2": "#334fb4",
+      "gradient_accent_2": "",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#ffffff",
+      "gradient_background_1": "",
+      "colors_background_2": "#f3f3f3",
+      "gradient_background_2": "",
+      "type_header_font": "assistant_n4",
+      "heading_scale": 100,
+      "type_body_font": "assistant_n4",
+      "body_scale": 100,
+      "page_width": 1200,
+      "spacing_sections": 0,
+      "spacing_grid_horizontal": 8,
+      "spacing_grid_vertical": 8,
+      "buttons_border_thickness": 1,
+      "buttons_border_opacity": 100,
+      "buttons_radius": 0,
+      "buttons_shadow_opacity": 0,
+      "buttons_shadow_horizontal_offset": 0,
+      "buttons_shadow_vertical_offset": 4,
+      "buttons_shadow_blur": 5,
+      "variant_pills_border_thickness": 1,
+      "variant_pills_border_opacity": 55,
+      "variant_pills_radius": 40,
+      "variant_pills_shadow_opacity": 0,
+      "variant_pills_shadow_horizontal_offset": 0,
+      "variant_pills_shadow_vertical_offset": 4,
+      "variant_pills_shadow_blur": 5,
+      "inputs_border_thickness": 1,
+      "inputs_border_opacity": 55,
+      "inputs_radius": 0,
+      "inputs_shadow_opacity": 0,
+      "inputs_shadow_horizontal_offset": 0,
+      "inputs_shadow_vertical_offset": 4,
+      "inputs_shadow_blur": 5,
+      "card_style": "standard",
+      "card_image_padding": 0,
+      "card_text_alignment": "left",
+      "card_color_scheme": "background-2",
+      "card_border_thickness": 0,
+      "card_border_opacity": 10,
+      "card_corner_radius": 0,
+      "card_shadow_opacity": 0,
+      "card_shadow_horizontal_offset": 0,
+      "card_shadow_vertical_offset": 4,
+      "card_shadow_blur": 5,
+      "text_boxes_border_thickness": 0,
+      "text_boxes_border_opacity": 10,
+      "text_boxes_radius": 0,
+      "text_boxes_shadow_opacity": 0,
+      "text_boxes_shadow_horizontal_offset": 0,
+      "text_boxes_shadow_vertical_offset": 4,
+      "text_boxes_shadow_blur": 5,
+      "media_border_thickness": 1,
+      "media_border_opacity": 5,
+      "media_radius": 0,
+      "media_shadow_opacity": 0,
+      "media_shadow_horizontal_offset": 0,
+      "media_shadow_vertical_offset": 4,
+      "media_shadow_blur": 5,
+      "popup_border_thickness": 1,
+      "popup_border_opacity": 10,
+      "popup_corner_radius": 0,
+      "popup_shadow_opacity": 0,
+      "popup_shadow_horizontal_offset": 0,
+      "popup_shadow_vertical_offset": 4,
+      "popup_shadow_blur": 5,
+      "drawer_border_thickness": 1,
+      "drawer_border_opacity": 10,
+      "drawer_shadow_opacity": 0,
+      "drawer_shadow_horizontal_offset": 0,
+      "drawer_shadow_vertical_offset": 4,
+      "drawer_shadow_blur": 5,
+      "badge_position": "bottom left",
+      "badge_corner_radius": 40,
+      "sale_badge_color_scheme": "accent-2",
+      "sold_out_badge_color_scheme": "inverse",
+      "accent_icons": "text",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": false,
+      "predictive_search_show_price": false,
+      "currency_code_enabled": true,
+      "cart_type": "notification",
+      "show_vendor": false,
+      "show_cart_note": false,
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "text": "Welcome to our store",
+                "color_scheme": "background-1",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {}
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "color_scheme": "background-1",
+            "logo": "{{ shop.brand.logo }}",
+            "logo_width": 90,
+            "logo_position": "middle-left",
+            "menu": "main-menu",
+            "show_line_separator": true,
+            "enable_sticky_header": true,
+            "margin_bottom": 0,
+            "padding_top": 20,
+            "padding_bottom": 20
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {
+                "heading": "Quick links",
+                "menu": "footer"
+              }
+            },
+            "footer-1": {
+              "type": "link_list",
+              "settings": {
+                "heading": "Info",
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "text",
+              "settings": {
+                "heading": "Our mission",
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "color_scheme": "background-1",
+            "newsletter_enable": true,
+            "newsletter_heading": "Subscribe to our emails",
+            "show_social": true,
+            "enable_country_selector": false,
+            "enable_language_selector": false,
+            "payment_enable": true,
+            "margin_top": 48,
+            "padding_top": 36,
+            "padding_bottom": 36
+          }
+        },
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "logo": "{{ shop.brand.logo }}",
+            "logo_max_width": 100,
+            "color_scheme": "background-1"
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "color_scheme": "background-1"
+          }
+        }
+      }
+    }
+  }
+}
